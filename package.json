@@ -1,0 +1,22 @@
+{
+  "name": "workcation",
+  "version": "1.0.0",
+  "description": "Tailwind demo",
+  "private": true,
+  "scripts": {
+    "build": "postcss assets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css && webpack",
+    "watch": "postcss asseets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css --watch"
+  },
+  "author": "Rob Cameron",
+  "license": "MIT",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^6.1.3",
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}

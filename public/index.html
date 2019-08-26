@@ -1,0 +1,265 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/tailwind.css">
+  <script type="text/javascript" src="javascripts/main.js"></script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+  <header class="border-t-4 border-orange-800 shadow relative">
+    <nav class="flex items-center bg-white">
+      <div class="flex-1 flex items-center">
+        <a class="flex items-center font-mono tracking-tighter" href="/index.html">
+          <span class="text-orange-800 text-4xl font-bold -mr-1">[</span>
+          <span class="text-3xl font-bold">T</span>
+          <span class="text-orange-800 text-4xl font-bold -ml-1">]</span>
+        </a>
+        <pre class="font-mono font-bold text-sm">v1.0</pre>
+      </div>
+      <ul class="flex-none flex font-mono font-bold text-sm uppercase">
+        <li class="flex-1 text-center mx-4">
+          <a href="#">Code</a>
+        </li>
+        <li class="flex-1 text-center mx-4">
+          <a href="#">Spec</a>
+        </li>
+        <li class="flex-1 text-center mx-4">
+          <a class="bg-gray-800 text-white rounded-sm px-4 py-2" href="#">Validate</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="">
+    <section class="pt-8 bg-orange-100">
+      <div class="flex items-end">
+        <div class="flex items-center font-mono tracking-tighter">
+          <span class="text-orange-800 text-8xl font-bold -mr-3">[</span>
+          <span class="text-7xl font-bold mt-3">T</span>
+          <span class="text-orange-800 text-8xl font-bold -ml-3">]</span>
+        </div>
+        <div class="font-mono leading-tight mb-6">
+          <h1 class="font-bold text-xl">TOML</h1>
+          <h2 class="text-xs text-orange-800">[Tom's Obvious Markup Language]</h2>
+        </div>
+      </div>
+      <h3 class="mt-2 font-semibold text-xl text-center">[a_config_file_format_for_humans]</h3>
+    </section>
+
+    <section class="pt-8 pb-12 bg-orange-100" data-controller="sample-code">
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="json">
+        <pre class="text-white">
+{
+  <span class="text-blue-300">"family"</span>: {
+    <span class="text-blue-300">"spouse"</span>: <span class="text-orange-500">"Aimee"</span>,
+    <span class="text-blue-300">"kids"</span>: [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+  },
+  <span class="text-blue-300">"foods"</span>: {
+    <span class="text-blue-300">"favorite"</span>: <span class="text-orange-500">"submarine sandwich"</span>,
+    <span class="text-blue-300">"acceptable"</span>: <span class="text-orange-500">"pizza"</span>
+  },
+  <span class="text-blue-300">"dob"</span>: <span class="text-orange-500">"1978-04-16T12:32:00Z"</span>,
+  <span class="text-blue-300">"age"</span>: <span class="text-green-500">41</span>,
+  <span class="text-blue-300">"coding"</span>: <span class="text-blue-600">true</span>
+}
+        </pre>
+      </code>
+
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="yaml">
+        <pre class="text-white">
+<span class="text-blue-600">family</span>:
+  <span class="text-blue-600">spouse</span>: <span class="text-orange-500">Aimee</span>
+  <span class="text-blue-600">kids</span>:
+    - <span class="text-orange-500">Jack</span>
+    - <span class="text-orange-500">Kate</span>
+<span class="text-blue-600">foods</span>:
+  <span class="text-blue-600">favorite</span>: <span class="text-orange-500">submarine sandwich</span>
+  <span class="text-blue-600">acceptable</span>: <span class="text-orange-500">pizza</span>
+<span class="text-blue-600">dob</span>: <span class="text-orange-500">1978-04-16T12:32:00Z</span>
+<span class="text-blue-600">age</span>: <span class="text-green-500">41</span>
+<span class="text-blue-600">coding</span>: <span class="text-blue-600">true</span>
+        </pre>
+      </code>
+
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="toml">
+        <pre class="text-white">
+[<span class="text-blue-300">family</span>]
+<span class="text-blue-600">spouse</span> = <span class="text-orange-500">"Aimee"</span>
+<span class="text-blue-600">kids</span> = [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+
+[<span class="text-blue-300">foods</span>]
+<span class="text-blue-600">favorite</span> = <span class="text-orange-500">"submarine sandwich"</span>
+<span class="text-blue-600">acceptable</span> = <span class="text-orange-500">"pizza"</span>
+
+<span class="text-blue-600">dob</span> = <span class="text-orange-500">"1978-04-16T07:32:00-05:00"</span>
+<span class="text-blue-600">age</span> = <span class="text-green-500">41</span>
+<span class="text-blue-600">coding</span> = true
+        </pre>
+      </code>
+
+      <nav class="-mt-px">
+        <ul class="text-lg font-bold text-orange-700 flex rounded mx-4">
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="toml" class="block py-2"
+              href="#">TOML</a>
+          </li>
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="json" class="block py-2" href="#">JSON</a>
+          </li>
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="yaml" class="block py-2" href="">YAML</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="mt-8 px-4">
+      <dl>
+        <dt class="title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z" />
+            </svg>
+          </div>
+          [toml.prioritizes_humans]
+        </dt>
+        <dd class="mt-2 text-gray-600 ml-14">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias amet
+          corporis voluptates a cum perferendis ea eum perspiciatis odit officia, totam nulla culpa
+          error facere eos dolorem natus id?
+        </dd>
+
+        <dt class="mt-12 title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path  d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z" />
+            </svg>
+          </div>
+          [toml.has_all_the_types]
+        </dt>
+        <dd class="mt-2 text-gray-600 ml-14">
+          <p>TOML has native support for:</p>
+          <ul class="mt-2 leading-relaxed">
+            <li class="align-middle">
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Key/Value Pairs</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Array</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Tables</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Arrays of tables</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Integers & Floats</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Booleans</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Dates (with and without offsets)</span>
+            </li>
+            <li>
+              <svg class="inline-block w-4 h-4 mr-1 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
+              <span class="align-middle">Times (with and without offsets)</span>
+            </li>
+          </uL>
+        </dd>
+
+        <dt class="mt-12 title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"/>
+            </svg>
+          </div>
+          [toml.language_support]
+        </dt>
+        <dd class="mt-2 text-gray-600 ml-14">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias amet corporis voluptates a cum perferendis ea eum perspiciatis odit officia, totam nulla culpa error facere eos dolorem natus id?</dd>
+      </dl>
+    </section>
+
+    <section class="bg-orange-100 mt-8 py-8">
+      <div class="px-4">
+        <h2 class="title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M11.03 8h3.94l1.06-4.24a1 1 0 1 1 1.94.48L17.03 8H20a1 1 0 0 1 0 2h-3.47l-1 4H18a1 1 0 1 1 0 2h-2.97l-1.06 4.25a1 1 0 1 1-1.94-.49l.94-3.76H9.03l-1.06 4.25a1 1 0 1 1-1.94-.49L6.97 16H4a1 1 0 0 1 0-2h3.47l1-4H6a1 1 0 0 1 0-2h2.97l1.06-4.24a1 1 0 1 1 1.94.48L11.03 8zm-.5 2l-1 4h3.94l1-4h-3.94z" />
+            </svg>
+          </div>
+          [toml.try]
+        </h2>
+        <p class="text-gray-600 ml-14">Convert to and from JSON, JSON5, YAML and TOML</p>
+      </div>
+
+      <form class="mt-12">
+        <code class="code h-64 rounded-lg mt-4">
+          <pre class="whitespace-pre-line text-white">
+            <span class="text-gray-600">// json input here</span>
+          </pre>
+        </code>
+
+        <div class="mt-4 flex items-center px-4">
+          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">From</label>
+          <div class="flex-1 relative ml-4">
+            <select
+              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="from">
+              <option>JSON</option>
+              <option>JSON5</option>
+              <option>YAML</option>
+              <option>TOML</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-2 flex items-center px-4">
+          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">To</label>
+          <div class="flex-1 relative ml-4">
+            <select
+              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="from">
+              <option>JSON</option>
+              <option>JSON5</option>
+              <option>YAML</option>
+              <option selected>TOML</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <code class="code h-64 rounded-lg mt-4">
+          <pre class="whitespace-pre-line text-white">
+            <span class="text-gray-600"># toml output here</span>
+          </pre>
+        </code>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="border-t-4 border-orange-800 bg-orange-200 text-orange-800 text-center text-sm p-4">
+    <span class="font-mono font-bold">TOML</span> is &copy;2019 <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
+    <br>
+    <span class="font-mono font-bold">TOML</span> is released under the <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE">MIT License</a>
+  </footer>
+</body>
+</html>
