@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "postcss assets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css && webpack",
-    "watch": "webpack --watch"
+    "watch-postcss": "postcss assets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css --watch",
+    "watch-webpack": "webpack --watch"
   },
   "author": "Rob Cameron",
   "license": "MIT",
