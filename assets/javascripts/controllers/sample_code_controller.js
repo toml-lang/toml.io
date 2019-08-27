@@ -10,8 +10,11 @@ export default class extends Controller {
   }
 
   change(event) {
-    event.preventDefault()
     this._changeLanguage(event.currentTarget.dataset.language)
+  }
+
+  preventDefault(event) {
+    event.preventDefault()
   }
 
   _changeLanguage(language) {
@@ -22,9 +25,9 @@ export default class extends Controller {
   _swapTabs(language) {
     this.tabTargets.forEach(target => {
       if (target.dataset.language === language) {
-        target.parentElement.classList.add('tab-active')
+        target.classList.add(this._activeTabClass)
       } else {
-        target.parentElement.classList.remove('tab-active')
+        target.classList.remove(this._activeTabClass)
       }
     })
   }
@@ -32,12 +35,24 @@ export default class extends Controller {
   _showCode(language) {
     this.codeTargets.forEach(target => {
       if (target.dataset.language === language) {
-        target.classList.add('block')
-        target.classList.remove('hidden')
+        target.classList.add(this._showClass)
+        target.classList.remove(this._hideClass)
       } else {
-        target.classList.remove('block')
-        target.classList.add('hidden')
+        target.classList.remove(this._showClass)
+        target.classList.add(this._hideClass)
       }
     })
+  }
+
+  get _activeTabClass() {
+    return this.data.get('active-tab-class')
+  }
+
+  get _hideClass() {
+    return this.data.get('hide-class')
+  }
+
+  get _showClass() {
+    return this.data.get('show-class')
   }
 }
