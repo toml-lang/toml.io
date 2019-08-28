@@ -47,14 +47,13 @@
     </section>
 
     <section class="pt-8 pb-12 bg-orange-100">
-      <pre class="text-white ini" data-controller="snippet"><code class="code rounded-lg p-2"># This is a TOML document.
+      <pre class="text-white toml" data-controller="snippet"><code># This is a TOML document
 
 title = "TOML Example"
 
 [owner]
 name = "Tom Preston-Werner"
 dob = 1979-05-27T07:32:00-08:00
-# ^ First class dates ^
 
 [database]
 server = "192.168.1.1"
@@ -66,14 +65,11 @@ enabled = true
 
   [servers.alpha]
   ip = "10.0.0.1"
-  dc = "eqdc10"
-
-  [servers.beta]
-  ip = "10.0.0.2"
-  dc = "eqdc10"
+  hostname = "alpha"
 
 [clients]
-data = [ ["gamma", "delta"], [1, 2] ]</code></pre>
+data = [ ["delta", "phi"], 3.14159 ]
+temp = { die = 79.5, fan = 72.0 }</code></pre>
     </section>
 
     <section class="mt-8 px-4">

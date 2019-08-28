@@ -1,10 +1,10 @@
 import { Controller } from "stimulus"
 import hljs from 'highlight.js';
-import ini from 'highlight.js/lib/languages/ini';
+import toml from '../highlight.js/toml';
 
 export default class extends Controller {
   connect() {
-    hljs.registerLanguage('ini', ini);
+    hljs.registerLanguage('toml', toml);
     hljs.highlightBlock(this.element);
   }
 }
