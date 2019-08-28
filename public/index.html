@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="stylesheets/tailwind.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
   <script type="text/javascript" src="javascripts/main.js"></script>
 </head>
 
@@ -21,13 +21,10 @@
       </div>
       <ul class="flex-none flex font-mono font-bold text-sm uppercase">
         <li class="flex-1 text-center mx-4">
-          <a href="#">Code</a>
+          <a href="spec/index.html">Spec</a>
         </li>
         <li class="flex-1 text-center mx-4">
-          <a href="#">Spec</a>
-        </li>
-        <li class="flex-1 text-center mx-4">
-          <a class="bg-gray-800 text-white rounded-sm px-4 py-2" href="#">Validate</a>
+          <a href="https://github.com/toml-lang/toml">GitHub</a>
         </li>
       </ul>
     </nav>
@@ -43,76 +40,40 @@
         </div>
         <div class="font-mono leading-tight mb-6">
           <h1 class="font-bold text-xl">TOML</h1>
-          <h2 class="text-xs text-orange-800">[Tom's Obvious Markup Language]</h2>
+          <h2 class="text-xs text-orange-800">[Tom's Obvious Minimal Language]</h2>
         </div>
       </div>
       <h3 class="mt-2 font-semibold text-xl text-center">[a_config_file_format_for_humans]</h3>
     </section>
 
-    <section class="pt-8 pb-12 bg-orange-100" data-controller="sample-code" data-sample-code-active-tab-class="tab-active" data-sample-code-hide-class="hidden" data-sample-code-show-class="block">
-      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="json">
-        <pre class="text-white">
-{
-  <span class="text-blue-300">"family"</span>: {
-    <span class="text-blue-300">"spouse"</span>: <span class="text-orange-500">"Aimee"</span>,
-    <span class="text-blue-300">"kids"</span>: [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
-  },
-  <span class="text-blue-300">"foods"</span>: {
-    <span class="text-blue-300">"favorite"</span>: <span class="text-orange-500">"submarine sandwich"</span>,
-    <span class="text-blue-300">"acceptable"</span>: <span class="text-orange-500">"pizza"</span>
-  },
-  <span class="text-blue-300">"dob"</span>: <span class="text-orange-500">"1978-04-16T12:32:00Z"</span>,
-  <span class="text-blue-300">"age"</span>: <span class="text-green-500">41</span>,
-  <span class="text-blue-300">"coding"</span>: <span class="text-blue-600">true</span>
-}
-        </pre>
-      </code>
+    <section class="pt-8 pb-12 bg-orange-100">
+      <pre class="text-white ini" data-controller="snippet"><code class="code rounded-lg p-2"># This is a TOML document.
 
-      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="yaml">
-        <pre class="text-white">
-<span class="text-blue-600">family</span>:
-  <span class="text-blue-600">spouse</span>: <span class="text-orange-500">Aimee</span>
-  <span class="text-blue-600">kids</span>:
-    - <span class="text-orange-500">Jack</span>
-    - <span class="text-orange-500">Kate</span>
-<span class="text-blue-600">foods</span>:
-  <span class="text-blue-600">favorite</span>: <span class="text-orange-500">submarine sandwich</span>
-  <span class="text-blue-600">acceptable</span>: <span class="text-orange-500">pizza</span>
-<span class="text-blue-600">dob</span>: <span class="text-orange-500">1978-04-16T12:32:00Z</span>
-<span class="text-blue-600">age</span>: <span class="text-green-500">41</span>
-<span class="text-blue-600">coding</span>: <span class="text-blue-600">true</span>
-        </pre>
-      </code>
+title = "TOML Example"
 
-      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="toml">
-        <pre class="text-white">
-[<span class="text-blue-300">family</span>]
-<span class="text-blue-600">spouse</span> = <span class="text-orange-500">"Aimee"</span>
-<span class="text-blue-600">kids</span> = [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00
+# ^ First class dates ^
 
-[<span class="text-blue-300">foods</span>]
-<span class="text-blue-600">favorite</span> = <span class="text-orange-500">"submarine sandwich"</span>
-<span class="text-blue-600">acceptable</span> = <span class="text-orange-500">"pizza"</span>
+[database]
+server = "192.168.1.1"
+ports = [ 8001, 8001, 8002 ]
+connection_max = 5000
+enabled = true
 
-<span class="text-blue-600">dob</span> = <span class="text-orange-500">"1978-04-16T07:32:00-05:00"</span>
-<span class="text-blue-600">age</span> = <span class="text-green-500">41</span>
-<span class="text-blue-600">coding</span> = true
-        </pre>
-      </code>
+[servers]
 
-      <nav class="-mt-px">
-        <ul class="text-lg font-bold text-orange-700 flex rounded mx-4">
-          <li class="flex-1 text-center" data-target="sample-code.tab" data-action="click->sample-code#change" data-language="toml" >
-            <a data-action="click->sample-code#preventDefault" class="block py-2" href="#">TOML</a>
-          </li>
-          <li class="flex-1 text-center" data-target="sample-code.tab" data-action="click->sample-code#change" data-language="json" >
-            <a data-action="click->sample-code#preventDefault" class="block py-2" href="#">JSON</a>
-          </li>
-          <li class="flex-1 text-center" data-target="sample-code.tab" data-action="click->sample-code#change" data-language="yaml" >
-            <a data-action="click->sample-code#preventDefault" class="block py-2" href="">YAML</a>
-          </li>
-        </ul>
-      </nav>
+  [servers.alpha]
+  ip = "10.0.0.1"
+  dc = "eqdc10"
+
+  [servers.beta]
+  ip = "10.0.0.2"
+  dc = "eqdc10"
+
+[clients]
+data = [ ["gamma", "delta"], [1, 2] ]</code></pre>
     </section>
 
     <section class="mt-8 px-4">
@@ -203,11 +164,7 @@
       </div>
 
       <form class="mt-12">
-        <code class="code h-64 rounded-lg mt-4">
-          <pre class="whitespace-pre-line text-white">
-            <span class="text-gray-600">// json input here</span>
-          </pre>
-        </code>
+        <pre class="whitespace-pre-line text-white" data-controller="snippet"><code class="code h-64 rounded-lg mt-4">// json input here</code></pre>
 
         <div class="mt-4 flex items-center px-4">
           <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">From</label>
@@ -245,12 +202,7 @@
           </div>
         </div>
 
-        <code class="code h-64 rounded-lg mt-4">
-          <pre class="whitespace-pre-line text-white">
-            <span class="text-gray-600"># toml output here</span>
-          </pre>
-        </code>
-
+        <pre class="whitespace-pre-line text-white" data-controller="snippet"><code class="code h-64 rounded-lg mt-4">// json input here</code></pre>
       </form>
     </section>
   </main>
