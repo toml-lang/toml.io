@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+
+.title {
+  @apply text-2xl tracking-tight font-semibold;
+}
+
+.code {
+  @apply block text-xs;
+}
+
+.tab-active {
+  @apply bg-gray-900 text-gray-600 rounded-b;
+}
+
+@tailwind utilities;
