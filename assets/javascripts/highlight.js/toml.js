@@ -51,7 +51,7 @@ module.exports = function (hljs) {
               STRING,
               {
                 className: 'number',
-                begin: /([\+\-]+)?[\d]+_[\d_]+|(\d{4}\-\d{2}\-\d{2}(T\d{2}\:\d{2}\:\d{2}([+-]\d{2}:\d{2})?)?)/
+                begin: /([\+\-\d(inf|nan|0o|0b|0x)])+[\d_eETZa-fA-F\:\-\+\.(inf|nan)]+/
               },
               {
                 className: 'literal',
