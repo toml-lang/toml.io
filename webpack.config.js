@@ -5,7 +5,7 @@ module.exports = {
   entry: './assets/javascripts/application.js',
   mode: process.env.NODE_ENV || 'development',
   output: {
-    filename: 'main.js',
+    filename: 'application.js',
     path: path.resolve(__dirname, 'public/javascripts')
   },
   watchOptions: {
