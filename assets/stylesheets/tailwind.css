@@ -1,16 +1,20 @@
 @tailwind base;
 @tailwind components;
 
-.title {
-  @apply text-2xl tracking-tight font-semibold;
+.mt-1\/2 {
+  margin-top: 0.125rem;
 }
 
-.code {
-  @apply block text-xs;
+.marketing-title {
+  @apply text-xl tracking-tight font-semibold;
 }
 
-.tab-active {
-  @apply bg-gray-900 text-gray-600 rounded-b;
+.section-title {
+  @apply marketing-title text-2xl;
+}
+
+.feature-title {
+  @apply section-title text-orange-900 mb-2;
 }
 
 @tailwind utilities;
