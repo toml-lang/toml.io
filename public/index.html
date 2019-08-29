@@ -10,7 +10,7 @@
 
 <body class="bg-white text-gray-900 font-sans antialiased">
   <header class="">
-    <nav class="flex items-center bg-white shadow border-t-4 border-orange-800">
+    <nav class="flex items-center bg-white shadow fixed left-0 right-0 border-t-4 border-orange-800">
       <div class="flex-1 flex items-center p-2">
         <a class="flex items-center font-mono tracking-tighter" href="/index.html">
           <svg class="w-10 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
   </header>
 
   <main class="">
-    <section class="pt-12 pb-8 bg-orange-100">
+    <section class="pt-32 pb-8 bg-orange-100">
       <div class="flex items-end px-4">
         <svg class="w-24 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
           <g>
@@ -59,7 +59,7 @@
           <h2 class="text-xs text-orange-800">[Tom's Obvious Minimal Language]</h2>
         </div>
       </div>
-      <h3 class="mt-12 mb-4 font-semibold text-4xl text-center text-orange-900 leading-none">A config file format<br>for humans.</h3>
+      <h3 class="mt-12 mb-4 px-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight">A config file format<br>for humans.</h3>
     </section>
 
     <section>
@@ -177,9 +177,11 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
       </dl>
     </section>
 
-    <section class="bg-orange-100 text-orange-800 mt-8 mb-16">
-      <header class="py-8 border-b border-orange-200">
-        <h2 class="text-3xl font-semibold tracking-tight text-center text-orange-700">A Quick Tour of TOML</h2>
+    <section class="bg-orange-100 text-orange-800 mt-8 pb-16">
+      <header class="">
+        <h2 class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100">
+          A Quick Tour of TOML
+        </h2>
       </header>
       <section class="mt-8">
         <div class="px-4">
@@ -347,15 +349,15 @@ lt2 = 00:32:00.999999
       </section>
     </section>
 
-    <section class="bg-white mt-8 ph-8">
-      <header class="px-4">
-        <h2 class="section-title text-2xl">
+    <section class="bg-white ph-8">
+      <header class="">
+        <h2 class="p-4 text-2xl font-semibold tracking-tight bg-orange-800 text-left text-orange-100">
           Try TOML
         </h2>
-        <p class="mt-2 text-gray-600">Give TOML a try by converting to and from JSON, JSON5, YAML and TOML.</p>
+        <p class="mt-8 px-4 text-gray-600">Give TOML a try by converting to and from JSON, JSON5, YAML and TOML.</p>
       </header>
 
-      <form class="mt-12">
+      <form class="mt-8">
         <pre class="whitespace-pre-line text-white h-64 json" data-controller="snippet"><code class="json">// json input here
 
           { foo: "bar" }
@@ -403,9 +405,13 @@ lt2 = 00:32:00.999999
         </code></pre>
       </form>
     </section>
+
+    <section>
+      <p class="mt-8 px-4 text-gray-600">Check out <a class="underline" href="spec/index.html">the full spec</a> or <a class="underline" href="https://github.com/toml-lang/toml/wiki">find your language implementation</a>.</p>
+    </section>
   </main>
 
-  <footer class="mt-12 border-t-4 border-orange-800 bg-orange-200 text-orange-800 text-center text-sm p-4">
+  <footer class="mt-12 bg-orange-900 text-orange-100 text-center text-sm p-4">
     <span class="font-mono font-bold">TOML</span> is &copy;2019 <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
     <br>
     <span class="font-mono font-bold">TOML</span> is released under the <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE">MIT License</a>
