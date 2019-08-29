@@ -1,4 +1,4 @@
-@import "./tailwind.pcss";
+@import "tailwind.pcss";
 /* purgecss start ignore */
-@import "./highlight.css";
+@import "highlight/highlight.css";
 /* purgecss end ignore */
