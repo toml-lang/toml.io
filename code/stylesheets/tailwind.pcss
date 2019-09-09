@@ -3,17 +3,26 @@
 @tailwind base;
 @tailwind components;
 
-/*
-  Overriding styles or extracted components go here, see:
+.mt-1\/2 {
+  margin-top: 0.125rem;
+}
 
-  https://tailwindcss.com/docs/adding-base-styles
-  https://tailwindcss.com/docs/extracting-components
-*/
+.marketing-title {
+  @apply text-xl tracking-tight font-semibold;
+}
+
+@screen lg {
+  .marketing-title {
+    @apply text-2xl;
+  }
+}
+
+.section-title {
+  @apply text-xl tracking-tight font-semibold text-2xl;
+}
+
+.feature-title {
+  @apply section-title text-orange-900 mb-2;
+}
 
 @tailwind utilities;
-
-/*
-  Completely custom CSS goes here, see:
-
-  https://tailwindcss.com/docs/adding-new-utilities
-*/

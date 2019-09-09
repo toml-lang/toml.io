@@ -3,7 +3,7 @@
   @@include("partials/head.html", { "title": "TOML: Tom's Obvious Minimal Language" })
 <body class="bg-white text-gray-900 font-sans antialiased">
   <header class="">
-    <nav class="flex items-center bg-white shadow fixed left-0 right-0 border-t-4 border-orange-800">
+    <nav class="flex items-center bg-white shadow fixed left-0 right-0 z-10 border-t-4 border-orange-800">
       <div class="flex-1 flex items-center p-2 font-">
         <a class="flex items-center font-mono tracking-tighter" href="/index.html">
           <svg class="w-10 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
@@ -34,32 +34,40 @@
   </header>
 
   <main class="">
-    <section class="pt-32 pb-8 bg-orange-100">
-      <div class="flex items-end px-4">
-        <svg class="w-24 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <polygon class="fill-current text-orange-800"
-              points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0">
-            </polygon>
-            <polygon fill="#000000"
-              points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652">
-            </polygon>
-            <polygon class="fill-current text-orange-800"
-              points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0">
-            </polygon>
-          </g>
-        </svg>
-        <div class="font-mono leading-tight">
-          <h1 class="font-bold text-3xl">TOML</h1>
-          <h2 class="text-xs text-orange-800">[Tom's Obvious Minimal Language]</h2>
+    <div class="bg-orange-100 lg:flex">
+      <section class="pt-32 pb-8 lg:pt-64 lg:flex-1 lg:w-1/2">
+        <div class="px-4 lg:px-8">
+          <div class="flex items-end">
+            <svg class="w-24 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <polygon class="fill-current text-orange-800"
+                  points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0">
+                </polygon>
+                <polygon fill="#000000"
+                  points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652">
+                </polygon>
+                <polygon class="fill-current text-orange-800"
+                  points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0">
+                </polygon>
+              </g>
+            </svg>
+            <div class="font-mono leading-tight">
+              <h1 class="font-bold text-3xl">TOML</h1>
+              <h2 class="text-xs text-orange-800">[Tom's Obvious Minimal Language]</h2>
+            </div>
+          </div>
+          <h3 class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight">
+            A config file format <br class="lg:hidden">for humans.</h3>
+          <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
+            TOML aims to be a minimal configuration file format that's easy to read due to obvious
+            semantics. TOML is designed to map unambiguously to a hash table. TOML should be easy to
+            parse into data structures in a wide variety of languages.
+          </p>
         </div>
-      </div>
-      <h3 class="mt-12 mb-4 px-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight">A config
-        file format<br>for humans.</h3>
-    </section>
+      </section>
 
-    <section>
-      <pre class="text-white toml" data-controller="snippet"><code># This is a TOML document
+      <section class="lg:flex-1 lg:p-24 lg:pb-0 lg:-mb-8">
+        <pre class="text-white toml lg:rounded-lg lg:p-8" data-controller="snippet"><code># This is a TOML document
 
 title = "TOML Example"
 
@@ -82,129 +90,137 @@ enabled = true
 [clients]
 data = [ ["delta", "phi"], 3.14159 ]
 temp = { die = 79.5, fan = 72.0 }</code></pre>
-    </section>
+      </section>
+    </div>
 
-    <section class="mt-16 mb-16 px-4">
-      <dl>
-        <dt class="marketing-title">
-          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
-            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z" />
-            </svg>
-          </div>
-          TOML prioritizes humans
-        </dt>
-        <dd class="text-gray-600 ml-12">
-          <p class="ml-1">TOML aims to be a minimal configuration file format that:</p>
-          <ul class="mt-2 ml-1 leading-relaxed">
-            <li class="leading-snug">
-              <span class="font-bold">is easy to read</span> due to obvious semantics
-            </li>
-            <li class="leading-snug mt-2">
-              <span class="font-bold">maps unambiguously</span> to a hash table
-            </li>
-            <li class="leading-snug mt-2">
-              <span class="font-bold">is easy to parse</span> into data structures in a wide variety of languages
-            </li>
-          </ul>
-        </dd>
+    <section class="mt-16 mb-16 lg:p-4">
+      <dl class="lg:flex lg:items-start">
+        <div class="flex-1 p-4">
+          <dt class="marketing-title">
+            <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+              <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z" />
+              </svg>
+            </div>
+            TOML prioritizes humans
+          </dt>
 
-        <dt class="mt-12 marketing-title">
-          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
-            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z" />
-            </svg>
-          </div>
-          TOML has more native types
-        </dt>
-        <dd class="text-gray-600 ml-12">
-          <ul class="mt-1 ml-1 leading-relaxed">
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Key/Value Pairs</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Arrays</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Tables</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Inline tables</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Arrays of tables</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Integers & Floats</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Booleans</span>
-            </li>
-            <li class="flex items-center">
-              <svg class="inline-block w-4 h-4 mt-px mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path
-                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
-                </svg>
-              <span>Dates & Times, with optional offsets</span>
-            </li>
-          </uL>
-        </dd>
+          <dd class="text-gray-600 ml-12">
+            <p class="ml-1">TOML aims to be a minimal configuration file format that:</p>
+            <ul class="mt-2 ml-1 leading-relaxed">
+              <li class="leading-snug">
+                <span class="font-bold">is easy to read</span> due to obvious semantics
+              </li>
+              <li class="leading-snug mt-2">
+                <span class="font-bold">maps unambiguously</span> to a hash table
+              </li>
+              <li class="leading-snug mt-2">
+                <span class="font-bold">is easy to parse</span> into data structures in a wide variety of languages
+              </li>
+            </ul>
+          </dd>
+        </div>
 
-        <dt class="mt-12 marketing-title">
-          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
-            <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
-            </svg>
-          </div>
-          TOML is widely supported
-        </dt>
-        <dd class="text-gray-600 ml-12">
-          <p class="ml-1">
-            TOML already has implementations most of the most popular programming languages in use
-            today: C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, Javascript, Lua,
-            Objective-C, Perl, PHP, Python, Ruby, Swift, Scala...
-            <a class="underline" href="https://github.com/toml-lang/toml/wiki">and plenty more</a>.
-          </p>
-        </dd>
+        <div class="flex-1 p-4">
+          <dt class="mt-12 marketing-title lg:mt-0">
+            <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+              <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z" />
+              </svg>
+            </div>
+            TOML has more native types
+          </dt>
+          <dd class="text-gray-600 ml-12">
+            <ul class="mt-1 ml-1 leading-relaxed">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Key/Value Pairs</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Arrays</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Tables</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Inline tables</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Arrays of tables</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Integers & Floats</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Booleans</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="inline-block w-4 h-4 mt-px mr-2 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z" />
+                  </svg>
+                <span>Dates & Times, with optional offsets</span>
+              </li>
+            </uL>
+          </dd>
+        </div>
+
+        <div class="flex-1 p-4">
+          <dt class="mt-12 marketing-title lg:mt-0">
+            <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+              <svg class="w-6 h-6 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
+              </svg>
+            </div>
+            TOML is widely supported
+          </dt>
+          <dd class="text-gray-600 ml-12">
+            <p class="ml-1">
+              TOML already has implementations most of the most popular programming languages in use
+              today: C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, Javascript, Lua,
+              Objective-C, Perl, PHP, Python, Ruby, Swift, Scala...
+              <a class="underline" href="https://github.com/toml-lang/toml/wiki">and plenty more</a>.
+            </p>
+          </dd>
+        </div>
       </dl>
     </section>
 
@@ -375,80 +391,12 @@ lt2 = 00:32:00.999999
           <a class="underline" href="spec/index.html">the spec</a>
           to see the full TOML syntax or
           <a class="underline" href="https://github.com/toml-lang/toml/wiki">find your implementation</a>
-          and get started with the most obvious syntax ever!
+          and get started with the most obvious syntax ever!asdf
         </p>
       </section>
     </section>
-
-    <section class="bg-white ph-8">
-      <header class="">
-        <h2 class="p-4 text-2xl font-semibold tracking-tight bg-orange-800 text-left text-orange-100">
-          Try TOML
-        </h2>
-        <p class="mt-8 px-4 text-gray-600">Give TOML a try by converting to and from JSON, JSON5, YAML and TOML.</p>
-      </header>
-
-      <form class="mt-8">
-        <pre class="whitespace-pre-line text-white h-64 json" data-controller="snippet"><code class="json">// json input here
-
-          { foo: "bar" }
-        </code></pre>
-
-        <div class="mt-4 flex items-center px-4">
-          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">From</label>
-          <div class="flex-1 relative ml-4">
-            <select
-              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="from">
-              <option>JSON</option>
-              <option>JSON5</option>
-              <option>YAML</option>
-              <option>TOML</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-2 flex items-center px-4">
-          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">To</label>
-          <div class="flex-1 relative ml-4">
-            <select
-              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="from">
-              <option>JSON</option>
-              <option>JSON5</option>
-              <option>YAML</option>
-              <option selected>TOML</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-            </div>
-          </div>
-        </div>
-
-        <pre class="whitespace-pre-line text-white toml mt-4 h-64" data-controller="snippet"><code class="code h-64 rounded-lg mt-4" contenteditable="true"># toml output here
-
-          foo = "bar"
-        </code></pre>
-      </form>
-    </section>
-
-    <section>
-      <p class="mt-8 px-4 text-gray-600">Check out <a class="underline" href="spec/index.html">the full spec</a> or <a
-          class="underline" href="https://github.com/toml-lang/toml/wiki">find your language implementation</a>.</p>
-    </section>
   </main>
 
-  <footer class="mt-12 bg-orange-900 text-orange-100 text-center text-sm p-4">
-    <span class="font-mono font-bold">TOML</span> is &copy;2019 <a class="underline"
-      href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
-    <br>
-    <span class="font-mono font-bold">TOML</span> is released under the <a class="underline"
-      href="https://github.com/toml-lang/toml/blob/master/LICENSE">MIT License</a>
-  </footer>
+  @@include('partials/footer.html')
 </body>
 </html>
