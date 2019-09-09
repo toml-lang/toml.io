@@ -10,7 +10,10 @@
   environment = { NODE_ENV = "production" }
 
 [[redirects]]
-# see https://www.netlify.com/docs/redirects
+  from = "/"
+  to = "/v1"
+  force = true
+  headers = { X-From = 'Netlify' }
 
 [[headers]]
 # see https://www.netlify.com/docs/headers-and-basic-auth
