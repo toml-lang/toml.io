@@ -1,4 +1,3 @@
-# toml.io
+## toml.io
 
-Work in progress for the toml.io site. https://wip.toml.io
-
+The public facing site at https://toml.io

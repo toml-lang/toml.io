@@ -1,3 +1,7 @@
+/* See https://tailwindcss.com/docs/configuration for more options */
+
 module.exports = {
-  variants: ['responsive'],
-}
+  theme: {},
+  variants: {},
+  plugins: []
+};

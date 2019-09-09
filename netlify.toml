@@ -1,0 +1,16 @@
+[build]
+  command = "yarn build"
+  publish = "public"
+  functions = "functions"
+
+[context.production]
+  environment = { NODE_ENV = "production"}
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "production" }
+
+[[redirects]]
+# see https://www.netlify.com/docs/redirects
+
+[[headers]]
+# see https://www.netlify.com/docs/headers-and-basic-auth

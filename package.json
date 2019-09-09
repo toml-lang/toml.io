@@ -1,24 +1,30 @@
 {
-  "name": "workcation",
+  "name": "toml.io",
   "version": "1.0.0",
-  "description": "Tailwind demo",
-  "private": true,
   "scripts": {
-    "build": "postcss assets/stylesheets/application.css -o public/stylesheets/application.css && webpack",
-    "watch-postcss": "postcss assets/stylesheets/application.css -o public/stylesheets/application.css --watch",
-    "watch-webpack": "webpack --watch"
+    "build": "webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
+    "clean": "del 'public/!(images)'",
+    "develop": "$npm_execpath serve & $npm_execpath watch",
+    "rebuild": "$npm_execpath clean && $npm_execpath build",
+    "serve": "live-server --watch=./public --mount=/:./public",
+    "watch": "webpack --watch & postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css --watch"
   },
-  "author": "Rob Cameron",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
+    "del-cli": "^3.0.0",
+    "file-include-webpack-plugin": "^1.3.2",
+    "live-server": "^1.2.1",
     "postcss-cli": "^6.1.3",
     "postcss-import": "^12.0.1",
+    "postcss-nesting": "^7.0.1",
+    "remove-files-webpack-plugin": "^1.1.3",
     "stimulus": "^1.1.1",
     "tailwindcss": "^1.1.2",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   }
 }
