@@ -2,3 +2,4 @@
 node_modules
 public/*
 !public/images
+yarn-error.log
