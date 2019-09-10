@@ -6,7 +6,7 @@
     "clean": "del 'public/!(images)'",
     "develop": "$npm_execpath serve & $npm_execpath watch",
     "rebuild": "$npm_execpath clean && $npm_execpath build",
-    "serve": "live-server --watch=./public --mount=/:./public",
+    "serve": "live-server --watch=./public --mount=/:./public --entry-file='public/404.html'",
     "watch": "webpack --watch & postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css --watch"
   },
   "license": "MIT",
