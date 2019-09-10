@@ -25,13 +25,25 @@
   @apply section-title text-orange-900 mb-2;
 }
 
+@screen lg {
+  .feature-title {
+    @apply text-2xl;
+  }
+}
+
 .code {
-  @apply my-8
+  @apply my-8 p-4;
 }
 
 @screen lg {
   .code {
-    @apply mx-4 rounded-lg;
+    @apply mx-4 p-8 rounded-lg;
+  }
+}
+
+@screen lg {
+  .tour-section {
+    @apply pb-4 bg-orange-100 rounded-lg shadow-lg;
   }
 }
 
