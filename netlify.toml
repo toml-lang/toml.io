@@ -1,3 +1,8 @@
+[dev]
+  command = "cameron develop"
+  publish = "public"
+  port = 8080
+
 [build]
   command = "yarn build"
   publish = "public"
