@@ -9,10 +9,6 @@ module.exports = {
         content: ["./public/**/*.html"],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         whitelist: ["tab-active"]
-      }),
-    process.env.NODE_ENV === "production" &&
-      require("cssnano")({
-        preset: ["default", { discardComments: { removeAll: true } }]
       })
   ]
 };

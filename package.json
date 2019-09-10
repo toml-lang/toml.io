@@ -14,7 +14,6 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",
-    "cssnano": "^4.1.10",
     "del-cli": "^3.0.0",
     "file-include-webpack-plugin": "^1.3.2",
     "live-server": "^1.2.1",
