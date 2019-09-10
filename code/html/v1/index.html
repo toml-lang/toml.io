@@ -57,7 +57,7 @@
             </div>
           </div>
           <h3 class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight">
-            A config file format <br class="lg:hidden">for humans.</h3>
+            A config file format <br class="md:hidden">for humans.</h3>
           <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
             TOML aims to be a minimal configuration file format that's easy to read due to obvious
             semantics. TOML is designed to map unambiguously to a hash table. TOML should be easy to
@@ -230,159 +230,164 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
           A Quick Tour of TOML
         </h2>
       </header>
-      <section class="mt-8">
-        <div class="px-4">
-          <h3 class="feature-title">Comments</h3>
-          <p class="">TOML thinks all config files should support comments.</p>
+
+      <div class="lg:flex">
+        <div class="lg:flex-1">
+          <section class="mt-8">
+            <div class="px-4">
+              <h3 class="feature-title">Comments</h3>
+              <p class="">TOML thinks all config files should support comments.</p>
+            </div>
+
+            <pre class="code toml" data-controller="snippet"><code># This is a TOML comment
+
+    # This is a multiline
+    # TOML comment</code></pre>
+          </section>
+
+          <section class="mt-12">
+            <div class="px-4">
+              <h3 class="feature-title">Powerful Strings</h3>
+              <p>
+                There are four ways to express strings: basic, multi-line basic, literal, and multi-line
+                literal. <span class="font-bold">Basic strings</span> are surrounded by quotation marks:
+              </p>
+            </div>
+
+            <pre class="code toml" data-controller="snippet"><code>str1 = "I'm a string."
+    str2 = "You can \"quote\" me."
+    str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
+
+            <p class="px-4">
+              <span class="font-bold">Multi-line basic strings</span> Multi-line basic strings are
+              surrounded by three quotation marks on each side and allow newlines. Include a line ending
+              backslash to automatically trim whitespace preceeding any non-whitespace characters:
+            </p>
+
+            <pre class="code toml" data-controller="snippet"><code>str1 = """
+    Roses are red
+    Violets are blue"""
+
+    str2 = """\
+          The quick brown \
+          fox jumps over \
+          the lazy dog.\
+          """</code></pre>
+
+            <p class="px-4"><code class="font-mono font-bold text-sm">
+              str2</code> becomes
+              <code class="font-mono font-bold text-sm">"The quick brown fox jumps over the lazy dog."</code>
+              (a single sentence with no line breaks).
+            </p>
+
+            <p class="mt-8 px-4"><span class="font-bold">
+                Literal strings</span> are surrounded by single quotes. No
+              escaping is performed so what you see is what you get:
+            </p>
+
+            <pre class="code toml" data-controller="snippet"><code>path = 'C:\Users\nodejs\templates'
+    path2 = '\\User\admin$\system32'
+    quoted = 'Tom "Dubs" Preston-Werner'
+    regex = '<\i\c*\s*>'</code></pre>
+
+            <p class="px-4">
+              Since there is no escaping, there is no way to write a single quote inside a literal
+              string enclosed by single quotes. That's where
+              <span class="font-bold">multi-line literal strings</span> come in:
+            </p>
+            <pre class="code toml" data-controller="snippet"><code>re = '''\d{2} apps is t[wo]o many'''
+    lines = '''
+    The first newline is
+    trimmed in raw strings.
+        All other whitespace
+        is preserved.
+    '''</code></pre>
+          </section>
         </div>
 
-        <pre class="my-8 toml" data-controller="snippet"><code># This is a TOML comment
+        <div class="lg:flex-1">
+          <section class="mt-12">
+            <div class="px-4">
+              <h3 class="feature-title">Numbers</h3>
+              <p class="text-orange-800">
+                Integers, floats, infinity and even NaN are all supported. You can use scientific notation
+                and thousands even thousands separators.
+              </p>
+            </div>
 
-# This is a multiline
-# TOML comment</code></pre>
-      </section>
+            <pre class="code toml" data-controller="snippet"><code># integers
+    int1 = +99
+    int2 = 42
+    int3 = 0
+    int4 = -17
 
-      <section class="mt-12">
-        <div class="px-4">
-          <h3 class="feature-title">Powerful Strings</h3>
-          <p>
-            There are four ways to express strings: basic, multi-line basic, literal, and multi-line
-            literal. <span class="font-bold">Basic strings</span> are surrounded by quotation marks:
-          </p>
+    # hexadecimal with prefix `0x`
+    hex1 = 0xDEADBEEF
+    hex2 = 0xdeadbeef
+    hex3 = 0xdead_beef
+
+    # octal with prefix `0o`
+    oct1 = 0o01234567
+    oct2 = 0o755
+
+    # binary with prefix `0b`
+    bin1 = 0b11010110
+
+    # fractional
+    float1 = +1.0
+    float2 = 3.1415
+    float3 = -0.01
+
+    # exponent
+    float4 = 5e+22
+    float5 = 1e06
+    float6 = -2E-2
+
+    # both
+    float7 = 6.626e-34
+
+    # separators
+    float8 = 224_617.445_991_228
+
+    # infinity
+    infinite1 = inf # positive infinity
+    infinite2 = +inf # positive infinity
+    infinite3 = -inf # negative infinity
+
+    # not a number
+    not1 = nan
+    not2 = +nan
+    not3 = -nan </code></pre>
+          </section>
+
+
+          <section class="mt-12">
+            <div class="px-4">
+              <h3 class="feature-title">Dates and Times</h3>
+              <p class="text-orange-800">
+                TOML features support for dates, times and datetimes with and without offsets.
+              </p>
+            </div>
+
+            <pre class="code toml" data-controller="snippet"><code>#offset datetime
+    odt1 = 1979-05-27T07:32:00Z
+    odt2 = 1979-05-27T00:32:00-07:00
+    odt3 = 1979-05-27T00:32:00.999999-07:00
+
+    # local datetime
+    ldt1 = 1979-05-27T07:32:00
+    ldt2 = 1979-05-27T00:32:00.999999
+
+    # local date
+    ld1 = 1979-05-27
+
+    # local time
+    lt1 = 07:32:00
+    lt2 = 00:32:00.999999
+    </code></pre>
+          </section>
         </div>
-
-        <pre class="my-8 toml" data-controller="snippet"><code>str1 = "I'm a string."
-str2 = "You can \"quote\" me."
-str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
-
-        <p class="px-4">
-          <span class="font-bold">Multi-line basic strings</span> Multi-line basic strings are
-          surrounded by three quotation marks on each side and allow newlines. Include a line ending
-          backslash to automatically trim whitespace preceeding any non-whitespace characters:
-        </p>
-
-        <pre class="my-8 toml" data-controller="snippet"><code>str1 = """
-Roses are red
-Violets are blue"""
-
-str2 = """\
-      The quick brown \
-      fox jumps over \
-      the lazy dog.\
-      """</code></pre>
-
-        <p class="px-4"><code class="font-mono font-bold text-sm">
-          str2</code> becomes
-          <code class="font-mono font-bold text-sm">"The quick brown fox jumps over the lazy dog."</code>
-          (a single sentence with no line breaks).
-        </p>
-
-        <p class="mt-8 px-4"><span class="font-bold">
-            Literal strings</span> are surrounded by single quotes. No
-          escaping is performed so what you see is what you get:
-        </p>
-
-        <pre class="my-8 toml" data-controller="snippet"><code>path = 'C:\Users\nodejs\templates'
-path2 = '\\User\admin$\system32'
-quoted = 'Tom "Dubs" Preston-Werner'
-regex = '<\i\c*\s*>'</code></pre>
-
-        <p class="px-4">
-          Since there is no escaping, there is no way to write a single quote inside a literal
-          string enclosed by single quotes. That's where
-          <span class="font-bold">multi-line literal strings</span> come in:
-        </p>
-        <pre class="my-8 toml" data-controller="snippet"><code>re = '''\d{2} apps is t[wo]o many'''
-lines = '''
-The first newline is
-trimmed in raw strings.
-    All other whitespace
-    is preserved.
-'''</code></pre>
-
-      </section>
-
-
-      <section class="mt-12">
-        <div class="px-4">
-          <h3 class="feature-title">Numbers</h3>
-          <p class="text-orange-800">
-            Integers, floats, infinity and even NaN are all supported. You can use scientific notation
-            and thousands even thousands separators.
-          </p>
-        </div>
-
-        <pre class="my-8 toml" data-controller="snippet"><code># integers
-int1 = +99
-int2 = 42
-int3 = 0
-int4 = -17
-
-# hexadecimal with prefix `0x`
-hex1 = 0xDEADBEEF
-hex2 = 0xdeadbeef
-hex3 = 0xdead_beef
-
-# octal with prefix `0o`
-oct1 = 0o01234567
-oct2 = 0o755
-
-# binary with prefix `0b`
-bin1 = 0b11010110
-
-# fractional
-float1 = +1.0
-float2 = 3.1415
-float3 = -0.01
-
-# exponent
-float4 = 5e+22
-float5 = 1e06
-float6 = -2E-2
-
-# both
-float7 = 6.626e-34
-
-# separators
-float8 = 224_617.445_991_228
-
-# infinity
-infinite1 = inf # positive infinity
-infinite2 = +inf # positive infinity
-infinite3 = -inf # negative infinity
-
-# not a number
-not1 = nan
-not2 = +nan
-not3 = -nan </code></pre>
-      </section>
-
-
-      <section class="mt-12">
-        <div class="px-4">
-          <h3 class="feature-title">Dates and Times</h3>
-          <p class="text-orange-800">
-            TOML features support for dates, times and datetimes with and without offsets.
-          </p>
-        </div>
-
-        <pre class="my-8 toml" data-controller="snippet"><code>#offset datetime
-odt1 = 1979-05-27T07:32:00Z
-odt2 = 1979-05-27T00:32:00-07:00
-odt3 = 1979-05-27T00:32:00.999999-07:00
-
-# local datetime
-ldt1 = 1979-05-27T07:32:00
-ldt2 = 1979-05-27T00:32:00.999999
-
-# local date
-ld1 = 1979-05-27
-
-# local time
-lt1 = 07:32:00
-lt2 = 00:32:00.999999
-</code></pre>
-      </section>
+      </div>
 
       <section class="mt-12 px-4">
         <h3 class="feature-title">...and much more</h3>

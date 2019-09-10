@@ -11,7 +11,7 @@
   @apply text-xl tracking-tight font-semibold;
 }
 
-@screen lg {
+@screen md {
   .marketing-title {
     @apply text-2xl;
   }
@@ -23,6 +23,16 @@
 
 .feature-title {
   @apply section-title text-orange-900 mb-2;
+}
+
+.code {
+  @apply my-8
+}
+
+@screen lg {
+  .code {
+    @apply mx-4 rounded-lg;
+  }
 }
 
 @tailwind utilities;
