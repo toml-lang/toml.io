@@ -8,6 +8,17 @@
   publish = "public"
   functions = "functions"
 
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  minify = true
+[build.processing.js]
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
+
 [context.production]
   environment = { NODE_ENV = "production"}
 
