@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "$npm_execpath parse && webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
-    "clean": "del 'public/!(images)'",
+    "clean": "del 'public/!(images|favicon.png)'",
     "develop": "$npm_execpath serve & $npm_execpath watch",
     "parse": "node lib/parse_spec.js",
     "rebuild": "$npm_execpath clean && $npm_execpath build",
