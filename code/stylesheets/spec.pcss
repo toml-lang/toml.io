@@ -1,0 +1,53 @@
+body.spec {
+  aside {
+    ul {
+      @apply list-none;
+    }
+
+    li {
+      @apply text-orange-700 mt-2;
+    }
+
+    a.active {
+      @apply font-semibold text-orange-900;
+    }
+  }
+
+  main {
+    h2 {
+      @apply text-2xl font-semibold text-orange-800 pt-16;
+    }
+
+    p {
+      @apply my-4;
+    }
+
+    header {
+      p {
+        @apply my-0;
+      }
+    }
+
+    pre {
+      code {
+        @apply my-8 p-4;
+      }
+    }
+
+    code {
+      @apply bg-black text-gray-200 mx-1 px-1 rounded;
+    }
+
+    @screen lg {
+      pre {
+        code {
+          @apply p-8 rounded-lg;
+        }
+      }
+    }
+
+    ul {
+      @apply list-disc list-inside my-4
+    }
+  }
+}
