@@ -16,7 +16,7 @@ module.exports = {
     }),
     new RemovePlugin({
       after: {
-        include: ["partials"]
+        include: ["public/partials"]
       }
     })
   ],
