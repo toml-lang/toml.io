@@ -28,12 +28,13 @@ module.exports = function (hljs) {
         begin: /^\s*\[+/, end: /\]+/
       },
       {
-        begin: /^[ a-z0-9\[\]_\.-]+\s*=\s*/, end: '$',
+        // begin: /[ a-z0-9\[\]"'_\.-]+\s*=\s*/, end: '$',
+        begin: /[^\u0000-\u0008\u000a-\u001f\u007f]+\s*=\s*/, end: '$',
         returnBegin: true,
         contains: [
           {
             className: 'attr',
-            begin: /[a-z0-9\[\]_\.-]+/
+            begin: /[^\u0000-\u0008\u000a-\u001f\u007f=]+/
           },
           {
             begin: /=/, endsWithParent: true,
