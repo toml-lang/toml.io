@@ -256,7 +256,7 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
         </dl>
       </section>
 
-      <section class="bg-orange-100 text-orange-800 mt-8 pb-16">
+      <section class="bg-orange-100 text-orange-800 mt-8 pb-8">
         <header class="">
           <h2
             class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
@@ -266,9 +266,9 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
         </header>
 
         <div class="lg:flex">
-          <div class="lg:flex-1 lg:ml-8 lg:mr-4">
+          <div class="lg:flex-1 lg:ml-16 lg:mr-8">
             <section class="mt-8">
-              <div class="px-4">
+              <div class="tour-text">
                 <h3 class="feature-title">Comments</h3>
                 <p class="">TOML thinks all config files should support comments.</p>
               </div>
@@ -280,7 +280,7 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
             </section>
 
             <section class="mt-12">
-              <div class="px-4">
+              <div class="tour-text">
                 <h3 class="feature-title">Powerful Strings</h3>
                 <p>
                   There are four ways to express strings: basic, multi-line basic, literal, and
@@ -293,7 +293,7 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
 str2 = "You can \"quote\" me."
 str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
 
-              <p class="px-4">
+              <p class="tour-text">
                 <span class="font-bold">Multi-line basic strings</span> Multi-line basic strings are
                 surrounded by three quotation marks on each side and allow newlines. Include a line
                 ending backslash to automatically trim whitespace preceeding any non-whitespace
@@ -310,7 +310,7 @@ str2 = """\
       the lazy dog.\
       """</code></pre>
 
-              <p class="px-4">
+              <p class="tour-text">
                 <code class="font-mono font-bold text-sm"> str2</code> becomes
                 <code class="font-mono font-bold text-sm"
                   >"The quick brown fox jumps over the lazy dog."</code
@@ -318,7 +318,7 @@ str2 = """\
                 (a single sentence with no line breaks).
               </p>
 
-              <p class="mt-8 px-4">
+              <p class="mt-8 tour-text">
                 <span class="font-bold"> Literal strings</span> are surrounded by single quotes. No
                 escaping is performed so what you see is what you get:
               </p>
@@ -331,7 +331,7 @@ path2 = '\\User\admin$\system32'
 quoted = 'Tom "Dubs" Preston-Werner'
 regex = '<\i\c*\s*>'</code></pre>
 
-              <p class="px-4">
+              <p class="tour-text">
                 Since there is no escaping, there is no way to write a single quote inside a literal
                 string enclosed by single quotes. That's where
                 <span class="font-bold">multi-line literal strings</span> come in:
@@ -349,9 +349,9 @@ trimmed in raw strings.
             </section>
           </div>
 
-          <div class="lg:flex-1 lg:ml-4 lg:mr-8">
+          <div class="lg:flex-1 lg:ml-8 lg:mr-16">
             <section class="mt-12 lg:mt-8">
-              <div class="px-4">
+              <div class="tour-text">
                 <h3 class="feature-title">Numbers</h3>
                 <p class="text-orange-800">
                   Integers, floats, infinity and even NaN are all supported. You can use scientific
@@ -405,7 +405,7 @@ not3 = -nan </code></pre>
             </section>
 
             <section class="mt-12">
-              <div class="px-4">
+              <div class="tour-text">
                 <h3 class="feature-title">Dates and Times</h3>
                 <p class="text-orange-800">
                   TOML features support for dates, times and datetimes with and without offsets.
@@ -430,19 +430,30 @@ lt2 = 00:32:00.999999</code></pre>
             </section>
           </div>
         </div>
+      </section>
 
-        <section class="mt-12 px-4 lg:px-12">
-          <h3 class="feature-title">...and much more</h3>
-          <p class="text-orange-800">
-            Check out
-            <a class="underline" href="/v1/spec/index.html">the spec</a>
-            to see the full TOML syntax or
-            <a class="underline" href="https://github.com/toml-lang/toml/wiki"
-              >find your implementation</a
-            >
-            and get started with the most obvious syntax ever!
+      <section class="lg:flex bg-white">
+        <div
+          class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
+        >
+          <h3 class="text-2xl font-bold lg:text-3xl">More Spec</h3>
+          <p class="text-gray-600">
+            <strong>TOML</strong> supports even more native types and syntax, read all about it:
           </p>
-        </section>
+          <div class="mt-4">
+            <a class="button" href="spec">Read the full spec</a>
+          </div>
+        </div>
+
+        <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
+          <h3 class="text-2xl font-bold lg:text-3xl">Start coding</h3>
+          <p class="text-gray-600">
+            <strong>TOML</strong> is already implemented in over 40 programming languages:
+          </p>
+          <div class="mt-4">
+            <a class="button" href="https://github.com/toml-lang/toml/wiki">Find a library</a>
+          </div>
+        </div>
       </section>
     </main>
 
