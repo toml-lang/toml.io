@@ -15,6 +15,7 @@
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",
     "del-cli": "^3.0.0",
+    "file-include-webpack-plugin": "https://github.com/cannikin/file-include-webpack-plugin.git#three-level-fix",
     "live-server": "^1.2.1",
     "markdown-it": "^10.0.0",
     "node-fetch": "^2.6.0",
@@ -25,10 +26,9 @@
     "stimulus": "^1.1.1",
     "string-dasherize": "^1.0.0",
     "tailwindcss": "^1.1.2",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack": "^4.39.3"
   },
   "dependencies": {
-    "file-include-webpack-plugin": "https://github.com/cannikin/file-include-webpack-plugin.git#three-level-fix"
+    "webpack-cli": "^3.3.8"
   }
 }
