@@ -51,12 +51,12 @@ module.exports = function (hljs) {
               },
               STRING,
               {
-                className: 'number',
-                begin: /([\+\-\d(inf|nan|0o|0b|0x)])+[\d_eETZa-fA-F\:\-\+\.(inf|nan)]+/
-              },
-              {
                 className: 'literal',
                 begin: /\bon|off|true|false|yes|no\b/
+              },
+              {
+                className: 'number',
+                begin: /([\+\-\d(inf|nan|0o|0b|0x)])+[\d_eETZa-fA-F\:\-\+\.(inf|nan)]+/
               },
               hljs.NUMBER_MODE
             ]
