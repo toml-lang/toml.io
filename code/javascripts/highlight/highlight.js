@@ -793,7 +793,7 @@ https://highlightjs.org/
 
   // Common modes
   hljs.BACKSLASH_ESCAPE = {
-    begin: '\\\\[\\s\\S]', relevance: 0
+    begin: '\\\\[\\s\\S](?!$)', relevance: 0
   };
   hljs.APOS_STRING_MODE = {
     className: 'string',
