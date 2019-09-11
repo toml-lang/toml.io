@@ -7,17 +7,16 @@ module.exports = {
   entry: "./code/javascripts/application.js",
   mode: process.env.NODE_ENV || "development",
   output: {
-    filename: "application.js",
-    path: path.resolve(__dirname, "public/javascripts")
+    filename: "javascripts/application.js",
+    path: path.resolve(__dirname, "public")
   },
   plugins: [
     new FileIncludeWebpackPlugin({
-      source: "./code/html",
-      destination: ".."
+      source: "./code/html"
     }),
     new RemovePlugin({
       after: {
-        include: ["public/partials"]
+        include: ["partials"]
       }
     })
   ],

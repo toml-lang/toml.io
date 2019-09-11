@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include("partials/head.html", { "title": "TOML: Tom's Obvious Minimal Language" })
+  @@include("partials/head.html", { "title": "TOML: Tom's Obvious Minimal Language" })
 
-<body class="bg-white text-gray-900 font-sans antialiased">
-  @@include("partials/nav.html")
-  <main class="">
-  </main>
-</body>
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    @@include("partials/nav.html")
+    <div class="flex pt-12">
+      <aside class="w-1/5">
+        <nav class="fixed overflow-y-scroll top-0 bottom-0 w-1/5 pt-24 px-8">
+          @@include("partials/spec_nav.html")
+        </nav>
+      </aside>
+
+      <main class="w-4/5 pb-12 px-8">
+        @@include("partials/spec.html")
+      </main>
+    </div>
+  </body>
 </html>
