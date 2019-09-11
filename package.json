@@ -2,9 +2,10 @@
   "name": "toml.io",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
+    "build": "$npm_execpath parse && webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
     "clean": "del 'public/!(images)'",
     "develop": "$npm_execpath serve & $npm_execpath watch",
+    "parse": "node lib/parse_spec.js",
     "rebuild": "$npm_execpath clean && $npm_execpath build",
     "serve": "live-server --watch=./public --mount=/:./public --entry-file='public/404.html'",
     "watch": "webpack --watch & postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css --watch"
