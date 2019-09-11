@@ -5,16 +5,16 @@
   <body class="spec bg-orange-100 text-gray-900 font-sans antialiased" data-controller="nav" data-action="scroll@window->nav#scroll">
     @@include("partials/nav.html")
     <div class="flex pt-12">
-      <aside class="w-1/5">
-        <nav class="fixed overflow-y-scroll top-0 bottom-0 w-1/5 pt-24 px-8">
+      <aside class="hidden lg:w-1/5 lg:block">
+        <nav class="fixed overflow-y-scroll top-0 bottom-0 w-1/5 pt-24 px-4 lg:px-8">
           @@include("partials/spec_nav.html")
         </nav>
       </aside>
 
-      <main class="spec relative w-4/5 pb-12 px-8">
+      <main class="spec relative w-full pb-12 px-4 lg:px-8 lg:w-4/5 ">
         <header class="mb-12">
-          <h1 class="text-4xl mt-12">TOML v1.0 Spec</h2>
-          <p class="text-gray-600">Last updated 11 September 2019</p>
+          <h1 class="font-semibold text-4xl text-orange-900 mt-12">TOML v1.0 Spec</h2>
+          <p class="text-orange-700">Last updated 11 September 2019</p>
         </header>
         @@include("partials/spec.html")
       </main>
