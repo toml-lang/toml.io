@@ -6,6 +6,7 @@
     "clean": "del 'public/!(images|favicon.*)'",
     "dev": "$npm_execpath serve & $npm_execpath watch",
     "netlify": "$npm_execpath watch & netlify dev",
+    "parse": "node lib/parse_spec.js",
     "rebuild": "$npm_execpath clean && $npm_execpath build",
     "serve": "live-server --watch=./public --mount=/:./public --entry-file='public/404.html'",
     "watch": "webpack --watch & postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css --watch"
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@octokit/rest": "^16.28.9",
     "autoprefixer": "^9.6.1",
     "cameronjs": "^0.4.0",
     "markdown-it": "^10.0.0",
