@@ -1,5 +1,5 @@
 [dev]
-  command = "cameron develop"
+  command = "cameronjs dev"
   publish = "public"
   port = 8080
 
@@ -27,7 +27,13 @@
 
 [[redirects]]
   from = "/"
-  to = "/v1"
+  to = "/v1/en"
+  force = true
+  headers = { X-From = 'Netlify' }
+
+[[redirects]]
+  from = "/v1"
+  to = "/v1/en"
   force = true
   headers = { X-From = 'Netlify' }
 

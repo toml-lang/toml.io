@@ -1,6 +1,5 @@
 const path = require("path");
-const FileIncludeWebpackPlugin = require("file-include-webpack-plugin");
-const RemovePlugin = require("remove-files-webpack-plugin");
+const CameronJSHtmlWebpackPlugin = require("cameronjs-html-webpack-plugin");
 
 module.exports = {
   devtool: "source-map",
@@ -11,13 +10,10 @@ module.exports = {
     path: path.resolve(__dirname, "public")
   },
   plugins: [
-    new FileIncludeWebpackPlugin({
-      source: "./code/html"
-    }),
-    new RemovePlugin({
-      after: {
-        include: ["public/partials"]
-      }
+    new CameronJSHtmlWebpackPlugin({
+      source: "./code/html",
+      layouts: "layouts",
+      partials: "partials"
     })
   ],
   watchOptions: {
