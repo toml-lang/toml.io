@@ -13,8 +13,9 @@ export default class extends Controller {
 
   changeLocale(event) {
     let target = event.currentTarget;
+    let path = location.pathname;
 
-    location.href = `/v1/${target.value}`;
+    location.href = path.replace(/[a-z]{2}(\/|$)/, `${target.value}$1`);
   }
 
   addLocales() {
