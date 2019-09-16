@@ -2,7 +2,7 @@
   "name": "toml.io",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
+    "build": "yarn parse && webpack && postcss --verbose code/stylesheets/application.pcss -o public/stylesheets/application.css",
     "clean": "del 'public/!(images|favicon.*)'",
     "dev": "$npm_execpath serve & $npm_execpath watch",
     "netlify": "$npm_execpath watch & netlify dev",
