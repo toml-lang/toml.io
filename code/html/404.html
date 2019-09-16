@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include("partials/head.html", { "title": "TOML: Tom's Obvious Minimal Language" })
-<body class="bg-gray-100 text-gray-900 font-sans antialiased text-center">
-  <main class="inline-block mx-auto py-8 px-24 mt-24 bg-white shadow">
-    404 Not Found
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>@@title</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/stylesheets/application.css" />
+    <script type="text/javascript" src="/javascripts/application.js"></script>
+  </head>
+
+  <body
+    class="bg-gray-100 text-center text-gray-900 font-sans antialiased"
+    data-controller="application"
+  >
+    @@include("header.html", { "specLabel": "Spec" })
+
+    <main class="inline-block mx-auto py-8 px-24 mt-24 bg-white shadow">
+      404 Not Found
+    </main>
+  </body>
 </html>

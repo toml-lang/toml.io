@@ -23,12 +23,20 @@
         <pre class="font-mono font-bold text-sm">v1.0</pre>
       </a>
     </div>
-    <ul class="flex-none flex font-mono font-bold text-sm uppercase">
-      <li class="flex-1 text-center mx-4">
-        <a href="/v1/spec">Spec</a>
+    <ul class="flex items-center font-mono font-bold text-sm">
+      <li class="flex-1 text-center mx-4 uppercase">
+        <a href="/v1/@@specLocale/spec">@@specLabel</a>
       </li>
-      <li class="flex-1 text-center mx-4">
+      <li class="flex-1 text-center mx-4 uppercase">
         <a href="https://github.com/toml-lang/toml">GitHub</a>
+      </li>
+      <li class="text-center mx-4">
+        <select
+          class="inline appearance-none bg-gray-200 text-gray-600 outline-none py-1 px-3"
+          data-target="application.locale"
+          data-action="change->application#changeLocale"
+        >
+        </select>
       </li>
     </ul>
   </nav>
