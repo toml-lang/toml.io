@@ -792,17 +792,17 @@ camelcase@^5.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
-cameronjs-html-webpack-plugin@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/cameronjs-html-webpack-plugin/-/cameronjs-html-webpack-plugin-0.3.0.tgz#56f9cbe4a8b4067b9611fbab6af95acfb0dcf211"
-  integrity sha512-nUFcMKF51ggLpb7x/09wtgzpHRG9CyNRsEV869Xr+vjaZZjvKdV2K4XEKRxPRd+DqchYuDO2lhIQxR6fd/JrzA==
-
-cameronjs@^0.4.1:
+cameronjs-html-webpack-plugin@^0.4.0:
   version "0.4.1"
-  resolved "https://registry.yarnpkg.com/cameronjs/-/cameronjs-0.4.1.tgz#1e0e5dfa6ffcb9c10d1e875b4d7ab17a91acf75d"
-  integrity sha512-gm0ndNyPCDThGISjZj2e5G0Jxznamn6HvNd1vQYVy6FWP11TxI0C5a4dwcsz0gSY3I8TVgkXHbgxX2pBot24Cg==
+  resolved "https://registry.yarnpkg.com/cameronjs-html-webpack-plugin/-/cameronjs-html-webpack-plugin-0.4.1.tgz#a44636929fdba0fe3a830d6278fba28a5b2c5bcf"
+  integrity sha512-fwWMeCHQOdx4f8P18fMwyY7DLA0x8Udv+XZIs1R2k8pxcxwnkzAmpk5/CDn8MWZFT88Ac/IAdesgI9pLpLaeyQ==
+
+cameronjs@^0.4.2:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/cameronjs/-/cameronjs-0.4.3.tgz#c3a32d5e030e5c3d1e36107d67550d9522c9d5c8"
+  integrity sha512-XI5FYxbdyP+qhaijZ0cNIgR4xVkIg9vDUt3iQLZr4qfJkfMeXAaH2cvb2mVDzW2Oo3fEXGF1Do9Hk8Q6kX21oQ==
   dependencies:
-    cameronjs-html-webpack-plugin "^0.3.0"
+    cameronjs-html-webpack-plugin "^0.4.0"
     replace-in-file "^4.1.3"
     yargs "^14.0.0"
 

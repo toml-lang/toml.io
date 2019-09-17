@@ -21,7 +21,7 @@
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "@octokit/rest": "^16.28.9",
     "autoprefixer": "^9.6.1",
-    "cameronjs": "^0.4.1",
+    "cameronjs": "^0.4.2",
     "markdown-it": "^10.0.0",
     "node-fetch": "^2.6.0",
     "postcss-cli": "^6.1.3",
