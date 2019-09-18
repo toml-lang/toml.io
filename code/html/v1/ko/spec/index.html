@@ -3,10 +3,19 @@
 <!-- prettier-ignore -->
 @@include("header.html", { "specLocale": "ko", "specLabel": "Spec" })
 
-<div class="spec">
-  <div class="flex pt-12">
-    <aside class="hidden lg:w-1/5 lg:block">
-      <nav class="fixed overflow-y-scroll top-0 bottom-0 w-1/5 pt-24 px-4 lg:px-8">
+<div class="spec" data-controller="nav" data-action="scroll@window->nav#scroll">
+  <div class="lg:flex pt-12">
+    <aside class="w-full bg-white lg:w-1/5 lg:block">
+      <div class="fixed bg-white z-20 left-0 right-0 mt-3 pl-4 py-4 border-b lg:hidden" data-target="nav.menuLink">
+        <div class="relative">
+          <a href="#" class="block font-semibold lg:hidden text-orange-800" data-action="click->nav#onMenuClick">Menu</a>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <nav class="hidden fixed w-full overflow-y-scroll top-0 bottom-0 bg-white z-10 py-32 pb-8 px-4 lg:w-auto lg:block lg:pl-8 lg:py-24" data-target="nav.menu">
         <div class="inline-block relative">
           <select
             class="inline appearance-none bg-white text-gray-800 outline-none border py-1 pl-3 pr-12"
@@ -22,7 +31,7 @@
       </nav>
     </aside>
 
-    <main class="spec relative w-full pb-12 px-4 lg:px-8 lg:w-4/5 ">
+    <main class="spec relative w-full pb-12 px-4 lg:mt-0 lg:px-8 lg:w-4/5">
       @@include("v1/ko/spec/spec.html")
     </main>
   </div>

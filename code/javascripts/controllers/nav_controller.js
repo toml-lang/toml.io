@@ -2,10 +2,25 @@ import { Controller } from "stimulus";
 
 export default class extends Controller {
   static get targets() {
-    return ["link", "header"];
+    return ["link", "menuLink", "header", "menu"];
+  }
+
+  onMenuClick(event) {
+    this.menuTarget.classList.toggle("hidden");
+    if (event) {
+      event.preventDefault();
+    }
+  }
+
+  click(event) {
+    // if the menu link is not hidden then we're on mobile and need to hide it
+    if (this.isMobile) {
+      this.onMenuClick();
+    }
   }
 
   scroll() {
+    console.log("scroll");
     let scrolledElements = this.headerTargets
       .map(target => {
         if (target.offsetTop < window.scrollY) {
@@ -26,5 +41,9 @@ export default class extends Controller {
         })
         .classList.add("active");
     }
+  }
+
+  get isMobile() {
+    return !this.menuTarget.classList.contains("hidden");
   }
 }
