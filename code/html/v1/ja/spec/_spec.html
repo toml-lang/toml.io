@@ -8,10 +8,14 @@
 特定のバージョンに関する仕様については<code>versions</code>ディレクトリ以下を参照してください。</p>
 <p>バージョン0.5.0になり、TOMLの仕様は非常に安定しています。
 将来出るバージョン1.0.0の目標として可能な限りの0.5.0との後方互換性を目指しています。1.0.0への移行をシンプルにするため、全てのTOMLの実装は0.5.0に準拠するよう推奨されます。</p>
-<h2 id="目的" data-target="nav.header">目的</h2>
+<h2 id="user-content-目的" data-target="nav.header">
+        <a href="#user-content-目的">目的</a>
+      </h2>
 <p>TOMLは明瞭なセマンティクスを持ち、可読性の高い、ミニマルな設定ファイルフォーマットとなることを目的として作られています。TOMLは曖昧さなしに連想配列に変換できるよう設計されていて、
 様々な言語上でそれらのデータ構造に展開することが出来ます。</p>
-<h2 id="目次" data-target="nav.header">目次</h2>
+<h2 id="user-content-目次" data-target="nav.header">
+        <a href="#user-content-目次">目次</a>
+      </h2>
 <ul>
 <li><a href="#%E4%BE%8B">例</a></li>
 <li><a href="#%E4%BB%95%E6%A7%98">仕様</a></li>
@@ -36,7 +40,9 @@
 <li><a href="#%E8%B2%A2%E7%8C%AE%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">貢献について</a></li>
 <li><a href="#wiki">Wiki</a></li>
 </ul>
-<h2 id="例" data-target="nav.header">例</h2>
+<h2 id="user-content-例" data-target="nav.header">
+        <a href="#user-content-例">例</a>
+      </h2>
 <pre><code data-controller="snippet" class="language-toml"># TOMLドキュメントの例です。
 
 title = &quot;TOML Example&quot;
@@ -71,19 +77,25 @@ hosts = [
   &quot;omega&quot;
 ]
 </code></pre>
-<h2 id="仕様" data-target="nav.header">仕様</h2>
+<h2 id="user-content-仕様" data-target="nav.header">
+        <a href="#user-content-仕様">仕様</a>
+      </h2>
 <ul>
 <li>TOMLはケース・センシティブです</li>
 <li>TOMLファイルはユニコード(UTF-8)でエンコードされている必要があります</li>
 <li>空白はタブ(0x09)もしくはスペース(0x20)のことです</li>
 <li>改行はLF(0x0A)もしくはCRLF(0x0D0A)です。</li>
 </ul>
-<h2 id="コメント" data-target="nav.header">コメント</h2>
+<h2 id="user-content-コメント" data-target="nav.header">
+        <a href="#user-content-コメント">コメント</a>
+      </h2>
 <p>ハッシュ記号(<code>#</code>)に続けて改行までをコメントとします。</p>
 <pre><code data-controller="snippet" class="language-toml"># 好きなようにコメントできます。
 key = &quot;value&quot; # 行末までコメントです。
 </code></pre>
-<h2 id="キーと値の組" data-target="nav.header">キーと値の組</h2>
+<h2 id="user-content-キーと値の組" data-target="nav.header">
+        <a href="#user-content-キーと値の組">キーと値の組</a>
+      </h2>
 <p>TOML文書の最も基本的な構造はキーと値の組からなります。</p>
 <p>キーは等号（<code>=</code>）の左に、値は右に記述します。
 キーと値の周りにある空白は無視されます。
@@ -93,7 +105,9 @@ key = &quot;value&quot; # 行末までコメントです。
 <p>値は、文字列、整数、浮動少数、ブーリアン、日時、配列もしくはインライン・テーブルのいずれかのデータ型でなければなりません。未定義の値は不正となります。</p>
 <pre><code data-controller="snippet" class="language-toml">key = # 不正
 </code></pre>
-<h2 id="キー" data-target="nav.header">キー</h2>
+<h2 id="user-content-キー" data-target="nav.header">
+        <a href="#user-content-キー">キー</a>
+      </h2>
 <p>キーはベア・キー、クォーテッド・キー、ドッテッド・キーのいずれかになります。</p>
 <p><strong>ベア・キー</strong>はASCII英数字とアンダースコア、ダッシュのみ含みます（<code>A-Za-z0-9_-</code>）。注意点としてベア・キーはASCII数字のみの構成でも構いません（例: <code>1234</code>）。ただし、常に文字列として解釈されます。</p>
 <pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
@@ -146,7 +160,9 @@ a.b = 1
 a.b.c = 2
 </code></pre>
 <p>訳注：ドッテッド・キーは階層構造をとるため、末端のキーより上の階層のキーに新たに別のキーを子として生やしても構いません。末端のキーはすでに値をアサインしてしまっているため、再度記述することは不正になります。</p>
-<h2 id="文字列" data-target="nav.header">文字列</h2>
+<h2 id="user-content-文字列" data-target="nav.header">
+        <a href="#user-content-文字列">文字列</a>
+      </h2>
 <p>文字列を記述するには、4種類の方法があります。基本文字列、複数行基本文字列、リテラル文字列、複数行リテラル文字列です。</p>
 <p><strong>基本文字列</strong>はクォーテーションマーク(<code>&quot;</code>)で囲まれた文字列です。
 クォーテーションマーク、バックスラッシュ、制御文字(U+0000 〜 U+001F、U+007F)はエスケープする必要があります。その他のユニコード文字は全て文字列内で使えます。</p>
@@ -216,7 +232,9 @@ lines  = '''
 </code></pre>
 <p>タブを除く制御文字をリテラル文字列に使うことは出来ません。
 よって、バイナリデータを扱う際には、Base64か、他の適切なASCIIもしくはUTF-8のエンコーディング形式でエンコードすることを推奨します。そして、それらのエンコーディングは（TOMLを読み込む）アプリケーション側で取り扱う必要があります。</p>
-<h2 id="整数" data-target="nav.header">整数</h2>
+<h2 id="user-content-整数" data-target="nav.header">
+        <a href="#user-content-整数">整数</a>
+      </h2>
 <p>整数は全ての数のことです(訳注：整数全体のことだと思われる)。正の数を表すときはプラス符号<code>+</code>を前につけても、つけなくても構いません。負の数の場合はマイナス符号<code>-</code>を前につけます。</p>
 <pre><code data-controller="snippet" class="language-toml">int1 = +99
 int2 = 42
@@ -244,7 +262,9 @@ oct2 = 0o755 # Unixのファイルパーミッションを表すのに便利で�
 bin1 = 0b11010110
 </code></pre>
 <p>許容される範囲としては、64bit(signed long)となります(−9,223,372,036,854,775,808 〜 9,223,372,036,854,775,807)。</p>
-<h2 id="浮動小数点数" data-target="nav.header">浮動小数点数</h2>
+<h2 id="user-content-浮動小数点数" data-target="nav.header">
+        <a href="#user-content-浮動小数点数">浮動小数点数</a>
+      </h2>
 <p>浮動小数点数はIEEE754 64ビット倍精度で実装されます。</p>
 <p>小数は整数部（整数型と同じルールで記述）と、それに続く小数部もしくは指数部から成ります。小数部と指数部の両方で表すことも出来ますが、その場合は小数部を指数部より前に置く必要があります。</p>
 <pre><code data-controller="snippet" class="language-toml"># 小数表記
@@ -278,12 +298,16 @@ sf4 = nan  # sNaNかqNaNかは実装依存です
 sf5 = +nan # `nan`と同じ
 sf6 = -nan # 許容されますが、展開は実装依存です
 </code></pre>
-<h2 id="ブーリアン" data-target="nav.header">ブーリアン</h2>
+<h2 id="user-content-ブーリアン" data-target="nav.header">
+        <a href="#user-content-ブーリアン">ブーリアン</a>
+      </h2>
 <p>ブーリアン値はただのトークンです（皆がいつも使っているやつです）。小文字のみとします。</p>
 <pre><code data-controller="snippet" class="language-toml">bool1 = true
 bool2 = false
 </code></pre>
-<h2 id="オフセット付き日時" data-target="nav.header">オフセット付き日時</h2>
+<h2 id="user-content-オフセット付き日時" data-target="nav.header">
+        <a href="#user-content-オフセット付き日時">オフセット付き日時</a>
+      </h2>
 <p>明確に特定の瞬間を表現するために<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>表記のオフセット付き日時を使います。</p>
 <pre><code data-controller="snippet" class="language-toml">odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
@@ -293,23 +317,31 @@ odt3 = 1979-05-27T00:32:00.999999-07:00
 <pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z
 </code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="ローカルの日時" data-target="nav.header">ローカルの日時</h2>
+<h2 id="user-content-ローカルの日時" data-target="nav.header">
+        <a href="#user-content-ローカルの日時">ローカルの日時</a>
+      </h2>
 <p>もしあなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>のオフセットを省略するのであれば、その値はオフセットやタイムゾーンなしの日時として扱われます。そしてその値は追加の情報なしには特定の瞬間を表すデータに変換されることはありません。仮にそのようなデータに変換する必要がある場合、その変換は実装依存となります。</p>
 <pre><code data-controller="snippet" class="language-toml">ldt1 = 1979-05-27T07:32:00
 ldt2 = 1979-05-27T00:32:00.999999
 </code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="ローカルの日付" data-target="nav.header">ローカルの日付</h2>
+<h2 id="user-content-ローカルの日付" data-target="nav.header">
+        <a href="#user-content-ローカルの日付">ローカルの日付</a>
+      </h2>
 <p>もし、あなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>日時の日付部分のみを記述したならば、それはオフセットやタイムゾーンなしの、その日付そのものを表すデータとなります。</p>
 <pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27
 </code></pre>
-<h2 id="ローカルの時刻" data-target="nav.header">ローカルの時刻</h2>
+<h2 id="user-content-ローカルの時刻" data-target="nav.header">
+        <a href="#user-content-ローカルの時刻">ローカルの時刻</a>
+      </h2>
 <p>もし、あなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>日時の時刻部分のみを記述したならば、それはオフセットやタイムゾーンなしの、その時刻そのものを表すデータとなります。</p>
 <pre><code data-controller="snippet" class="language-toml">lt1 = 07:32:00
 lt2 = 00:32:00.999999
 </code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="配列" data-target="nav.header">配列</h2>
+<h2 id="user-content-配列" data-target="nav.header">
+        <a href="#user-content-配列">配列</a>
+      </h2>
 <p>配列は角括弧で囲まれた値の集まりです。空白は無視されます。各要素はカンマで区切られます。各データ型を混合させることは出来ません（文字列は全て同じ型だと考えてください。また中の要素がそれぞれ異なる配列同士も同じ型とします）。</p>
 <pre><code data-controller="snippet" class="language-toml">arr1 = [ 1, 2, 3 ]
 arr2 = [ &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot; ]
@@ -329,7 +361,9 @@ arr8 = [
   2, # OK
 ]
 </code></pre>
-<h2 id="テーブル" data-target="nav.header">テーブル</h2>
+<h2 id="user-content-テーブル" data-target="nav.header">
+        <a href="#user-content-テーブル">テーブル</a>
+      </h2>
 <p>テーブル（ハッシュテーブルや連想配列のことです）はキーと値の組からなる集まりです。それは角括弧で囲まれたテーブル名が書かれた行から始まります。配列は必ず（キーと組になった）値として表記されるので、テーブルの角括弧と配列は簡単に区別することが出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml">[table]
 </code></pre>
@@ -381,7 +415,9 @@ b = 1
 [a.b]
 c = 2
 </code></pre>
-<h2 id="インライン・テーブル" data-target="nav.header">インライン・テーブル</h2>
+<h2 id="user-content-インライン・テーブル" data-target="nav.header">
+        <a href="#user-content-インライン・テーブル">インライン・テーブル</a>
+      </h2>
 <p>インライン・テーブルはテーブルを表現するためのよりコンパクトな構文です。他の表現だと冗長になるようなグループになったデータを表すのに向いています。インライン・テーブルは波括弧（<code>{</code>と<code>}</code>）で囲まれている必要があります。波括弧の中では、キーと値のペアをカンマ区切りでゼロ個以上置くことが出来ます。値にはインライン・テーブル自体を含む全ての型を使うことが出来ます。</p>
 <p>インライン・テーブルは一行で表現されるべきです。波括弧の内側では改行は認められません。ただし、それぞれの値の中で改行することは、それぞれの値型で認められている範囲で出来ます。ですが、出来るとしてもインライン・テーブルを複数行に分割することはなるべく避けるべきです。もしあなたがその必要があるように感じたのならば、普通のテーブルを用いるべきです。</p>
 <pre><code data-controller="snippet" class="language-toml">name = { first = &quot;Tom&quot;, last = &quot;Preston-Werner&quot; }
@@ -401,7 +437,9 @@ y = 2
 type.name = &quot;pug&quot;
 
 </code></pre>
-<h2 id="テーブルの配列" data-target="nav.header">テーブルの配列</h2>
+<h2 id="user-content-テーブルの配列" data-target="nav.header">
+        <a href="#user-content-テーブルの配列">テーブルの配列</a>
+      </h2>
 <p>最後に説明する型はテーブルの配列です。テーブル名を角括弧で二重に囲むことで表されます。二重角括弧で囲まれた同じテーブル名を持つテーブルは、一つの配列の要素となります。テーブルは表記順に配列に挿入されます。配列内のキーと値のペアを持たないテーブルは空のテーブルとして扱われます。</p>
 <pre><code data-controller="snippet" class="language-toml">[[products]]
 name = &quot;Hammer&quot;
@@ -485,19 +523,29 @@ fruit = []
   [fruit.variety]
     name = &quot;granny smith&quot;
 </code></pre>
-<h2 id="ファイル名（拡張子）" data-target="nav.header">ファイル名（拡張子）</h2>
+<h2 id="user-content-ファイル名（拡張子）" data-target="nav.header">
+        <a href="#user-content-ファイル名（拡張子）">ファイル名（拡張子）</a>
+      </h2>
 <p>TOMLのファイルは<code>.toml</code>という拡張子を付ける必要があります。</p>
-<h2 id="mime-type" data-target="nav.header">MIME Type</h2>
+<h2 id="user-content-mime-type" data-target="nav.header">
+        <a href="#user-content-mime-type">MIME Type</a>
+      </h2>
 <p>インターネット経由でTOMLファイルを転送する場合、ふさわしいMIMEタイプは<code>application/toml</code>です。</p>
-<h2 id="他のフォーマットとの比較" data-target="nav.header">他のフォーマットとの比較</h2>
+<h2 id="user-content-他のフォーマットとの比較" data-target="nav.header">
+        <a href="#user-content-他のフォーマットとの比較">他のフォーマットとの比較</a>
+      </h2>
 <p>いくつかの側面ではTOMLはJSONにとても似通っています。
 シンプルで、仕様がよく定義されており、どこにでもあるデータ型に変換するのが簡単です。
 JSONはコンピューター・プログラムが読み書きするデータをシリアライズするにはぴったりのフォーマットです。TOMLがJSONと異なるのは、人間が読み書きするのにやさしいフォーマットというところに重点を置いているところです。コメントが良い例です。それらはプログラムがデータをやり取りする上では何の意味も持ちません。ですが設定ファイルを人が手で編集するときにはとても助けになるのです。</p>
 <p>YAMLフォーマットはTOMLのように設定ファイルを記述するのに向いています。しかし、多くの場合、YAMLは複雑すぎる選択肢となってしまっています。TOMLは、<a href="http://www.yaml.org/spec/1.2/spec.html">YAMLの仕様</a>とは真逆のシンプルさを目標としています。</p>
 <p>INIフォーマットもまた設定ファイルを記述するのによく使われています。しかし、このフォーマットは標準化されていませんし、1つか2つのネストを超える複雑さを扱うには向いていません。</p>
-<h2 id="貢献について" data-target="nav.header">貢献について</h2>
+<h2 id="user-content-貢献について" data-target="nav.header">
+        <a href="#user-content-貢献について">貢献について</a>
+      </h2>
 <p>ドキュメント化、バグレポート、プルリクエスト、その他のコントリビューションは常に歓迎しています！</p>
-<h2 id="wiki" data-target="nav.header">Wiki</h2>
+<h2 id="user-content-wiki" data-target="nav.header">
+        <a href="#user-content-wiki">Wiki</a>
+      </h2>
 <p>私達には<a href="https://github.com/toml-lang/toml/wiki">Official TOML Wiki</a>があります。
 そこには以下の情報が集まっています。</p>
 <ul>

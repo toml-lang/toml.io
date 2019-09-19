@@ -6,11 +6,15 @@
 version 1.0.0 to be backwards compatible (as much as humanly possible) with
 version 0.5.0. All implementations are strongly encouraged to become 0.5.0
 compatible so that the transition to 1.0.0 will be simple when that happens.</p>
-<h2 id="objectives" data-target="nav.header">Objectives</h2>
+<h2 id="user-content-objectives" data-target="nav.header">
+        <a href="#user-content-objectives">Objectives</a>
+      </h2>
 <p>TOML aims to be a minimal configuration file format that's easy to read due to
 obvious semantics. TOML is designed to map unambiguously to a hash table. TOML
 should be easy to parse into data structures in a wide variety of languages.</p>
-<h2 id="table-of-contents" data-target="nav.header">Table of contents</h2>
+<h2 id="user-content-table-of-contents" data-target="nav.header">
+        <a href="#user-content-table-of-contents">Table of contents</a>
+      </h2>
 <ul>
 <li><a href="#user-content-example">Example</a></li>
 <li><a href="#user-content-spec">Spec</a></li>
@@ -34,7 +38,9 @@ should be easy to parse into data structures in a wide variety of languages.</p>
 <li><a href="#user-content-get-involved">Get Involved</a></li>
 <li><a href="#user-content-wiki">Wiki</a></li>
 </ul>
-<h2 id="example" data-target="nav.header">Example</h2>
+<h2 id="user-content-example" data-target="nav.header">
+        <a href="#user-content-example">Example</a>
+      </h2>
 <pre><code data-controller="snippet" class="language-toml"># This is a TOML document.
 
 title = &quot;TOML Example&quot;
@@ -69,19 +75,25 @@ hosts = [
   &quot;omega&quot;
 ]
 </code></pre>
-<h2 id="spec" data-target="nav.header">Spec</h2>
+<h2 id="user-content-spec" data-target="nav.header">
+        <a href="#user-content-spec">Spec</a>
+      </h2>
 <ul>
 <li>TOML is case sensitive.</li>
 <li>A TOML file must be a valid UTF-8 encoded Unicode document.</li>
 <li>Whitespace means tab (0x09) or space (0x20).</li>
 <li>Newline means LF (0x0A) or CRLF (0x0D0A).</li>
 </ul>
-<h2 id="comment" data-target="nav.header">Comment</h2>
+<h2 id="user-content-comment" data-target="nav.header">
+        <a href="#user-content-comment">Comment</a>
+      </h2>
 <p>A hash symbol marks the rest of the line as a comment.</p>
 <pre><code data-controller="snippet" class="language-toml"># This is a full-line comment
 key = &quot;value&quot; # This is a comment at the end of a line
 </code></pre>
-<h2 id="key-value-pair" data-target="nav.header">Key/Value Pair</h2>
+<h2 id="user-content-key-value-pair" data-target="nav.header">
+        <a href="#user-content-key-value-pair">Key/Value Pair</a>
+      </h2>
 <p>The primary building block of a TOML document is the key/value pair.</p>
 <p>Keys are on the left of the equals sign and values are on the right. Whitespace
 is ignored around key names and values. The key, equals sign, and value must be
@@ -92,7 +104,9 @@ on the same line (though some values can be broken over multiple lines).</p>
 Datetime, Array, or Inline Table. Unspecified values are invalid.</p>
 <pre><code data-controller="snippet" class="language-toml">key = # INVALID
 </code></pre>
-<h2 id="keys" data-target="nav.header">Keys</h2>
+<h2 id="user-content-keys" data-target="nav.header">
+        <a href="#user-content-keys">Keys</a>
+      </h2>
 <p>A key may be either bare, quoted or dotted.</p>
 <p><strong>Bare keys</strong> may only contain ASCII letters, ASCII digits, underscores, and
 dashes (<code>A-Za-z0-9_-</code>). Note that bare keys are allowed to be composed of only
@@ -152,7 +166,9 @@ a.d = 2
 a.b = 1
 a.b.c = 2
 </code></pre>
-<h2 id="string" data-target="nav.header">String</h2>
+<h2 id="user-content-string" data-target="nav.header">
+        <a href="#user-content-string">String</a>
+      </h2>
 <p>There are four ways to express strings: basic, multi-line basic, literal, and
 multi-line literal. All strings must contain only valid UTF-8 characters.</p>
 <p><strong>Basic strings</strong> are surrounded by quotation marks. Any Unicode character may
@@ -245,7 +261,9 @@ trimmed in raw strings.
 <p>Control characters other than tab are not permitted in a literal string. Thus,
 for binary data it is recommended that you use Base64 or another suitable ASCII
 or UTF-8 encoding. The handling of that encoding will be application specific.</p>
-<h2 id="integer" data-target="nav.header">Integer</h2>
+<h2 id="user-content-integer" data-target="nav.header">
+        <a href="#user-content-integer">Integer</a>
+      </h2>
 <p>Integers are whole numbers. Positive numbers may be prefixed with a plus sign.
 Negative numbers are prefixed with a minus sign.</p>
 <pre><code data-controller="snippet" class="language-toml">int1 = +99
@@ -280,7 +298,9 @@ bin1 = 0b11010110
 </code></pre>
 <p>64 bit (signed long) range expected (−9,223,372,036,854,775,808 to
 9,223,372,036,854,775,807).</p>
-<h2 id="float" data-target="nav.header">Float</h2>
+<h2 id="user-content-float" data-target="nav.header">
+        <a href="#user-content-float">Float</a>
+      </h2>
 <p>Floats should be implemented as IEEE 754 binary64 values.</p>
 <p>A float consists of an integer part (which follows the same rules as integer
 values) followed by a fractional part and/or an exponent part. If both a
@@ -318,12 +338,16 @@ sf4 = nan  # actual sNaN/qNaN encoding is implementation specific
 sf5 = +nan # same as `nan`
 sf6 = -nan # valid, actual encoding is implementation specific
 </code></pre>
-<h2 id="boolean" data-target="nav.header">Boolean</h2>
+<h2 id="user-content-boolean" data-target="nav.header">
+        <a href="#user-content-boolean">Boolean</a>
+      </h2>
 <p>Booleans are just the tokens you're used to. Always lowercase.</p>
 <pre><code data-controller="snippet" class="language-toml">bool1 = true
 bool2 = false
 </code></pre>
-<h2 id="offset-date-time" data-target="nav.header">Offset Date-Time</h2>
+<h2 id="user-content-offset-date-time" data-target="nav.header">
+        <a href="#user-content-offset-date-time">Offset Date-Time</a>
+      </h2>
 <p>To unambiguously represent a specific instant in time, you may use an
 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> formatted date-time with offset.</p>
 <pre><code data-controller="snippet" class="language-toml">odt1 = 1979-05-27T07:32:00Z
@@ -338,7 +362,9 @@ time with a space (as permitted by RFC 3339 section 5.6).</p>
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="local-date-time" data-target="nav.header">Local Date-Time</h2>
+<h2 id="user-content-local-date-time" data-target="nav.header">
+        <a href="#user-content-local-date-time">Local Date-Time</a>
+      </h2>
 <p>If you omit the offset from an <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>
 formatted date-time, it will represent the given date-time without any relation
 to an offset or timezone. It cannot be converted to an instant in time without
@@ -351,13 +377,17 @@ ldt2 = 1979-05-27T00:32:00.999999
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="local-date" data-target="nav.header">Local Date</h2>
+<h2 id="user-content-local-date" data-target="nav.header">
+        <a href="#user-content-local-date">Local Date</a>
+      </h2>
 <p>If you include only the date portion of an
 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> formatted date-time, it will
 represent that entire day without any relation to an offset or timezone.</p>
 <pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27
 </code></pre>
-<h2 id="local-time" data-target="nav.header">Local Time</h2>
+<h2 id="user-content-local-time" data-target="nav.header">
+        <a href="#user-content-local-time">Local Time</a>
+      </h2>
 <p>If you include only the time portion of an <a href="http://tools.ietf.org/html/rfc3339">RFC
 3339</a> formatted date-time, it will represent
 that time of day without any relation to a specific day or any offset or
@@ -369,7 +399,9 @@ lt2 = 00:32:00.999999
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="array" data-target="nav.header">Array</h2>
+<h2 id="user-content-array" data-target="nav.header">
+        <a href="#user-content-array">Array</a>
+      </h2>
 <p>Arrays are square brackets with values inside. Whitespace is ignored. Elements
 are separated by commas. Data types may not be mixed (different ways to define
 strings should be considered the same type, and so should arrays with different
@@ -394,7 +426,9 @@ arr8 = [
   2, # this is ok
 ]
 </code></pre>
-<h2 id="table" data-target="nav.header">Table</h2>
+<h2 id="user-content-table" data-target="nav.header">
+        <a href="#user-content-table">Table</a>
+      </h2>
 <p>Tables (also known as hash tables or dictionaries) are collections of key/value
 pairs. They appear in square brackets on a line by themselves. You can tell them
 apart from arrays because arrays are only ever values.</p>
@@ -449,7 +483,9 @@ b = 1
 [a.b]
 c = 2
 </code></pre>
-<h2 id="inline-table" data-target="nav.header">Inline Table</h2>
+<h2 id="user-content-inline-table" data-target="nav.header">
+        <a href="#user-content-inline-table">Inline Table</a>
+      </h2>
 <p>Inline tables provide a more compact syntax for expressing tables. They are
 especially useful for grouped data that can otherwise quickly become verbose.
 Inline tables are enclosed in curly braces <code>{</code> and <code>}</code>. Within the braces, zero
@@ -478,7 +514,9 @@ y = 2
 type.name = &quot;pug&quot;
 
 </code></pre>
-<h2 id="array-of-tables" data-target="nav.header">Array of Tables</h2>
+<h2 id="user-content-array-of-tables" data-target="nav.header">
+        <a href="#user-content-array-of-tables">Array of Tables</a>
+      </h2>
 <p>The last type that has not yet been expressed is an array of tables. These can
 be expressed by using a table name in double brackets. Each table with the same
 double bracketed name will be an element in the array. The tables are inserted
@@ -574,12 +612,18 @@ array must produce an error at parse time.</p>
            { x = 7, y = 8, z = 9 },
            { x = 2, y = 4, z = 8 } ]
 </code></pre>
-<h2 id="filename-extension" data-target="nav.header">Filename Extension</h2>
+<h2 id="user-content-filename-extension" data-target="nav.header">
+        <a href="#user-content-filename-extension">Filename Extension</a>
+      </h2>
 <p>TOML files should use the extension <code>.toml</code>.</p>
-<h2 id="mime-type" data-target="nav.header">MIME Type</h2>
+<h2 id="user-content-mime-type" data-target="nav.header">
+        <a href="#user-content-mime-type">MIME Type</a>
+      </h2>
 <p>When transferring TOML files over the internet, the appropriate MIME type is
 <code>application/toml</code>.</p>
-<h2 id="comparison-with-other-formats" data-target="nav.header">Comparison with Other Formats</h2>
+<h2 id="user-content-comparison-with-other-formats" data-target="nav.header">
+        <a href="#user-content-comparison-with-other-formats">Comparison with Other Formats</a>
+      </h2>
 <p>In some ways TOML is very similar to JSON: simple, well-specified, and
 maps easily to ubiquitous data types. JSON is great for serializing
 data that will mostly be read and written by computer programs. Where
@@ -594,10 +638,14 @@ the YAML specification: http://www.yaml.org/spec/1.2/spec.html</p>
 <p>The INI format is also frequently used for configuration files. The
 format is not standardized, however, and usually does not handle more
 than one or two levels of nesting.</p>
-<h2 id="get-involved" data-target="nav.header">Get Involved</h2>
+<h2 id="user-content-get-involved" data-target="nav.header">
+        <a href="#user-content-get-involved">Get Involved</a>
+      </h2>
 <p>Documentation, bug reports, pull requests, and all other contributions
 are welcome!</p>
-<h2 id="wiki" data-target="nav.header">Wiki</h2>
+<h2 id="user-content-wiki" data-target="nav.header">
+        <a href="#user-content-wiki">Wiki</a>
+      </h2>
 <p>We have an <a href="https://github.com/toml-lang/toml/wiki">Official TOML Wiki</a> that
 catalogs the following:</p>
 <ul>
