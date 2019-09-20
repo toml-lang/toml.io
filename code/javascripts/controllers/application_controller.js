@@ -15,7 +15,7 @@ export default class extends Controller {
     let target = event.currentTarget;
     let path = location.pathname;
 
-    location.href = path.replace(/[a-z]{2}(\/|$)/, `${target.value}$1`);
+    location.href = path.replace(/[a-z]{2}(\/|$)/, `${target.value}$1`) + location.hash;
   }
 
   addLocales() {
