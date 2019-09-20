@@ -14,7 +14,7 @@ export default class extends Controller {
 
   click(event) {
     // if the menu link is not hidden then we're on mobile and need to hide it
-    if (this.isMobile) {
+    if (this.hasCompactMenu) {
       this.onMenuClick();
     }
   }
@@ -43,7 +43,7 @@ export default class extends Controller {
     }
   }
 
-  get isMobile() {
+  get hasCompactMenu() {
     return !this.menuTarget.classList.contains("hidden");
   }
 }
