@@ -40,10 +40,10 @@ export default class extends Controller {
 
   get locales() {
     return {
-      cn: "🇨🇳 cn",
-      en: "🇺🇸 en",
-      ja: "🇯🇵 ja",
-      ko: "🇰🇷 ko"
+      cn: "中文",
+      en: "English",
+      ja: "日本語",
+      ko: "한국어"
     };
   }
 }
