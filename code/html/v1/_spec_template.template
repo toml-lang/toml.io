@@ -1,7 +1,7 @@
 @@layout("application", { "title" : "TOML: {{ specTitle }}" })
 
 <!-- prettier-ignore -->
-@@include("header.html", { "specLocale": "{{ locale }}", "specLabel": "{{ specTitle }}" })
+@@include("header.html", { "specLocale": "{{ locale }}" })
 
 <div class="spec" data-controller="nav" data-action="scroll@window->nav#scroll">
   <div class="lg:flex pt-12">

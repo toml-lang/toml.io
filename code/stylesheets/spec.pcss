@@ -4,6 +4,10 @@
   }
 }
 
+a {
+  @apply underline;
+}
+
 .spec {
   aside {
     ul {
@@ -14,8 +18,11 @@
       @apply text-orange-700 mt-3;
     }
 
-    a.active {
-      @apply font-semibold text-orange-900;
+    a {
+      @apply no-underline;
+      &.active {
+        @apply font-semibold text-orange-900;
+      }
     }
   }
 
@@ -31,6 +38,12 @@
 
     h1 {
       @apply pt-16 mt-0;
+    }
+
+    h2 {
+      a {
+        @apply no-underline;
+      }
     }
 
     p {

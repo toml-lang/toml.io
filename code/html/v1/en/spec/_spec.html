@@ -1,6 +1,6 @@
 <p><img src="../../logos/toml-200.png" alt="TOML Logo"></p>
-<h1>TOML v0.5.0</h1>
-<p>Tom's Obvious, Minimal Language.</p>
+<h1 id="toml-v050">TOML v0.5.0</h1>
+<p>Tom&#39;s Obvious, Minimal Language.</p>
 <p>By Tom Preston-Werner.</p>
 <p>As of version 0.5.0, TOML should be considered extremely stable. The goal is for
 version 1.0.0 to be backwards compatible (as much as humanly possible) with
@@ -9,37 +9,11 @@ compatible so that the transition to 1.0.0 will be simple when that happens.</p>
 <h2 id="section-1" data-target="nav.header">
         <a href="#section-1">Objectives</a>
       </h2>
-<p>TOML aims to be a minimal configuration file format that's easy to read due to
+<p>TOML aims to be a minimal configuration file format that&#39;s easy to read due to
 obvious semantics. TOML is designed to map unambiguously to a hash table. TOML
 should be easy to parse into data structures in a wide variety of languages.</p>
 <h2 id="section-2" data-target="nav.header">
-        <a href="#section-2">Table of contents</a>
-      </h2>
-<ul>
-<li><a href="#user-content-example">Example</a></li>
-<li><a href="#user-content-spec">Spec</a></li>
-<li><a href="#user-content-comment">Comment</a></li>
-<li><a href="#user-content-keyvalue-pair">Key/Value Pair</a></li>
-<li><a href="#user-content-keys">Keys</a></li>
-<li><a href="#user-content-string">String</a></li>
-<li><a href="#user-content-integer">Integer</a></li>
-<li><a href="#user-content-float">Float</a></li>
-<li><a href="#user-content-boolean">Boolean</a></li>
-<li><a href="#user-content-offset-date-time">Offset Date-Time</a></li>
-<li><a href="#user-content-local-date-time">Local Date-Time</a></li>
-<li><a href="#user-content-local-date">Local Date</a></li>
-<li><a href="#user-content-local-time">Local Time</a></li>
-<li><a href="#user-content-array">Array</a></li>
-<li><a href="#user-content-table">Table</a></li>
-<li><a href="#user-content-inline-table">Inline Table</a></li>
-<li><a href="#user-content-array-of-tables">Array of Tables</a></li>
-<li><a href="#user-content-filename-extension">Filename Extension</a></li>
-<li><a href="#user-content-comparison-with-other-formats">Comparison with Other Formats</a></li>
-<li><a href="#user-content-get-involved">Get Involved</a></li>
-<li><a href="#user-content-wiki">Wiki</a></li>
-</ul>
-<h2 id="section-3" data-target="nav.header">
-        <a href="#section-3">Example</a>
+        <a href="#section-2">Example</a>
       </h2>
 <pre><code data-controller="snippet" class="language-toml"># This is a TOML document.
 
@@ -73,10 +47,9 @@ data = [ [&quot;gamma&quot;, &quot;delta&quot;], [1, 2] ]
 hosts = [
   &quot;alpha&quot;,
   &quot;omega&quot;
-]
-</code></pre>
-<h2 id="section-4" data-target="nav.header">
-        <a href="#section-4">Spec</a>
+]</code></pre>
+<h2 id="section-3" data-target="nav.header">
+        <a href="#section-3">Spec</a>
       </h2>
 <ul>
 <li>TOML is case sensitive.</li>
@@ -84,28 +57,25 @@ hosts = [
 <li>Whitespace means tab (0x09) or space (0x20).</li>
 <li>Newline means LF (0x0A) or CRLF (0x0D0A).</li>
 </ul>
-<h2 id="section-5" data-target="nav.header">
-        <a href="#section-5">Comment</a>
+<h2 id="section-4" data-target="nav.header">
+        <a href="#section-4">Comment</a>
       </h2>
 <p>A hash symbol marks the rest of the line as a comment.</p>
 <pre><code data-controller="snippet" class="language-toml"># This is a full-line comment
-key = &quot;value&quot; # This is a comment at the end of a line
-</code></pre>
-<h2 id="section-6" data-target="nav.header">
-        <a href="#section-6">Key/Value Pair</a>
+key = &quot;value&quot; # This is a comment at the end of a line</code></pre>
+<h2 id="section-5" data-target="nav.header">
+        <a href="#section-5">Key/Value Pair</a>
       </h2>
 <p>The primary building block of a TOML document is the key/value pair.</p>
 <p>Keys are on the left of the equals sign and values are on the right. Whitespace
 is ignored around key names and values. The key, equals sign, and value must be
 on the same line (though some values can be broken over multiple lines).</p>
-<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;</code></pre>
 <p>Values must be of the following types: String, Integer, Float, Boolean,
 Datetime, Array, or Inline Table. Unspecified values are invalid.</p>
-<pre><code data-controller="snippet" class="language-toml">key = # INVALID
-</code></pre>
-<h2 id="section-7" data-target="nav.header">
-        <a href="#section-7">Keys</a>
+<pre><code data-controller="snippet" class="language-toml">key = # INVALID</code></pre>
+<h2 id="section-6" data-target="nav.header">
+        <a href="#section-6">Keys</a>
       </h2>
 <p>A key may be either bare, quoted or dotted.</p>
 <p><strong>Bare keys</strong> may only contain ASCII letters, ASCII digits, underscores, and
@@ -114,30 +84,26 @@ ASCII digits, e.g. <code>1234</code>, but are always interpreted as strings.</p>
 <pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
 bare_key = &quot;value&quot;
 bare-key = &quot;value&quot;
-1234 = &quot;value&quot;
-</code></pre>
+1234 = &quot;value&quot;</code></pre>
 <p><strong>Quoted keys</strong> follow the exact same rules as either basic strings or literal
 strings and allow you to use a much broader set of key names. Best practice is
 to use bare keys except when absolutely necessary.</p>
 <pre><code data-controller="snippet" class="language-toml">&quot;127.0.0.1&quot; = &quot;value&quot;
 &quot;character encoding&quot; = &quot;value&quot;
 &quot;ʎǝʞ&quot; = &quot;value&quot;
-'key2' = &quot;value&quot;
-'quoted &quot;value&quot;' = &quot;value&quot;
-</code></pre>
+&#39;key2&#39; = &quot;value&quot;
+&#39;quoted &quot;value&quot;&#39; = &quot;value&quot;</code></pre>
 <p>A bare key must be non-empty, but an empty quoted key is allowed (though
 discouraged).</p>
 <pre><code data-controller="snippet" class="language-toml">= &quot;no key name&quot;  # INVALID
 &quot;&quot; = &quot;blank&quot;     # VALID but discouraged
-'' = 'blank'     # VALID but discouraged
-</code></pre>
+&#39;&#39; = &#39;blank&#39;     # VALID but discouraged</code></pre>
 <p><strong>Dotted keys</strong> are a sequence of bare or quoted keys joined with a dot. This
 allows for grouping similar properties together:</p>
 <pre><code data-controller="snippet" class="language-toml">name = &quot;Orange&quot;
 physical.color = &quot;orange&quot;
 physical.shape = &quot;round&quot;
-site.&quot;google.com&quot; = true
-</code></pre>
+site.&quot;google.com&quot; = true</code></pre>
 <p>In JSON land, that would give you the following structure:</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;name&quot;: &quot;Orange&quot;,
@@ -148,34 +114,26 @@ site.&quot;google.com&quot; = true
   &quot;site&quot;: {
     &quot;google.com&quot;: true
   }
-}
-</code></pre>
+}</code></pre>
 <p>Whitespace around dot-separated parts is ignored, however, best practice is to
 not use any extraneous whitespace.</p>
 <p>Defining a key multiple times is invalid.</p>
 <pre><code data-controller="snippet" class="language-toml"># DO NOT DO THIS
 name = &quot;Tom&quot;
-name = &quot;Pradyun&quot;
-</code></pre>
-<p>As long as a key hasn't been directly defined, you may still write to it and
+name = &quot;Pradyun&quot;</code></pre><p>As long as a key hasn&#39;t been directly defined, you may still write to it and
 to names within it.</p>
 <pre><code data-controller="snippet" class="language-toml">a.b.c = 1
-a.d = 2
-</code></pre>
-<pre><code data-controller="snippet" class="language-toml"># THIS IS INVALID
+a.d = 2</code></pre><pre><code data-controller="snippet" class="language-toml"># THIS IS INVALID
 a.b = 1
-a.b.c = 2
-</code></pre>
-<h2 id="section-8" data-target="nav.header">
-        <a href="#section-8">String</a>
+a.b.c = 2</code></pre><h2 id="section-7" data-target="nav.header">
+        <a href="#section-7">String</a>
       </h2>
 <p>There are four ways to express strings: basic, multi-line basic, literal, and
 multi-line literal. All strings must contain only valid UTF-8 characters.</p>
 <p><strong>Basic strings</strong> are surrounded by quotation marks. Any Unicode character may
 be used except those that must be escaped: quotation mark, backslash, and the
 control characters (U+0000 to U+001F, U+007F).</p>
-<pre><code data-controller="snippet" class="language-toml">str = &quot;I'm a string. \&quot;You can quote me\&quot;. Name\tJos\u00E9\nLocation\tSF.&quot;
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">str = &quot;I&#39;m a string. \&quot;You can quote me\&quot;. Name\tJos\u00E9\nLocation\tSF.&quot;</code></pre>
 <p>For convenience, some popular characters have a compact escape sequence.</p>
 <pre><code data-controller="snippet" class="language-toml">\b         - backspace       (U+0008)
 \t         - tab             (U+0009)
@@ -185,9 +143,7 @@ control characters (U+0000 to U+001F, U+007F).</p>
 \&quot;         - quote           (U+0022)
 \\         - backslash       (U+005C)
 \uXXXX     - unicode         (U+XXXX)
-\UXXXXXXXX - unicode         (U+XXXXXXXX)
-</code></pre>
-<p>Any Unicode character may be escaped with the <code>\uXXXX</code> or <code>\UXXXXXXXX</code> forms.
+\UXXXXXXXX - unicode         (U+XXXXXXXX)</code></pre><p>Any Unicode character may be escaped with the <code>\uXXXX</code> or <code>\UXXXXXXXX</code> forms.
 The escape codes must be valid Unicode <a href="http://unicode.org/glossary/#unicode_scalar_value">scalar values</a>.</p>
 <p>All other escape sequences not listed above are reserved and, if used, TOML
 should produce an error.</p>
@@ -198,16 +154,14 @@ side and allow newlines. A newline immediately following the opening delimiter
 will be trimmed. All other whitespace and newline characters remain intact.</p>
 <pre><code data-controller="snippet" class="language-toml">str1 = &quot;&quot;&quot;
 Roses are red
-Violets are blue&quot;&quot;&quot;
-</code></pre>
+Violets are blue&quot;&quot;&quot;</code></pre>
 <p>TOML parsers should feel free to normalize newline to whatever makes sense for
 their platform.</p>
 <pre><code data-controller="snippet" class="language-toml"># On a Unix system, the above multi-line string will most likely be the same as:
 str2 = &quot;Roses are red\nViolets are blue&quot;
 
 # On a Windows system, it will most likely be equivalent to:
-str3 = &quot;Roses are red\r\nViolets are blue&quot;
-</code></pre>
+str3 = &quot;Roses are red\r\nViolets are blue&quot;</code></pre>
 <p>For writing long strings without introducing extraneous whitespace, use a &quot;line
 ending backslash&quot;. When the last non-whitespace character on a line is a <code>\</code>, it
 will be trimmed along with all whitespace (including newlines) up to the next
@@ -227,22 +181,20 @@ str3 = &quot;&quot;&quot;\
        The quick brown \
        fox jumps over \
        the lazy dog.\
-       &quot;&quot;&quot;
-</code></pre>
+       &quot;&quot;&quot;</code></pre>
 <p>Any Unicode character may be used except those that must be escaped: backslash
 and the control characters (U+0000 to U+001F, U+007F). Quotation marks need not
 be escaped unless their presence would create a premature closing delimiter.</p>
-<p>If you're a frequent specifier of Windows paths or regular expressions, then
+<p>If you&#39;re a frequent specifier of Windows paths or regular expressions, then
 having to escape backslashes quickly becomes tedious and error prone. To help,
 TOML supports literal strings which do not allow escaping at all.</p>
 <p><strong>Literal strings</strong> are surrounded by single quotes. Like basic strings, they
 must appear on a single line:</p>
 <pre><code data-controller="snippet" class="language-toml"># What you see is what you get.
-winpath  = 'C:\Users\nodejs\templates'
-winpath2 = '\\ServerX\admin$\system32\'
-quoted   = 'Tom &quot;Dubs&quot; Preston-Werner'
-regex    = '&lt;\i\c*\s*&gt;'
-</code></pre>
+winpath  = &#39;C:\Users\nodejs\templates&#39;
+winpath2 = &#39;\\ServerX\admin$\system32\&#39;
+quoted   = &#39;Tom &quot;Dubs&quot; Preston-Werner&#39;
+regex    = &#39;&lt;\i\c*\s*&gt;&#39;</code></pre>
 <p>Since there is no escaping, there is no way to write a single quote inside a
 literal string enclosed by single quotes. Luckily, TOML supports a multi-line
 version of literal strings that solves this problem.</p>
@@ -250,34 +202,31 @@ version of literal strings that solves this problem.</p>
 side and allow newlines. Like literal strings, there is no escaping whatsoever.
 A newline immediately following the opening delimiter will be trimmed. All
 other content between the delimiters is interpreted as-is without modification.</p>
-<pre><code data-controller="snippet" class="language-toml">regex2 = '''I [dw]on't need \d{2} apples'''
-lines  = '''
+<pre><code data-controller="snippet" class="language-toml">regex2 = &#39;&#39;&#39;I [dw]on&#39;t need \d{2} apples&#39;&#39;&#39;
+lines  = &#39;&#39;&#39;
 The first newline is
 trimmed in raw strings.
    All other whitespace
    is preserved.
-'''
-</code></pre>
+&#39;&#39;&#39;</code></pre>
 <p>Control characters other than tab are not permitted in a literal string. Thus,
 for binary data it is recommended that you use Base64 or another suitable ASCII
 or UTF-8 encoding. The handling of that encoding will be application specific.</p>
-<h2 id="section-9" data-target="nav.header">
-        <a href="#section-9">Integer</a>
+<h2 id="section-8" data-target="nav.header">
+        <a href="#section-8">Integer</a>
       </h2>
 <p>Integers are whole numbers. Positive numbers may be prefixed with a plus sign.
 Negative numbers are prefixed with a minus sign.</p>
 <pre><code data-controller="snippet" class="language-toml">int1 = +99
 int2 = 42
 int3 = 0
-int4 = -17
-</code></pre>
+int4 = -17</code></pre>
 <p>For large numbers, you may use underscores between digits to enhance
 readability. Each underscore must be surrounded by at least one digit on each
 side.</p>
 <pre><code data-controller="snippet" class="language-toml">int5 = 1_000
 int6 = 5_349_221
-int7 = 1_2_3_4_5     # VALID but discouraged
-</code></pre>
+int7 = 1_2_3_4_5     # VALID but discouraged</code></pre>
 <p>Leading zeros are not allowed. Integer values <code>-0</code> and <code>+0</code> are valid and
 identical to an unprefixed zero.</p>
 <p>Non-negative integer values may also be expressed in hexadecimal, octal, or
@@ -294,12 +243,11 @@ oct1 = 0o01234567
 oct2 = 0o755 # useful for Unix file permissions
 
 # binary with prefix `0b`
-bin1 = 0b11010110
-</code></pre>
+bin1 = 0b11010110</code></pre>
 <p>64 bit (signed long) range expected (−9,223,372,036,854,775,808 to
 9,223,372,036,854,775,807).</p>
-<h2 id="section-10" data-target="nav.header">
-        <a href="#section-10">Float</a>
+<h2 id="section-9" data-target="nav.header">
+        <a href="#section-9">Float</a>
       </h2>
 <p>Floats should be implemented as IEEE 754 binary64 values.</p>
 <p>A float consists of an integer part (which follows the same rules as integer
@@ -317,15 +265,13 @@ flt5 = 1e6
 flt6 = -2E-2
 
 # both
-flt7 = 6.626e-34
-</code></pre>
+flt7 = 6.626e-34</code></pre>
 <p>A fractional part is a decimal point followed by one or more digits.</p>
 <p>An exponent part is an E (upper or lower case) followed by an integer part
 (which follows the same rules as integer values).</p>
 <p>Similar to integers, you may use underscores to enhance readability. Each
 underscore must be surrounded by at least one digit.</p>
-<pre><code data-controller="snippet" class="language-toml">flt8 = 9_224_617.445_991_228_313
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">flt8 = 9_224_617.445_991_228_313</code></pre>
 <p>Float values <code>-0.0</code> and <code>+0.0</code> are valid and should map according to IEEE 754.</p>
 <p>Special float values can also be expressed. They are always lowercase.</p>
 <pre><code data-controller="snippet" class="language-toml"># infinity
@@ -336,34 +282,30 @@ sf3 = -inf # negative infinity
 # not a number
 sf4 = nan  # actual sNaN/qNaN encoding is implementation specific
 sf5 = +nan # same as `nan`
-sf6 = -nan # valid, actual encoding is implementation specific
-</code></pre>
-<h2 id="section-11" data-target="nav.header">
-        <a href="#section-11">Boolean</a>
+sf6 = -nan # valid, actual encoding is implementation specific</code></pre>
+<h2 id="section-10" data-target="nav.header">
+        <a href="#section-10">Boolean</a>
       </h2>
-<p>Booleans are just the tokens you're used to. Always lowercase.</p>
+<p>Booleans are just the tokens you&#39;re used to. Always lowercase.</p>
 <pre><code data-controller="snippet" class="language-toml">bool1 = true
-bool2 = false
-</code></pre>
-<h2 id="section-12" data-target="nav.header">
-        <a href="#section-12">Offset Date-Time</a>
+bool2 = false</code></pre>
+<h2 id="section-11" data-target="nav.header">
+        <a href="#section-11">Offset Date-Time</a>
       </h2>
 <p>To unambiguously represent a specific instant in time, you may use an
 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> formatted date-time with offset.</p>
 <pre><code data-controller="snippet" class="language-toml">odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
-odt3 = 1979-05-27T00:32:00.999999-07:00
-</code></pre>
+odt3 = 1979-05-27T00:32:00.999999-07:00</code></pre>
 <p>For the sake of readability, you may replace the T delimiter between date and
 time with a space (as permitted by RFC 3339 section 5.6).</p>
-<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z</code></pre>
 <p>The precision of fractional seconds is implementation specific, but at least
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="section-13" data-target="nav.header">
-        <a href="#section-13">Local Date-Time</a>
+<h2 id="section-12" data-target="nav.header">
+        <a href="#section-12">Local Date-Time</a>
       </h2>
 <p>If you omit the offset from an <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>
 formatted date-time, it will represent the given date-time without any relation
@@ -371,36 +313,33 @@ to an offset or timezone. It cannot be converted to an instant in time without
 additional information. Conversion to an instant, if required, is implementation
 specific.</p>
 <pre><code data-controller="snippet" class="language-toml">ldt1 = 1979-05-27T07:32:00
-ldt2 = 1979-05-27T00:32:00.999999
-</code></pre>
+ldt2 = 1979-05-27T00:32:00.999999</code></pre>
 <p>The precision of fractional seconds is implementation specific, but at least
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="section-14" data-target="nav.header">
-        <a href="#section-14">Local Date</a>
+<h2 id="section-13" data-target="nav.header">
+        <a href="#section-13">Local Date</a>
       </h2>
 <p>If you include only the date portion of an
 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> formatted date-time, it will
 represent that entire day without any relation to an offset or timezone.</p>
-<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27
-</code></pre>
-<h2 id="section-15" data-target="nav.header">
-        <a href="#section-15">Local Time</a>
+<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27</code></pre>
+<h2 id="section-14" data-target="nav.header">
+        <a href="#section-14">Local Time</a>
       </h2>
 <p>If you include only the time portion of an <a href="http://tools.ietf.org/html/rfc3339">RFC
 3339</a> formatted date-time, it will represent
 that time of day without any relation to a specific day or any offset or
 timezone.</p>
 <pre><code data-controller="snippet" class="language-toml">lt1 = 07:32:00
-lt2 = 00:32:00.999999
-</code></pre>
+lt2 = 00:32:00.999999</code></pre>
 <p>The precision of fractional seconds is implementation specific, but at least
 millisecond precision is expected. If the value contains greater precision than
 the implementation can support, the additional precision must be truncated, not
 rounded.</p>
-<h2 id="section-16" data-target="nav.header">
-        <a href="#section-16">Array</a>
+<h2 id="section-15" data-target="nav.header">
+        <a href="#section-15">Array</a>
       </h2>
 <p>Arrays are square brackets with values inside. Whitespace is ignored. Elements
 are separated by commas. Data types may not be mixed (different ways to define
@@ -409,11 +348,10 @@ element types).</p>
 <pre><code data-controller="snippet" class="language-toml">arr1 = [ 1, 2, 3 ]
 arr2 = [ &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot; ]
 arr3 = [ [ 1, 2 ], [3, 4, 5] ]
-arr4 = [ &quot;all&quot;, 'strings', &quot;&quot;&quot;are the same&quot;&quot;&quot;, '''type''']
+arr4 = [ &quot;all&quot;, &#39;strings&#39;, &quot;&quot;&quot;are the same&quot;&quot;&quot;, &#39;&#39;&#39;type&#39;&#39;&#39;]
 arr5 = [ [ 1, 2 ], [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] ]
 
-arr6 = [ 1, 2.0 ] # INVALID
-</code></pre>
+arr6 = [ 1, 2.0 ] # INVALID</code></pre>
 <p>Arrays can also be multiline. Terminating commas (also called trailing commas)
 are ok after the last value of the array. There can be an arbitrary number of
 newlines and comments before a value and before the closing bracket.</p>
@@ -424,16 +362,14 @@ newlines and comments before a value and before the closing bracket.</p>
 arr8 = [
   1,
   2, # this is ok
-]
-</code></pre>
-<h2 id="section-17" data-target="nav.header">
-        <a href="#section-17">Table</a>
+]</code></pre>
+<h2 id="section-16" data-target="nav.header">
+        <a href="#section-16">Table</a>
       </h2>
 <p>Tables (also known as hash tables or dictionaries) are collections of key/value
 pairs. They appear in square brackets on a line by themselves. You can tell them
 apart from arrays because arrays are only ever values.</p>
-<pre><code data-controller="snippet" class="language-toml">[table]
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">[table]</code></pre>
 <p>Under that, and until the next table or EOF are the key/values of that table.
 Key/value pairs within tables are not guaranteed to be in any specific order.</p>
 <pre><code data-controller="snippet" class="language-toml">[table-1]
@@ -442,29 +378,24 @@ key2 = 123
 
 [table-2]
 key1 = &quot;another string&quot;
-key2 = 456
-</code></pre>
+key2 = 456</code></pre>
 <p>Naming rules for tables are the same as for keys (see definition of Keys above).</p>
 <pre><code data-controller="snippet" class="language-toml">[dog.&quot;tater.man&quot;]
-type.name = &quot;pug&quot;
-</code></pre>
+type.name = &quot;pug&quot;</code></pre>
 <p>In JSON land, that would give you the following structure:</p>
-<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }
-</code></pre>
+<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }</code></pre>
 <p>Whitespace around the key is ignored, however, best practice is to not use any
 extraneous whitespace.</p>
 <pre><code data-controller="snippet" class="language-toml">[a.b.c]            # this is best practice
 [ d.e.f ]          # same as [d.e.f]
 [ g .  h  . i ]    # same as [g.h.i]
-[ j . &quot;ʞ&quot; . 'l' ]  # same as [j.&quot;ʞ&quot;.'l']
-</code></pre>
-<p>You don't need to specify all the super-tables if you don't want to. TOML knows
+[ j . &quot;ʞ&quot; . &#39;l&#39; ]  # same as [j.&quot;ʞ&quot;.&#39;l&#39;]</code></pre>
+<p>You don&#39;t need to specify all the super-tables if you don&#39;t want to. TOML knows
 how to do it for you.</p>
 <pre><code data-controller="snippet" class="language-toml"># [x] you
-# [x.y] don't
+# [x.y] don&#39;t
 # [x.y.z] need these
-[x.y.z.w] # for this to work
-</code></pre>
+[x.y.z.w] # for this to work</code></pre>
 <p>Empty tables are allowed and simply have no key/value pairs within them.</p>
 <p>Like keys, you cannot define any table more than once. Doing so is invalid.</p>
 <pre><code data-controller="snippet" class="language-toml"># DO NOT DO THIS
@@ -473,18 +404,14 @@ how to do it for you.</p>
 b = 1
 
 [a]
-c = 2
-</code></pre>
-<pre><code data-controller="snippet" class="language-toml"># DO NOT DO THIS EITHER
+c = 2</code></pre><pre><code data-controller="snippet" class="language-toml"># DO NOT DO THIS EITHER
 
 [a]
 b = 1
 
 [a.b]
-c = 2
-</code></pre>
-<h2 id="section-18" data-target="nav.header">
-        <a href="#section-18">Inline Table</a>
+c = 2</code></pre><h2 id="section-17" data-target="nav.header">
+        <a href="#section-17">Inline Table</a>
       </h2>
 <p>Inline tables provide a more compact syntax for expressing tables. They are
 especially useful for grouped data that can otherwise quickly become verbose.
@@ -498,8 +425,7 @@ strongly discouraged to break an inline table onto multiples lines. If you find
 yourself gripped with this desire, it means you should be using standard tables.</p>
 <pre><code data-controller="snippet" class="language-toml">name = { first = &quot;Tom&quot;, last = &quot;Preston-Werner&quot; }
 point = { x = 1, y = 2 }
-animal = { type.name = &quot;pug&quot; }
-</code></pre>
+animal = { type.name = &quot;pug&quot; }</code></pre>
 <p>The inline tables above are identical to the following standard table
 definitions:</p>
 <pre><code data-controller="snippet" class="language-toml">[name]
@@ -512,10 +438,9 @@ y = 2
 
 [animal]
 type.name = &quot;pug&quot;
-
 </code></pre>
-<h2 id="section-19" data-target="nav.header">
-        <a href="#section-19">Array of Tables</a>
+<h2 id="section-18" data-target="nav.header">
+        <a href="#section-18">Array of Tables</a>
       </h2>
 <p>The last type that has not yet been expressed is an array of tables. These can
 be expressed by using a table name in double brackets. Each table with the same
@@ -531,8 +456,7 @@ sku = 738594937
 [[products]]
 name = &quot;Nail&quot;
 sku = 284758393
-color = &quot;gray&quot;
-</code></pre>
+color = &quot;gray&quot;</code></pre>
 <p>In JSON land, that would give you the following structure.</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;products&quot;: [
@@ -540,8 +464,7 @@ color = &quot;gray&quot;
     { },
     { &quot;name&quot;: &quot;Nail&quot;, &quot;sku&quot;: 284758393, &quot;color&quot;: &quot;gray&quot; }
   ]
-}
-</code></pre>
+}</code></pre>
 <p>You can create nested arrays of tables as well. Just use the same double bracket
 syntax on sub-tables. Each double-bracketed sub-table will belong to the most
 recently defined table element above it.</p>
@@ -562,8 +485,7 @@ recently defined table element above it.</p>
   name = &quot;banana&quot;
 
   [[fruit.variety]]
-    name = &quot;plantain&quot;
-</code></pre>
+    name = &quot;plantain&quot;</code></pre>
 <p>The above TOML maps to the following JSON.</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;fruit&quot;: [
@@ -585,15 +507,13 @@ recently defined table element above it.</p>
       ]
     }
   ]
-}
-</code></pre>
+}</code></pre>
 <p>Attempting to append to a statically defined array, even if that array is empty
 or of compatible type, must produce an error at parse time.</p>
 <pre><code data-controller="snippet" class="language-toml"># INVALID TOML DOC
 fruit = []
 
-[[fruit]] # Not allowed
-</code></pre>
+[[fruit]] # Not allowed</code></pre>
 <p>Attempting to define a normal table with the same name as an already established
 array must produce an error at parse time.</p>
 <pre><code data-controller="snippet" class="language-toml"># INVALID TOML DOC
@@ -605,24 +525,21 @@ array must produce an error at parse time.</p>
 
   # This table conflicts with the previous table
   [fruit.variety]
-    name = &quot;granny smith&quot;
-</code></pre>
-<p>You may also use inline tables where appropriate:</p>
+    name = &quot;granny smith&quot;</code></pre><p>You may also use inline tables where appropriate:</p>
 <pre><code data-controller="snippet" class="language-toml">points = [ { x = 1, y = 2, z = 3 },
            { x = 7, y = 8, z = 9 },
-           { x = 2, y = 4, z = 8 } ]
-</code></pre>
-<h2 id="section-20" data-target="nav.header">
-        <a href="#section-20">Filename Extension</a>
+           { x = 2, y = 4, z = 8 } ]</code></pre>
+<h2 id="section-19" data-target="nav.header">
+        <a href="#section-19">Filename Extension</a>
       </h2>
 <p>TOML files should use the extension <code>.toml</code>.</p>
-<h2 id="section-21" data-target="nav.header">
-        <a href="#section-21">MIME Type</a>
+<h2 id="section-20" data-target="nav.header">
+        <a href="#section-20">MIME Type</a>
       </h2>
 <p>When transferring TOML files over the internet, the appropriate MIME type is
 <code>application/toml</code>.</p>
-<h2 id="section-22" data-target="nav.header">
-        <a href="#section-22">Comparison with Other Formats</a>
+<h2 id="section-21" data-target="nav.header">
+        <a href="#section-21">Comparison with Other Formats</a>
       </h2>
 <p>In some ways TOML is very similar to JSON: simple, well-specified, and
 maps easily to ubiquitous data types. JSON is great for serializing
@@ -634,17 +551,17 @@ helpful in a configuration file that may be edited by hand.</p>
 <p>The YAML format is oriented towards configuration files just like
 TOML. For many purposes, however, YAML is an overly complex
 solution. TOML aims for simplicity, a goal which is not apparent in
-the YAML specification: http://www.yaml.org/spec/1.2/spec.html</p>
+the YAML specification: <a href="http://www.yaml.org/spec/1.2/spec.html">http://www.yaml.org/spec/1.2/spec.html</a></p>
 <p>The INI format is also frequently used for configuration files. The
 format is not standardized, however, and usually does not handle more
 than one or two levels of nesting.</p>
-<h2 id="section-23" data-target="nav.header">
-        <a href="#section-23">Get Involved</a>
+<h2 id="section-22" data-target="nav.header">
+        <a href="#section-22">Get Involved</a>
       </h2>
 <p>Documentation, bug reports, pull requests, and all other contributions
 are welcome!</p>
-<h2 id="section-24" data-target="nav.header">
-        <a href="#section-24">Wiki</a>
+<h2 id="section-23" data-target="nav.header">
+        <a href="#section-23">Wiki</a>
       </h2>
 <p>We have an <a href="https://github.com/toml-lang/toml/wiki">Official TOML Wiki</a> that
 catalogs the following:</p>
@@ -657,5 +574,5 @@ catalogs the following:</p>
 <li>Encoders</li>
 <li>Converters</li>
 </ul>
-<p>Please take a look if you'd like to view or add to that list. Thanks for being
+<p>Please take a look if you&#39;d like to view or add to that list. Thanks for being
 a part of the TOML community!</p>

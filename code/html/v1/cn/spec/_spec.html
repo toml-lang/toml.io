@@ -1,45 +1,13 @@
 <p><img src="../../logos/toml-200.png" alt="TOML Logo"></p>
-<h1>TOML v0.5.0</h1>
-<p>全称：Tom 的（语义）明显、（配置）最小化的语言。<br>
-（Tom's Obvious, Minimal Language. By Tom Preston-Werner.）</p>
-<p>自版本 0.5.0 起，TOML 可以说是非常稳定了。<br>
-我们的目标是将来正式的 1.0.0 版能够向下兼容到 0.5.0 版（尽人事之可能吧）。<br>
-强烈建议所有的实现都着手兼容 0.5.0，以便于到时转化成 1.0.0 能简单一些。</p>
+<h1 id="toml-v050">TOML v0.5.0</h1>
+<p>全称：Tom 的（语义）明显、（配置）最小化的语言。<br>（Tom&#39;s Obvious, Minimal Language. By Tom Preston-Werner.）</p>
+<p>自版本 0.5.0 起，TOML 可以说是非常稳定了。<br>我们的目标是将来正式的 1.0.0 版能够向下兼容到 0.5.0 版（尽人事之可能吧）。<br>强烈建议所有的实现都着手兼容 0.5.0，以便于到时转化成 1.0.0 能简单一些。</p>
 <h2 id="section-1" data-target="nav.header">
         <a href="#section-1">宗旨</a>
       </h2>
-<p>TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。<br>
-TOML 被设计成可以无歧义地映射为哈希表。<br>
-TOML 应该能很容易地被解析成各种语言中的数据结构。</p>
+<p>TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。<br>TOML 被设计成可以无歧义地映射为哈希表。<br>TOML 应该能很容易地被解析成各种语言中的数据结构。</p>
 <h2 id="section-2" data-target="nav.header">
-        <a href="#section-2">目录</a>
-      </h2>
-<ul>
-<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
-<li><a href="#%E8%A7%84%E6%A0%BC">规格</a></li>
-<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
-<li><a href="#%E9%94%AE%E5%80%BC%E5%AF%B9">键值对</a></li>
-<li><a href="#%E9%94%AE%E5%90%8D">键名</a></li>
-<li><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2">字符串</a></li>
-<li><a href="#%E6%95%B4%E6%95%B0">整数</a></li>
-<li><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0">浮点数</a></li>
-<li><a href="#%E5%B8%83%E5%B0%94%E5%80%BC">布尔值</a></li>
-<li><a href="#%E5%9D%90%E6%A0%87%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">坐标日期时刻</a></li>
-<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E5%88%BB">各地日期时刻</a></li>
-<li><a href="#%E5%90%84%E5%9C%B0%E6%97%A5%E6%9C%9F">各地日期</a></li>
-<li><a href="#%E5%90%84%E5%9C%B0%E6%97%B6%E5%88%BB">各地时刻</a></li>
-<li><a href="#%E6%95%B0%E7%BB%84">数组</a></li>
-<li><a href="#%E8%A1%A8">表</a></li>
-<li><a href="#%E5%86%85%E8%81%94%E8%A1%A8">内联表</a></li>
-<li><a href="#%E8%A1%A8%E6%95%B0%E7%BB%84">表数组</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D">文件扩展名</a></li>
-<li><a href="#mime-%E7%B1%BB%E5%9E%8B">MIME 类型</a></li>
-<li><a href="#%E4%B8%8E%E5%85%B6%E5%AE%83%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%AF%94%E8%BE%83">与其它格式的比较</a></li>
-<li><a href="#%E5%8F%82%E4%B8%8E">参与</a></li>
-<li><a href="#Wiki">Wiki</a></li>
-</ul>
-<h2 id="section-3" data-target="nav.header">
-        <a href="#section-3">示例</a>
+        <a href="#section-2">示例</a>
       </h2>
 <pre><code data-controller="snippet" class="language-toml"># 这是一个 TOML 文档。
 
@@ -73,10 +41,9 @@ data = [ [&quot;gamma&quot;, &quot;delta&quot;], [1, 2] ]
 hosts = [
   &quot;alpha&quot;,
   &quot;omega&quot;
-]
-</code></pre>
-<h2 id="section-4" data-target="nav.header">
-        <a href="#section-4">规格</a>
+]</code></pre>
+<h2 id="section-3" data-target="nav.header">
+        <a href="#section-3">规格</a>
       </h2>
 <ul>
 <li>TOML 是大小写敏感的。</li>
@@ -84,57 +51,44 @@ hosts = [
 <li>空白是指制表符（0x09）或空格（0x20）。</li>
 <li>换行是指 LF（0x0A）或 CRLF（0x0D0A）。</li>
 </ul>
-<h2 id="section-5" data-target="nav.header">
-        <a href="#section-5">注释</a>
+<h2 id="section-4" data-target="nav.header">
+        <a href="#section-4">注释</a>
       </h2>
 <p>井字符（Hash Symbol）将该行余下的部分标记为注释。</p>
 <pre><code data-controller="snippet" class="language-toml"># 这是一个全行注释
-key = &quot;value&quot; # 这是一个行末注释
-</code></pre>
-<h2 id="section-6" data-target="nav.header">
-        <a href="#section-6">键值对</a>
+key = &quot;value&quot; # 这是一个行末注释</code></pre>
+<h2 id="section-5" data-target="nav.header">
+        <a href="#section-5">键值对</a>
       </h2>
 <p>TOML 文档最基本的构成区块是键/值对。</p>
-<p>键名在等号的左边而值在右边。<br>
-键名和键值周围的空白会被忽略。<br>
-键、等号和值必须在同一行（不过有些值可以跨多行）。</p>
-<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
-</code></pre>
-<p>值必须是这些类型：字符串，整数，浮点数，布尔值，日期时刻，数组，或内联表。<br>
-不指定值是非法的。</p>
-<pre><code data-controller="snippet" class="language-toml">key = # 非法
-</code></pre>
-<h2 id="section-7" data-target="nav.header">
-        <a href="#section-7">键名</a>
+<p>键名在等号的左边而值在右边。<br>键名和键值周围的空白会被忽略。<br>键、等号和值必须在同一行（不过有些值可以跨多行）。</p>
+<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;</code></pre>
+<p>值必须是这些类型：字符串，整数，浮点数，布尔值，日期时刻，数组，或内联表。<br>不指定值是非法的。</p>
+<pre><code data-controller="snippet" class="language-toml">key = # 非法</code></pre>
+<h2 id="section-6" data-target="nav.header">
+        <a href="#section-6">键名</a>
       </h2>
 <p>键名可以是裸露的，引号引起来的，或点分隔的。</p>
-<p><strong>裸键</strong>（Bare keys）只能包含 ASCII 字母，ASCII 数字，下划线和短横线（<code>A-Za-z0-9_-</code>）。<br>
-注意裸键允许仅由纯 ASCII 数字构成，例如 <code>1234</code>，但是是被理解为字符串的。</p>
+<p><strong>裸键</strong>（Bare keys）只能包含 ASCII 字母，ASCII 数字，下划线和短横线（<code>A-Za-z0-9_-</code>）。<br>注意裸键允许仅由纯 ASCII 数字构成，例如 <code>1234</code>，但是是被理解为字符串的。</p>
 <pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
 bare_key = &quot;value&quot;
 bare-key = &quot;value&quot;
-1234 = &quot;value&quot;
-</code></pre>
-<p><strong>引号键</strong>（Quoted keys）遵循与基本字符串或字面量字符串相同的规则并允许你使用更为广泛的键名。<br>
-除非明显必要，使用裸键方为最佳实践。</p>
+1234 = &quot;value&quot;</code></pre>
+<p><strong>引号键</strong>（Quoted keys）遵循与基本字符串或字面量字符串相同的规则并允许你使用更为广泛的键名。<br>除非明显必要，使用裸键方为最佳实践。</p>
 <pre><code data-controller="snippet" class="language-toml">&quot;127.0.0.1&quot; = &quot;value&quot;
 &quot;character encoding&quot; = &quot;value&quot;
 &quot;ʎǝʞ&quot; = &quot;value&quot;
-'key2' = &quot;value&quot;
-'quoted &quot;value&quot;' = &quot;value&quot;
-</code></pre>
+&#39;key2&#39; = &quot;value&quot;
+&#39;quoted &quot;value&quot;&#39; = &quot;value&quot;</code></pre>
 <p>裸键中不能为空，但空引号键是允许的（虽然不建议如此）。</p>
 <pre><code data-controller="snippet" class="language-toml">= &quot;no key name&quot;  # 非法
 &quot;&quot; = &quot;blank&quot;     # 合法但不建议
-'' = 'blank'     # 合法但不建议
-</code></pre>
-<p><strong>点分隔键</strong>（Dotted keys）是一系列通过点相连的裸键或引号键。<br>
-这允许了你将相近属性放在一起：</p>
+&#39;&#39; = &#39;blank&#39;     # 合法但不建议</code></pre>
+<p><strong>点分隔键</strong>（Dotted keys）是一系列通过点相连的裸键或引号键。<br>这允许了你将相近属性放在一起：</p>
 <pre><code data-controller="snippet" class="language-toml">name = &quot;Orange&quot;
 physical.color = &quot;orange&quot;
 physical.shape = &quot;round&quot;
-site.&quot;google.com&quot; = true
-</code></pre>
+site.&quot;google.com&quot; = true</code></pre>
 <p>等价于 JSON 的如下结构：</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;name&quot;: &quot;Orange&quot;,
@@ -145,31 +99,21 @@ site.&quot;google.com&quot; = true
   &quot;site&quot;: {
     &quot;google.com&quot;: true
   }
-}
-</code></pre>
+}</code></pre>
 <p>点分隔符周围的空白会被忽略，不过，最佳实践是不要使用任何不必要的空白。</p>
 <p>多次定义同一个键是不行的。</p>
 <pre><code data-controller="snippet" class="language-toml"># 不要这样做
 name = &quot;Tom&quot;
-name = &quot;Pradyun&quot;
-</code></pre>
-<p>只要一个键还没有被直接定义过，你就仍可以对它和它下属的键名赋值。</p>
+name = &quot;Pradyun&quot;</code></pre><p>只要一个键还没有被直接定义过，你就仍可以对它和它下属的键名赋值。</p>
 <pre><code data-controller="snippet" class="language-toml">a.b.c = 1
-a.d = 2
-</code></pre>
-<pre><code data-controller="snippet" class="language-toml"># 这是非法的
+a.d = 2</code></pre><pre><code data-controller="snippet" class="language-toml"># 这是非法的
 a.b = 1
-a.b.c = 2
-</code></pre>
-<h2 id="section-8" data-target="nav.header">
-        <a href="#section-8">字符串</a>
+a.b.c = 2</code></pre><h2 id="section-7" data-target="nav.header">
+        <a href="#section-7">字符串</a>
       </h2>
-<p>共有四种方式来表示字符串：基本字符串、多行基本字符串、字面量和多行字面量。<br>
-所有字符串都只能包含有效的 UTF-8 字符。</p>
-<p><strong>基本字符串</strong>（Basic strings）由引号包裹。<br>
-任何 Unicode 字符都可以使用，除了那些必须转义的：引号，反斜杠，以及控制字符（U+0000 至 U+001F，U+007F）。</p>
-<pre><code data-controller="snippet" class="language-toml">str = &quot;我是一个字符串。\&quot;你可以把我引起来\&quot;。姓名\tJos\u00E9\n位置\t旧金山。&quot;
-</code></pre>
+<p>共有四种方式来表示字符串：基本字符串、多行基本字符串、字面量和多行字面量。<br>所有字符串都只能包含有效的 UTF-8 字符。</p>
+<p><strong>基本字符串</strong>（Basic strings）由引号包裹。<br>任何 Unicode 字符都可以使用，除了那些必须转义的：引号，反斜杠，以及控制字符（U+0000 至 U+001F，U+007F）。</p>
+<pre><code data-controller="snippet" class="language-toml">str = &quot;我是一个字符串。\&quot;你可以把我引起来\&quot;。姓名\tJos\u00E9\n位置\t旧金山。&quot;</code></pre>
 <p>为了方便，一些流行的字符有其简便转义写法。</p>
 <pre><code data-controller="snippet" class="language-toml">\b         - backspace       (U+0008)
 \t         - tab             (U+0009)
@@ -179,30 +123,20 @@ a.b.c = 2
 \&quot;         - quote           (U+0022)
 \\         - backslash       (U+005C)
 \uXXXX     - unicode         (U+XXXX)
-\UXXXXXXXX - unicode         (U+XXXXXXXX)
-</code></pre>
-<p>任何 Unicode 字符都可以用 <code>\uXXXX</code> 或 <code>\UXXXXXXXX</code> 的形式来转义。<br>
-转义码必须是有效的 Unicode <a href="http://unicode.org/glossary/#unicode_scalar_value">标量值</a>。</p>
+\UXXXXXXXX - unicode         (U+XXXXXXXX)</code></pre><p>任何 Unicode 字符都可以用 <code>\uXXXX</code> 或 <code>\UXXXXXXXX</code> 的形式来转义。<br>转义码必须是有效的 Unicode <a href="http://unicode.org/glossary/#unicode_scalar_value">标量值</a>。</p>
 <p>所有上面未列出的其它转义序列都是保留的，如果被用了，TOML 应当生成一个错误。</p>
-<p>有时你需要表示一小篇文本（例如译文）或者想要对非常长的字符串进行折行。<br>
-TOML 对此进行了简化。</p>
-<p><strong>多行基本字符串</strong>（Multi-line basic strings）由三个引号包裹，允许折行。<br>
-紧随开头引号的那个换行会被去除。<br>
-其它空白和换行符会被原样保留。</p>
+<p>有时你需要表示一小篇文本（例如译文）或者想要对非常长的字符串进行折行。<br>TOML 对此进行了简化。</p>
+<p><strong>多行基本字符串</strong>（Multi-line basic strings）由三个引号包裹，允许折行。<br>紧随开头引号的那个换行会被去除。<br>其它空白和换行符会被原样保留。</p>
 <pre><code data-controller="snippet" class="language-toml">str1 = &quot;&quot;&quot;
 Roses are red
-Violets are blue&quot;&quot;&quot;
-</code></pre>
+Violets are blue&quot;&quot;&quot;</code></pre>
 <p>TOML 解析器可以相对灵活地解析成对所在平台有效的换行字符。</p>
 <pre><code data-controller="snippet" class="language-toml"># 在 Unix 系统，上面的多行字符串可能等同于：
 str2 = &quot;Roses are red\nViolets are blue&quot;
 
 # 在 Windows 系统，它可能等价于：
-str3 = &quot;Roses are red\r\nViolets are blue&quot;
-</code></pre>
-<p>想书写长字符串却不想引入无关空白，可以用“行末反斜杠”。<br>
-当一行的最后一个非空白字符是 <code>\</code> 时，它会连同它后面的所有空白（包括换行）一起被去除，直到下一个非空白字符或结束引号为止。<br>
-所有对基本字符串有效的转义序列，对多行基本字符串也同样适用。</p>
+str3 = &quot;Roses are red\r\nViolets are blue&quot;</code></pre>
+<p>想书写长字符串却不想引入无关空白，可以用“行末反斜杠”。<br>当一行的最后一个非空白字符是 <code>\</code> 时，它会连同它后面的所有空白（包括换行）一起被去除，直到下一个非空白字符或结束引号为止。<br>所有对基本字符串有效的转义序列，对多行基本字符串也同样适用。</p>
 <pre><code data-controller="snippet" class="language-toml"># 下列字符串的每一个字节都完全相同：
 str1 = &quot;The quick brown fox jumps over the lazy dog.&quot;
 
@@ -217,60 +151,39 @@ str3 = &quot;&quot;&quot;\
        The quick brown \
        fox jumps over \
        the lazy dog.\
-       &quot;&quot;&quot;
-</code></pre>
-<p>任何 Unicode 字符都可以使用，除了那些必须被转义的：反斜杠和控制字符（U+0000 至 U+001F，U+007F）。<br>
-引号不需要转义，除非它们的存在会造成一个比预期提前的结束标记。</p>
-<p>如果你常常要指定 Windows 路径或正则表达式，那么必须转义反斜杠就马上成为啰嗦而易错的了。<br>
-为了帮助搞定这点，TOML 支持字面量字符串，它完全不允许转义。</p>
-<p><strong>字面量字符串</strong>（Literal strings）由单引号包裹。<br>
-类似于基本字符串，他们只能表现为单行：</p>
+       &quot;&quot;&quot;</code></pre>
+<p>任何 Unicode 字符都可以使用，除了那些必须被转义的：反斜杠和控制字符（U+0000 至 U+001F，U+007F）。<br>引号不需要转义，除非它们的存在会造成一个比预期提前的结束标记。</p>
+<p>如果你常常要指定 Windows 路径或正则表达式，那么必须转义反斜杠就马上成为啰嗦而易错的了。<br>为了帮助搞定这点，TOML 支持字面量字符串，它完全不允许转义。</p>
+<p><strong>字面量字符串</strong>（Literal strings）由单引号包裹。<br>类似于基本字符串，他们只能表现为单行：</p>
 <pre><code data-controller="snippet" class="language-toml"># 所见即所得。
-winpath  = 'C:\Users\nodejs\templates'
-winpath2 = '\\ServerX\admin$\system32\'
-quoted   = 'Tom &quot;Dubs&quot; Preston-Werner'
-regex    = '&lt;\i\c*\s*&gt;'
-</code></pre>
-<p>由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号。<br>
-万幸，TOML 支持一种多行版本的字面量字符串来解决这个问题。</p>
-<p><strong>多行字面量字符串</strong>（Multi-line literal strings）两侧各有三个单引号来包裹，允许换行。<br>
-类似于字面量字符串，无论任何转义都不存在。<br>
-紧随开始标记的那个换行会被剔除。<br>
-开始结束标记之间的所有其它内容会原样对待。</p>
-<pre><code data-controller="snippet" class="language-toml">regex2 = '''I [dw]on't need \d{2} apples'''
-lines  = '''
+winpath  = &#39;C:\Users\nodejs\templates&#39;
+winpath2 = &#39;\\ServerX\admin$\system32\&#39;
+quoted   = &#39;Tom &quot;Dubs&quot; Preston-Werner&#39;
+regex    = &#39;&lt;\i\c*\s*&gt;&#39;</code></pre>
+<p>由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号。<br>万幸，TOML 支持一种多行版本的字面量字符串来解决这个问题。</p>
+<p><strong>多行字面量字符串</strong>（Multi-line literal strings）两侧各有三个单引号来包裹，允许换行。<br>类似于字面量字符串，无论任何转义都不存在。<br>紧随开始标记的那个换行会被剔除。<br>开始结束标记之间的所有其它内容会原样对待。</p>
+<pre><code data-controller="snippet" class="language-toml">regex2 = &#39;&#39;&#39;I [dw]on&#39;t need \d{2} apples&#39;&#39;&#39;
+lines  = &#39;&#39;&#39;
 原始字符串中的
 第一个换行被剔除了。
    所有其它空白
    都保留了。
-'''
-</code></pre>
-<p>除 tab 以外的所有控制字符都不允许出现在字面量字符串中。<br>
-因此，对于二进制数据，建议你使用 Base64 或其它合适的 ASCII 或 UTF-8 编码。<br>
-对那些编码的处理方式，将交由应用程序自己来确定。</p>
-<h2 id="section-9" data-target="nav.header">
-        <a href="#section-9">整数</a>
+&#39;&#39;&#39;</code></pre>
+<p>除 tab 以外的所有控制字符都不允许出现在字面量字符串中。<br>因此，对于二进制数据，建议你使用 Base64 或其它合适的 ASCII 或 UTF-8 编码。<br>对那些编码的处理方式，将交由应用程序自己来确定。</p>
+<h2 id="section-8" data-target="nav.header">
+        <a href="#section-8">整数</a>
       </h2>
-<p>整数是纯数字。<br>
-正数可以有加号前缀。<br>
-负数的前缀是减号。</p>
+<p>整数是纯数字。<br>正数可以有加号前缀。<br>负数的前缀是减号。</p>
 <pre><code data-controller="snippet" class="language-toml">int1 = +99
 int2 = 42
 int3 = 0
-int4 = -17
-</code></pre>
-<p>对于大数，你可以在数字之间用下划线来增强可读性。<br>
-每个下划线两侧必须至少有一个数字。</p>
+int4 = -17</code></pre>
+<p>对于大数，你可以在数字之间用下划线来增强可读性。<br>每个下划线两侧必须至少有一个数字。</p>
 <pre><code data-controller="snippet" class="language-toml">int5 = 1_000
 int6 = 5_349_221
-int7 = 1_2_3_4_5     # 合法但不鼓励
-</code></pre>
-<p>前导零是不允许的。<br>
-整数值 <code>-0</code> 与 <code>+0</code> 是有效的，并等同于无前缀的零。</p>
-<p>非负整数值也可以用十六进制、八进制或二进制来表示。<br>
-在这些格式中，（前缀后的）前导零是允许的。<br>
-十六进制值大小写不敏感。<br>
-数字间的下划线是允许的（但不能存在于前缀和值之间）。</p>
+int7 = 1_2_3_4_5     # 合法但不鼓励</code></pre>
+<p>前导零是不允许的。<br>整数值 <code>-0</code> 与 <code>+0</code> 是有效的，并等同于无前缀的零。</p>
+<p>非负整数值也可以用十六进制、八进制或二进制来表示。<br>在这些格式中，（前缀后的）前导零是允许的。<br>十六进制值大小写不敏感。<br>数字间的下划线是允许的（但不能存在于前缀和值之间）。</p>
 <pre><code data-controller="snippet" class="language-toml"># 带有 `0x` 前缀的十六进制
 hex1 = 0xDEADBEEF
 hex2 = 0xdeadbeef
@@ -281,15 +194,13 @@ oct1 = 0o01234567
 oct2 = 0o755 # 对于表示 Unix 文件权限很有用
 
 # 带有 `0b` 前缀的二进制
-bin1 = 0b11010110
-</code></pre>
+bin1 = 0b11010110</code></pre>
 <p>取值范围要求为 64 比特（signed long）（−9,223,372,036,854,775,808 至 9,223,372,036,854,775,807）。</p>
-<h2 id="section-10" data-target="nav.header">
-        <a href="#section-10">浮点数</a>
+<h2 id="section-9" data-target="nav.header">
+        <a href="#section-9">浮点数</a>
       </h2>
 <p>浮点数应当被实现为 IEEE 754 binary64 值。</p>
-<p>一个浮点数由一个整数部分（遵从与十进制整数值相同的规则）后跟上一个小数部分和/或一个指数部分组成。<br>
-如果小数部分和指数部分兼有，那小数部分必须在指数部分前面。</p>
+<p>一个浮点数由一个整数部分（遵从与十进制整数值相同的规则）后跟上一个小数部分和/或一个指数部分组成。<br>如果小数部分和指数部分兼有，那小数部分必须在指数部分前面。</p>
 <pre><code data-controller="snippet" class="language-toml"># 小数
 flt1 = +1.0
 flt2 = 3.1415
@@ -301,14 +212,11 @@ flt5 = 1e6
 flt6 = -2E-2
 
 # 都有
-flt7 = 6.626e-34
-</code></pre>
+flt7 = 6.626e-34</code></pre>
 <p>小数部分是一个小数点后跟一个或多个数字。</p>
 <p>一个指数部分是一个 E（大小写均可）后跟一个整数部分（遵从与十进制整数值相同的规则）。</p>
-<p>与整数相似，你可以使用下划线来增强可读性。<br>
-每个下划线必须被至少一个数字围绕。</p>
-<pre><code data-controller="snippet" class="language-toml">flt8 = 224_617.445_991_228
-</code></pre>
+<p>与整数相似，你可以使用下划线来增强可读性。<br>每个下划线必须被至少一个数字围绕。</p>
+<pre><code data-controller="snippet" class="language-toml">flt8 = 224_617.445_991_228</code></pre>
 <p>浮点数值 <code>-0.0</code> 与 <code>+0.0</code> 是有效的，并且应当遵从 IEEE 754。</p>
 <p>特殊浮点值也能够表示。
 它们是小写的。</p>
@@ -320,73 +228,54 @@ sf3 = -inf # 负无穷
 # 非数
 sf4 = nan  # 实际上对应信号非数码还是静默非数码，取决于实现
 sf5 = +nan # 等同于 `nan`
-sf6 = -nan # 有效，实际码取决于实现
-</code></pre>
-<h2 id="section-11" data-target="nav.header">
-        <a href="#section-11">布尔值</a>
+sf6 = -nan # 有效，实际码取决于实现</code></pre>
+<h2 id="section-10" data-target="nav.header">
+        <a href="#section-10">布尔值</a>
       </h2>
-<p>布尔值就是你所惯用的那样。<br>
-要小写。</p>
+<p>布尔值就是你所惯用的那样。<br>要小写。</p>
 <pre><code data-controller="snippet" class="language-toml">bool1 = true
-bool2 = false
-</code></pre>
-<h2 id="section-12" data-target="nav.header">
-        <a href="#section-12">坐标日期时刻</a>
+bool2 = false</code></pre>
+<h2 id="section-11" data-target="nav.header">
+        <a href="#section-11">坐标日期时刻</a>
       </h2>
 <p>要准确地表示世上的一个特定时间，你可以使用指定了时区偏移量的 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> 格式的日期时刻。</p>
 <pre><code data-controller="snippet" class="language-toml">odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
-odt3 = 1979-05-27T00:32:00.999999-07:00
-</code></pre>
+odt3 = 1979-05-27T00:32:00.999999-07:00</code></pre>
 <p>出于可读性的目的，你可以用空格替代日期和时刻中间的 T（RFC 3339 的第 5.6 节中允许了这样做）。</p>
-<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z
-</code></pre>
-<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>
-如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
-<h2 id="section-13" data-target="nav.header">
-        <a href="#section-13">各地日期时刻</a>
+<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z</code></pre>
+<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
+<h2 id="section-12" data-target="nav.header">
+        <a href="#section-12">各地日期时刻</a>
       </h2>
-<p>如果你省略了 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的时区偏移量，这表示该日期时刻的使用并不涉及时区偏移。<br>
-在没有其它信息的情况下，并不知道它究竟该被转化成世上的哪一刻。<br>
-如果仍被要求转化，那结果将取决于实现。</p>
+<p>如果你省略了 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的时区偏移量，这表示该日期时刻的使用并不涉及时区偏移。<br>在没有其它信息的情况下，并不知道它究竟该被转化成世上的哪一刻。<br>如果仍被要求转化，那结果将取决于实现。</p>
 <pre><code data-controller="snippet" class="language-toml">ldt1 = 1979-05-27T07:32:00
-ldt2 = 1979-05-27T00:32:00.999999
-</code></pre>
-<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>
-如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
-<h2 id="section-14" data-target="nav.header">
-        <a href="#section-14">各地日期</a>
+ldt2 = 1979-05-27T00:32:00.999999</code></pre>
+<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
+<h2 id="section-13" data-target="nav.header">
+        <a href="#section-13">各地日期</a>
       </h2>
 <p>如果你只写了 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的日期部分，那它表示一整天，同时也不涉及时区偏移。</p>
-<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27
-</code></pre>
-<h2 id="section-15" data-target="nav.header">
-        <a href="#section-15">各地时刻</a>
+<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27</code></pre>
+<h2 id="section-14" data-target="nav.header">
+        <a href="#section-14">各地时刻</a>
       </h2>
 <p>如果你只写了 <a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a> 日期时刻中的时刻部分，它将只表示一天之中的那个时刻，而与任何特定的日期无关、亦不涉及时区偏移。</p>
 <pre><code data-controller="snippet" class="language-toml">lt1 = 07:32:00
-lt2 = 00:32:00.999999
-</code></pre>
-<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>
-如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
-<h2 id="section-16" data-target="nav.header">
-        <a href="#section-16">数组</a>
+lt2 = 00:32:00.999999</code></pre>
+<p>小数秒的精度取决于实现，但至少应当能够精确到毫秒。<br>如果它的值超出了实现所支持的精度，那多余的部分必须被舍弃，而不能四舍五入。</p>
+<h2 id="section-15" data-target="nav.header">
+        <a href="#section-15">数组</a>
       </h2>
-<p>数组是内含值的方括号。<br>
-空白会被忽略。<br>
-子元素由逗号分隔。<br>
-子元素的数据类型必须一致（不同写法的字符串应当被认为是相同的类型，不同元素类型的数组也同是数组类型）。</p>
+<p>数组是内含值的方括号。<br>空白会被忽略。<br>子元素由逗号分隔。<br>子元素的数据类型必须一致（不同写法的字符串应当被认为是相同的类型，不同元素类型的数组也同是数组类型）。</p>
 <pre><code data-controller="snippet" class="language-toml">arr1 = [ 1, 2, 3 ]
 arr2 = [ &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot; ]
 arr3 = [ [ 1, 2 ], [3, 4, 5] ]
-arr4 = [ &quot;所有（写法的）&quot;, '字符串', &quot;&quot;&quot;都是一样的&quot;&quot;&quot;, '''类型''']
+arr4 = [ &quot;所有（写法的）&quot;, &#39;字符串&#39;, &quot;&quot;&quot;都是一样的&quot;&quot;&quot;, &#39;&#39;&#39;类型&#39;&#39;&#39;]
 arr5 = [ [ 1, 2 ], [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] ]
 
-arr6 = [ 1, 2.0 ] # 非法
-</code></pre>
-<p>数组也可以跨多行。<br>
-数组的最后一个值后面可以有终逗号（也称为尾逗号）。<br>
-值和结束括号前可以存在任意数量的换行和注释。</p>
+arr6 = [ 1, 2.0 ] # 非法</code></pre>
+<p>数组也可以跨多行。<br>数组的最后一个值后面可以有终逗号（也称为尾逗号）。<br>值和结束括号前可以存在任意数量的换行和注释。</p>
 <pre><code data-controller="snippet" class="language-toml">arr7 = [
   1, 2, 3
 ]
@@ -394,82 +283,57 @@ arr6 = [ 1, 2.0 ] # 非法
 arr8 = [
   1,
   2, # 这是可以的
-]
-</code></pre>
-<h2 id="section-17" data-target="nav.header">
-        <a href="#section-17">表</a>
+]</code></pre>
+<h2 id="section-16" data-target="nav.header">
+        <a href="#section-16">表</a>
       </h2>
-<p>表（也被称为哈希表或字典）是键值对的集合。<br>
-它们在方括号里，并作为单独的行出现。<br>
-看得出它们不同于数组，因为数组只有值。</p>
-<pre><code data-controller="snippet" class="language-toml">[table]
-</code></pre>
-<p>在它下方，直至下一个表或文件结束，都是这个表的键值对。<br>
-表不保证保持键值对的指定顺序。</p>
+<p>表（也被称为哈希表或字典）是键值对的集合。<br>它们在方括号里，并作为单独的行出现。<br>看得出它们不同于数组，因为数组只有值。</p>
+<pre><code data-controller="snippet" class="language-toml">[table]</code></pre>
+<p>在它下方，直至下一个表或文件结束，都是这个表的键值对。<br>表不保证保持键值对的指定顺序。</p>
 <pre><code data-controller="snippet" class="language-toml">[table-1]
 key1 = &quot;some string&quot;
 key2 = 123
 
 [table-2]
 key1 = &quot;another string&quot;
-key2 = 456
-</code></pre>
+key2 = 456</code></pre>
 <p>表名的规则与键名相同（见前文键名定义）。</p>
 <pre><code data-controller="snippet" class="language-toml">[dog.&quot;tater.man&quot;]
-type.name = &quot;pug&quot;
-</code></pre>
+type.name = &quot;pug&quot;</code></pre>
 <p>等价于 JSON 的如下结构：</p>
-<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }
-</code></pre>
+<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }</code></pre>
 <p>键名周围的空格会被忽略，然而最佳实践还是不要有任何多余的空白。</p>
 <pre><code data-controller="snippet" class="language-toml">[a.b.c]            # 这是最佳实践
 [ d.e.f ]          # 等同于 [d.e.f]
 [ g .  h  . i ]    # 等同于 [g.h.i]
-[ j . &quot;ʞ&quot; . 'l' ]  # 等同于 [j.&quot;ʞ&quot;.'l']
-</code></pre>
-<p>你不必层层完整地写出你不想写的所有途径的父表。<br>
-TOML 知道该怎么办。</p>
+[ j . &quot;ʞ&quot; . &#39;l&#39; ]  # 等同于 [j.&quot;ʞ&quot;.&#39;l&#39;]</code></pre>
+<p>你不必层层完整地写出你不想写的所有途径的父表。<br>TOML 知道该怎么办。</p>
 <pre><code data-controller="snippet" class="language-toml"># [x] 你
 # [x.y] 不
 # [x.y.z] 需要这些
-[x.y.z.w] # 来让这生效
-</code></pre>
+[x.y.z.w] # 来让这生效</code></pre>
 <p>空表是允许的，只要里面没有键值对就行了。</p>
-<p>类似于键名，你不能重复定义任何表。<br>
-这样做是非法的。</p>
+<p>类似于键名，你不能重复定义任何表。<br>这样做是非法的。</p>
 <pre><code data-controller="snippet" class="language-toml"># 不要这样做
 
 [a]
 b = 1
 
 [a]
-c = 2
-</code></pre>
-<pre><code data-controller="snippet" class="language-toml"># 也不要这样做
+c = 2</code></pre><pre><code data-controller="snippet" class="language-toml"># 也不要这样做
 
 [a]
 b = 1
 
 [a.b]
-c = 2
-</code></pre>
-<h2 id="section-18" data-target="nav.header">
-        <a href="#section-18">内联表</a>
+c = 2</code></pre><h2 id="section-17" data-target="nav.header">
+        <a href="#section-17">内联表</a>
       </h2>
-<p>内联表提供了一种更为紧凑的语法来表示表。<br>
-对于否则就很啰嗦的成组数据，这尤其有用。<br>
-内联表由花括号 <code>{</code> 和 <code>}</code> 包裹。<br>
-在括号中，可以出现零个或更多逗号分隔的键值对。<br>
-键值对采取与标准表中的键值对相同的形式。<br>
-什么类型的值都可以，包括内联表。</p>
-<p>内联表得出现在同一行内。<br>
-不允许花括号中出现换行，除非它们存在于正确的值当中。<br>
-即便如此，也强烈不建议把一个内联表搞成纵跨多行的样子。<br>
-如果你发现自己真的需要，那意味着你应该使用标准表。</p>
+<p>内联表提供了一种更为紧凑的语法来表示表。<br>对于否则就很啰嗦的成组数据，这尤其有用。<br>内联表由花括号 <code>{</code> 和 <code>}</code> 包裹。<br>在括号中，可以出现零个或更多逗号分隔的键值对。<br>键值对采取与标准表中的键值对相同的形式。<br>什么类型的值都可以，包括内联表。</p>
+<p>内联表得出现在同一行内。<br>不允许花括号中出现换行，除非它们存在于正确的值当中。<br>即便如此，也强烈不建议把一个内联表搞成纵跨多行的样子。<br>如果你发现自己真的需要，那意味着你应该使用标准表。</p>
 <pre><code data-controller="snippet" class="language-toml">name = { first = &quot;Tom&quot;, last = &quot;Preston-Werner&quot; }
 point = { x = 1, y = 2 }
-animal = { type.name = &quot;pug&quot; }
-</code></pre>
+animal = { type.name = &quot;pug&quot; }</code></pre>
 <p>上述内联表等同于下面的标准表定义：</p>
 <pre><code data-controller="snippet" class="language-toml">[name]
 first = &quot;Tom&quot;
@@ -481,16 +345,11 @@ y = 2
 
 [animal]
 type.name = &quot;pug&quot;
-
 </code></pre>
-<h2 id="section-19" data-target="nav.header">
-        <a href="#section-19">表数组</a>
+<h2 id="section-18" data-target="nav.header">
+        <a href="#section-18">表数组</a>
       </h2>
-<p>最后还剩下一个没法表示的是表数组。<br>
-这可以通过双方括号来表示。<br>
-各个具有相同方括号名的表将会成为该数组内的一员。<br>
-这些表的出现顺序就是它们的插入顺序。<br>
-一个没有任何键值对的双方括号表将为视为一个空表。</p>
+<p>最后还剩下一个没法表示的是表数组。<br>这可以通过双方括号来表示。<br>各个具有相同方括号名的表将会成为该数组内的一员。<br>这些表的出现顺序就是它们的插入顺序。<br>一个没有任何键值对的双方括号表将为视为一个空表。</p>
 <pre><code data-controller="snippet" class="language-toml">[[products]]
 name = &quot;Hammer&quot;
 sku = 738594937
@@ -500,8 +359,7 @@ sku = 738594937
 [[products]]
 name = &quot;Nail&quot;
 sku = 284758393
-color = &quot;gray&quot;
-</code></pre>
+color = &quot;gray&quot;</code></pre>
 <p>等价于 JSON 的如下结构。</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;products&quot;: [
@@ -509,11 +367,8 @@ color = &quot;gray&quot;
     { },
     { &quot;name&quot;: &quot;Nail&quot;, &quot;sku&quot;: 284758393, &quot;color&quot;: &quot;gray&quot; }
   ]
-}
-</code></pre>
-<p>你还可以创建一个嵌套表数组。<br>
-只要在子表上使用相同的双方括号语法语法。<br>
-每个双方括号子表将隶属于上方最近定义的表元素。</p>
+}</code></pre>
+<p>你还可以创建一个嵌套表数组。<br>只要在子表上使用相同的双方括号语法语法。<br>每个双方括号子表将隶属于上方最近定义的表元素。</p>
 <pre><code data-controller="snippet" class="language-toml">[[fruit]]
   name = &quot;apple&quot;
 
@@ -531,8 +386,7 @@ color = &quot;gray&quot;
   name = &quot;banana&quot;
 
   [[fruit.variety]]
-    name = &quot;plantain&quot;
-</code></pre>
+    name = &quot;plantain&quot;</code></pre>
 <p>上述 TOML 等价于 JSON 的如下结构。</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;fruit&quot;: [
@@ -554,14 +408,12 @@ color = &quot;gray&quot;
       ]
     }
   ]
-}
-</code></pre>
+}</code></pre>
 <p>若试图向一个静态定义的数组追加内容，即便数组尚且为空或类型兼容，也必须在解析时报错。</p>
 <pre><code data-controller="snippet" class="language-toml"># 无效的 TOML 文档
 fruit = []
 
-[[fruit]] # 不允许
-</code></pre>
+[[fruit]] # 不允许</code></pre>
 <p>若试图用已经确定为数组的名称定义表，必须在解析时报错。</p>
 <pre><code data-controller="snippet" class="language-toml"># 无效的 TOML 文档
 [[fruit]]
@@ -572,39 +424,30 @@ fruit = []
 
   # 这个表与之前的表冲突了
   [fruit.variety]
-    name = &quot;granny smith&quot;
-</code></pre>
-<p>你也可以适当使用内联表：</p>
+    name = &quot;granny smith&quot;</code></pre><p>你也可以适当使用内联表：</p>
 <pre><code data-controller="snippet" class="language-toml">points = [ { x = 1, y = 2, z = 3 },
            { x = 7, y = 8, z = 9 },
-           { x = 2, y = 4, z = 8 } ]
-</code></pre>
-<h2 id="section-20" data-target="nav.header">
-        <a href="#section-20">文件扩展名</a>
+           { x = 2, y = 4, z = 8 } ]</code></pre>
+<h2 id="section-19" data-target="nav.header">
+        <a href="#section-19">文件扩展名</a>
       </h2>
 <p>TOML 文件应当使用 <code>.toml</code> 扩展名。</p>
-<h2 id="section-21" data-target="nav.header">
-        <a href="#section-21">MIME 类型</a>
+<h2 id="section-20" data-target="nav.header">
+        <a href="#section-20">MIME 类型</a>
       </h2>
 <p>在互联网上传输 TOML 文件时，恰当的 MIME 类型是 <code>application/toml</code>。</p>
-<h2 id="section-22" data-target="nav.header">
-        <a href="#section-22">与其它格式的比较</a>
+<h2 id="section-21" data-target="nav.header">
+        <a href="#section-21">与其它格式的比较</a>
       </h2>
-<p>某种程度上讲 TOML 与 JSON 非常相似：简单，规格明确，并且宜于转化成普适的数据类型。<br>
-JSON 适合序列化由计算机程序读写的数据。<br>
-TOML 与 JSON 的不同之处是它的重点在于宜于人类读写。<br>
-注释就是一个好例子：当数据在程序之间传送时，它们有些多余，但是在手工编辑的配置文件中非常有帮助。</p>
-<p>YAML 格式就像 TOML 一样，是以配置文件为导向的。<br>
-然而……因为种种原因，YAML 是一种过于复杂的解决方案。<br>
-TOML 旨在简易，这个目标在 YAML 的规范当中不那么明显：http://www.yaml.org/spec/1.2/spec.html</p>
-<p>INI 格式也常见于配置文件。<br>
-然而……这个格式并无统一标准，并且通常不料理超过一或两层的嵌套。</p>
-<h2 id="section-23" data-target="nav.header">
-        <a href="#section-23">参与</a>
+<p>某种程度上讲 TOML 与 JSON 非常相似：简单，规格明确，并且宜于转化成普适的数据类型。<br>JSON 适合序列化由计算机程序读写的数据。<br>TOML 与 JSON 的不同之处是它的重点在于宜于人类读写。<br>注释就是一个好例子：当数据在程序之间传送时，它们有些多余，但是在手工编辑的配置文件中非常有帮助。</p>
+<p>YAML 格式就像 TOML 一样，是以配置文件为导向的。<br>然而……因为种种原因，YAML 是一种过于复杂的解决方案。<br>TOML 旨在简易，这个目标在 YAML 的规范当中不那么明显：<a href="http://www.yaml.org/spec/1.2/spec.html">http://www.yaml.org/spec/1.2/spec.html</a></p>
+<p>INI 格式也常见于配置文件。<br>然而……这个格式并无统一标准，并且通常不料理超过一或两层的嵌套。</p>
+<h2 id="section-22" data-target="nav.header">
+        <a href="#section-22">参与</a>
       </h2>
 <p>欢迎帮助文档、问题反馈、修缮合并，以及其它一切形式的贡献！</p>
-<h2 id="section-24" data-target="nav.header">
-        <a href="#section-24">Wiki</a>
+<h2 id="section-23" data-target="nav.header">
+        <a href="#section-23">Wiki</a>
       </h2>
 <p>我们有一个<a href="https://github.com/toml-lang/toml/wiki">官方 TOML Wiki</a> 收录了以下内容：</p>
 <ul>
@@ -616,5 +459,4 @@ TOML 旨在简易，这个目标在 YAML 的规范当中不那么明显：http:/
 <li>编码器</li>
 <li>格式转换器</li>
 </ul>
-<p>请点进去看一下，如果你想要阅览或加入其中。<br>
-感谢你成为 TOML 社区的一员！</p>
+<p>请点进去看一下，如果你想要阅览或加入其中。<br>感谢你成为 TOML 社区的一员！</p>

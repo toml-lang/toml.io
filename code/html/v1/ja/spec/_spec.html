@@ -1,5 +1,5 @@
 <p><img src="../../logos/toml-200.png" alt="TOML Logo"></p>
-<h1>TOML</h1>
+<h1 id="toml">TOML</h1>
 <p>トムの明瞭で最小の言語。
 （By Tom Preston Werner）</p>
 <p>最新版: <a href="https://github.com/mojombo/toml/blob/master/versions/en/toml-v0.5.0.md">v0.5.0</a>.</p>
@@ -14,34 +14,7 @@
 <p>TOMLは明瞭なセマンティクスを持ち、可読性の高い、ミニマルな設定ファイルフォーマットとなることを目的として作られています。TOMLは曖昧さなしに連想配列に変換できるよう設計されていて、
 様々な言語上でそれらのデータ構造に展開することが出来ます。</p>
 <h2 id="section-2" data-target="nav.header">
-        <a href="#section-2">目次</a>
-      </h2>
-<ul>
-<li><a href="#%E4%BE%8B">例</a></li>
-<li><a href="#%E4%BB%95%E6%A7%98">仕様</a></li>
-<li><a href="#%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88">コメント</a></li>
-<li><a href="#%E3%82%AD%E3%83%BC%E3%81%A8%E5%80%A4%E3%81%AE%E7%B5%84">キーと値の組</a></li>
-<li><a href="#%E3%82%AD%E3%83%BC">キー</a></li>
-<li><a href="#%E6%96%87%E5%AD%97%E5%88%97">文字列</a></li>
-<li><a href="#%E6%95%B4%E6%95%B0">整数</a></li>
-<li><a href="#%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">浮動小数点数</a></li>
-<li><a href="#%E3%83%96%E3%83%BC%E3%83%AA%E3%82%A2%E3%83%B3">ブーリアン</a></li>
-<li><a href="#%E3%82%AA%E3%83%95%E3%82%BB%E3%83%83%E3%83%88%E4%BB%98%E3%81%8DDateTime">オフセット付き日時</a></li>
-<li><a href="#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AEDateTime">ローカルの日時</a></li>
-<li><a href="#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E6%97%A5%E4%BB%98">ローカルの日付</a></li>
-<li><a href="#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E6%99%82%E5%88%BB">ローカルの時刻</a></li>
-<li><a href="#%E9%85%8D%E5%88%97">配列</a></li>
-<li><a href="#%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">テーブル</a></li>
-<li><a href="#%E3%82%A4%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">インライン・テーブル</a></li>
-<li><a href="#%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB%E3%81%AE%E9%85%8D%E5%88%97">テーブルの配列</a></li>
-<li><a href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%EF%BC%88%E6%8B%A1%E5%BC%B5%E5%AD%90%EF%BC%89">ファイル名（拡張子）</a></li>
-<li><a href="#mime-type">MIME Type</a></li>
-<li><a href="#%E4%BB%96%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%83%E3%83%88%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83">他のフォーマットとの比較</a></li>
-<li><a href="#%E8%B2%A2%E7%8C%AE%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6">貢献について</a></li>
-<li><a href="#wiki">Wiki</a></li>
-</ul>
-<h2 id="section-3" data-target="nav.header">
-        <a href="#section-3">例</a>
+        <a href="#section-2">例</a>
       </h2>
 <pre><code data-controller="snippet" class="language-toml"># TOMLドキュメントの例です。
 
@@ -75,10 +48,9 @@ data = [ [&quot;gamma&quot;, &quot;delta&quot;], [1, 2] ]
 hosts = [
   &quot;alpha&quot;,
   &quot;omega&quot;
-]
-</code></pre>
-<h2 id="section-4" data-target="nav.header">
-        <a href="#section-4">仕様</a>
+]</code></pre>
+<h2 id="section-3" data-target="nav.header">
+        <a href="#section-3">仕様</a>
       </h2>
 <ul>
 <li>TOMLはケース・センシティブです</li>
@@ -86,53 +58,46 @@ hosts = [
 <li>空白はタブ(0x09)もしくはスペース(0x20)のことです</li>
 <li>改行はLF(0x0A)もしくはCRLF(0x0D0A)です。</li>
 </ul>
-<h2 id="section-5" data-target="nav.header">
-        <a href="#section-5">コメント</a>
+<h2 id="section-4" data-target="nav.header">
+        <a href="#section-4">コメント</a>
       </h2>
 <p>ハッシュ記号(<code>#</code>)に続けて改行までをコメントとします。</p>
 <pre><code data-controller="snippet" class="language-toml"># 好きなようにコメントできます。
-key = &quot;value&quot; # 行末までコメントです。
-</code></pre>
-<h2 id="section-6" data-target="nav.header">
-        <a href="#section-6">キーと値の組</a>
+key = &quot;value&quot; # 行末までコメントです。</code></pre>
+<h2 id="section-5" data-target="nav.header">
+        <a href="#section-5">キーと値の組</a>
       </h2>
 <p>TOML文書の最も基本的な構造はキーと値の組からなります。</p>
 <p>キーは等号（<code>=</code>）の左に、値は右に記述します。
 キーと値の周りにある空白は無視されます。
 キー、等号、値は同じ行に入れる必要があります（いくつかのタイプの値は複数行で記述される場合があります）。</p>
-<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;</code></pre>
 <p>値は、文字列、整数、浮動少数、ブーリアン、日時、配列もしくはインライン・テーブルのいずれかのデータ型でなければなりません。未定義の値は不正となります。</p>
-<pre><code data-controller="snippet" class="language-toml">key = # 不正
-</code></pre>
-<h2 id="section-7" data-target="nav.header">
-        <a href="#section-7">キー</a>
+<pre><code data-controller="snippet" class="language-toml">key = # 不正</code></pre>
+<h2 id="section-6" data-target="nav.header">
+        <a href="#section-6">キー</a>
       </h2>
 <p>キーはベア・キー、クォーテッド・キー、ドッテッド・キーのいずれかになります。</p>
 <p><strong>ベア・キー</strong>はASCII英数字とアンダースコア、ダッシュのみ含みます（<code>A-Za-z0-9_-</code>）。注意点としてベア・キーはASCII数字のみの構成でも構いません（例: <code>1234</code>）。ただし、常に文字列として解釈されます。</p>
 <pre><code data-controller="snippet" class="language-toml">key = &quot;value&quot;
 bare_key = &quot;value&quot;
 bare-key = &quot;value&quot;
-1234 = &quot;value&quot;
-</code></pre>
+1234 = &quot;value&quot;</code></pre>
 <p><strong>クォーテッド・キー</strong>は後述の基本文字列もしくはリテラル文字列と同じルールで記述できます。これによってより広い文字セットをキーに使うことが出来ます。ベスト・プラクティスとして、絶対に必要なケース以外はベア・キーを使うことをおすすめします。</p>
 <pre><code data-controller="snippet" class="language-toml">&quot;127.0.0.1&quot; = &quot;value&quot;
 &quot;character encoding&quot; = &quot;value&quot;
 &quot;ʎǝʞ&quot; = &quot;value&quot;
-'key2' = &quot;value&quot;
-'quoted &quot;value&quot;' = &quot;value&quot;
-</code></pre>
+&#39;key2&#39; = &quot;value&quot;
+&#39;quoted &quot;value&quot;&#39; = &quot;value&quot;</code></pre>
 <p>ベア・キーでは空白は許容されませんが、クォーテッド・キーでは空文字列をキーに使うことが出来ます（非推奨ではありますが）。</p>
 <pre><code data-controller="snippet" class="language-toml">= &quot;no key name&quot;  # 不正です
 &quot;&quot; = &quot;blank&quot;     # 可能ですがお奨めしません
-'' = 'blank'     # 可能ですがお奨めしません
-</code></pre>
+&#39;&#39; = &#39;blank&#39;     # 可能ですがお奨めしません</code></pre>
 <p><strong>ドッテッドキー</strong>はドット（<code>.</code>）で接続されたベア・キーもしくはクォーテッド・キーの連なりです。近い属性同士をまとめるために用いることが出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml">name = &quot;Orange&quot;
 physical.color = &quot;orange&quot;
 physical.shape = &quot;round&quot;
-site.&quot;google.com&quot; = true
-</code></pre>
+site.&quot;google.com&quot; = true</code></pre>
 <p>JSONで記述すると、上記のデータは以下のような構造になります。</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;name&quot;: &quot;Orange&quot;,
@@ -143,31 +108,26 @@ site.&quot;google.com&quot; = true
   &quot;site&quot;: {
     &quot;google.com&quot;: true
   }
-}
-</code></pre>
+}</code></pre>
 <p>ドットで分けられたそれぞれの部分の周りに空白を入れても無視されます。しかしながら、ベスト・プラクティスは空白で囲んだりはしないことです。</p>
 <p>キーを複数回定義することは不正です。</p>
 <pre><code data-controller="snippet" class="language-toml"># やらないでくださいね
 name = &quot;Tom&quot;
-name = &quot;Pradyun&quot;
-</code></pre>
+name = &quot;Pradyun&quot;</code></pre>
 <p>（クォーテッド・キーの部分となる）キーは、値との組が直に定義されていない限り、そのキーを再度記述したり、キーの下で更にキーを生やしたりすることが出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml">a.b.c = 1
-a.d = 2
-</code></pre>
+a.d = 2</code></pre>
 <pre><code data-controller="snippet" class="language-toml"># 以下は不正となります。
 a.b = 1
-a.b.c = 2
-</code></pre>
+a.b.c = 2</code></pre>
 <p>訳注：ドッテッド・キーは階層構造をとるため、末端のキーより上の階層のキーに新たに別のキーを子として生やしても構いません。末端のキーはすでに値をアサインしてしまっているため、再度記述することは不正になります。</p>
-<h2 id="section-8" data-target="nav.header">
-        <a href="#section-8">文字列</a>
+<h2 id="section-7" data-target="nav.header">
+        <a href="#section-7">文字列</a>
       </h2>
 <p>文字列を記述するには、4種類の方法があります。基本文字列、複数行基本文字列、リテラル文字列、複数行リテラル文字列です。</p>
 <p><strong>基本文字列</strong>はクォーテーションマーク(<code>&quot;</code>)で囲まれた文字列です。
 クォーテーションマーク、バックスラッシュ、制御文字(U+0000 〜 U+001F、U+007F)はエスケープする必要があります。その他のユニコード文字は全て文字列内で使えます。</p>
-<pre><code data-controller="snippet" class="language-toml">str = &quot;I'm a string. \&quot;You can quote me\&quot;. Name\tJos\u00E9\nLocation\tSF.&quot;
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">str = &quot;I&#39;m a string. \&quot;You can quote me\&quot;. Name\tJos\u00E9\nLocation\tSF.&quot;</code></pre>
 <p>利便性のために、いくつかの文字についてはエスケープシーケンスの短縮形が用意されています。</p>
 <pre><code data-controller="snippet" class="language-toml">\b         - backspace       (U+0008)
 \t         - tab             (U+0009)
@@ -177,23 +137,19 @@ a.b.c = 2
 \&quot;         - quote           (U+0022)
 \\         - backslash       (U+005C)
 \uXXXX     - unicode         (U+XXXX)
-\UXXXXXXXX - unicode         (U+XXXXXXXX)
-</code></pre>
-<p>全てのユニコード文字は<code>\uXXXX</code>もしくは<code>\UXXXXXXXX</code>の形式にエスケープできます。エスケープコードは正しい<a href="http://unicode.org/glossary/#unicode_scalar_value">ユニコード・スカラ値</a>である必要があります.</p>
+\UXXXXXXXX - unicode         (U+XXXXXXXX)</code></pre><p>全てのユニコード文字は<code>\uXXXX</code>もしくは<code>\UXXXXXXXX</code>の形式にエスケープできます。エスケープコードは正しい<a href="http://unicode.org/glossary/#unicode_scalar_value">ユニコード・スカラ値</a>である必要があります.</p>
 <p>上記以外のエスケープシーケンスは将来のために予約されていて、もし使ってしまった場合はTOMLはエラーを出すでしょう。</p>
 <p>ときにはあなたは文書の一節を書いたり（例: 翻訳文書）、とても長い文を改行したくなることがあるでしょう。TOMLはそのようなときの手間を省くことが出来ます。</p>
 <p><strong>複数行文字列</strong>はクォーテーションマーク3つずつで囲むことで表現できます。文字列の頭にすぐ改行が来た場合はその改行は取り除かれます。その他の空白と改行はそのまま保持されます。</p>
 <pre><code data-controller="snippet" class="language-toml">str1 = &quot;&quot;&quot;
 Roses are red
-Violets are blue&quot;&quot;&quot;
-</code></pre>
+Violets are blue&quot;&quot;&quot;</code></pre>
 <p>TOMLのパーサは改行をそのプラットフォームに応じて自由に正規化出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml"># Unixでは上記のTOMLファイルは以下と同じパース結果になります:
 str2 = &quot;Roses are red\nViolets are blue&quot;
 
 # Windowsでは上記のTOMLファイルは以下と同じパース結果になります:
-str3 = &quot;Roses are red\r\nViolets are blue&quot;
-</code></pre>
+str3 = &quot;Roses are red\r\nViolets are blue&quot;</code></pre>
 <p>長い文字列を不要な行頭の空白なしに書きたい場合は、<code>\</code>を行末に書きます。<code>\</code>は全ての空白（もしくは改行）を、空白でない文字が現れるまで取り除きます。もし文字列の最初の文字が<code>\</code>だった場合は、全ての空白文字列と改行を、次の空白でない文字が現れるか、文字列の終わりまで、取り除きます。全てのエスケープシーケンスは基本文字列と同様に複数行文字列でも使えます。</p>
 <pre><code data-controller="snippet" class="language-toml"># 以下のそれぞれの文字列は同じとなります:
 str1 = &quot;The quick brown fox jumps over the lazy dog.&quot;
@@ -209,43 +165,38 @@ str3 = &quot;&quot;&quot;\
        The quick brown \
        fox jumps over \
        the lazy dog.\
-       &quot;&quot;&quot;
-</code></pre>
+       &quot;&quot;&quot;</code></pre>
 <p>使える文字は、バックスラッシュと制御文字(U+0000 〜 U+001F、U+007F)以外の全てのユニコード文字です。バックスラッシュと制御文字はエスケープする必要があります。クォーテーションマークは複数行文字列の終了を避けるため以外の目的でエスケープする必要はありません。</p>
-<p>あなたがWindowsパスや正規表現を書くことが多い場合、バックスラッシュをエスケープすることは、面倒になったり、間違いやすくなったりします。そのような場合、TOMLはエスケープなしのリテラル形式の文字列をサポートしています。</p>
-<p><strong>リテラル文字列</strong>はシングル・クォート(<code>'</code>)で囲む必要があります。基本文字列のように一行に書きます:</p>
+<p>あなたがWindowsパスや正規表現を書くことが多い場合、バックスラッシュをエスケープすることは、面倒になったり、間違いやすくなったりします。そのような場合、TOMLはエスケープなしのリテラル形式の文字列をサポートしています。 </p>
+<p><strong>リテラル文字列</strong>はシングル・クォート(<code>&#39;</code>)で囲む必要があります。基本文字列のように一行に書きます:</p>
 <pre><code data-controller="snippet" class="language-toml"># そのままの文字列を得ることが出来ます.
-winpath  = 'C:\Users\nodejs\templates'
-winpath2 = '\\ServerX\admin$\system32\'
-quoted   = 'Tom &quot;Dubs&quot; Preston-Werner'
-regex    = '&lt;\i\c*\s*&gt;'
-</code></pre>
-<p>エスケープが無いため、シングル・クォートはリテラル文字列中では書けません。そのような場合、TOMLはリテラル文字列の複数行版をサポートしています。</p>
+winpath  = &#39;C:\Users\nodejs\templates&#39;
+winpath2 = &#39;\\ServerX\admin$\system32\&#39;
+quoted   = &#39;Tom &quot;Dubs&quot; Preston-Werner&#39;
+regex    = &#39;&lt;\i\c*\s*&gt;&#39;</code></pre>
+<p>エスケープが無いため、シングル・クォートはリテラル文字列中では書けません。そのような場合、TOMLはリテラル文字列の複数行版をサポートしています。 </p>
 <p><strong>複数行リテラル文字列</strong>はシングル・クォート3つずつで囲まれていて、改行も許します。リテラル文字列と同様エスケープはありません。文字列の頭の改行は取り除かれます。他の文字列の中身は全て変更なしに読み込まれます。</p>
-<pre><code data-controller="snippet" class="language-toml">regex2 = '''I [dw]on't need \d{2} apples'''
-lines  = '''
+<pre><code data-controller="snippet" class="language-toml">regex2 = &#39;&#39;&#39;I [dw]on&#39;t need \d{2} apples&#39;&#39;&#39;
+lines  = &#39;&#39;&#39;
 最初の一行は取り除かれて
 文字列に展開されます。
 その他の空白、改行文字は
 保持されます。
-'''
-</code></pre>
+&#39;&#39;&#39;</code></pre>
 <p>タブを除く制御文字をリテラル文字列に使うことは出来ません。
 よって、バイナリデータを扱う際には、Base64か、他の適切なASCIIもしくはUTF-8のエンコーディング形式でエンコードすることを推奨します。そして、それらのエンコーディングは（TOMLを読み込む）アプリケーション側で取り扱う必要があります。</p>
-<h2 id="section-9" data-target="nav.header">
-        <a href="#section-9">整数</a>
+<h2 id="section-8" data-target="nav.header">
+        <a href="#section-8">整数</a>
       </h2>
 <p>整数は全ての数のことです(訳注：整数全体のことだと思われる)。正の数を表すときはプラス符号<code>+</code>を前につけても、つけなくても構いません。負の数の場合はマイナス符号<code>-</code>を前につけます。</p>
 <pre><code data-controller="snippet" class="language-toml">int1 = +99
 int2 = 42
 int3 = 0
-int4 = -17
-</code></pre>
+int4 = -17</code></pre>
 <p>大きな数字を表記するために、あなたはアンダースコアを使うことも出来ます。それぞれのアンダースコアは最低1つの数字で囲む必要があります。</p>
 <pre><code data-controller="snippet" class="language-toml">int5 = 1_000
 int6 = 5_349_221
-int7 = 1_2_3_4_5     # 可能ですがお奨めしません
-</code></pre>
+int7 = 1_2_3_4_5     # 可能ですがお奨めしません</code></pre>
 <p>（10進数のゼロ以外の）整数の表記をゼロから始めることは出来ません。<code>-0</code>と<code>+0</code>については許容され、プレフィックスなしのゼロと同じ値となります。</p>
 <p>正の整数は2進数、8進数、16進数の形式で表すことも出来ます。
 これらの表記では（プレフィックスの後に）ゼロを頭にして続けることが出来ます。16進数を表す場合大文字小文字は問いません。アンダースコアは数字の間に用いることは出来ますが、プレフィックスとの間に入れることは出来ません。</p>
@@ -259,11 +210,10 @@ oct1 = 0o01234567
 oct2 = 0o755 # Unixのファイルパーミッションを表すのに便利です
 
 # 2進数表記はプレフィックス`0b`をつけます
-bin1 = 0b11010110
-</code></pre>
+bin1 = 0b11010110</code></pre>
 <p>許容される範囲としては、64bit(signed long)となります(−9,223,372,036,854,775,808 〜 9,223,372,036,854,775,807)。</p>
-<h2 id="section-10" data-target="nav.header">
-        <a href="#section-10">浮動小数点数</a>
+<h2 id="section-9" data-target="nav.header">
+        <a href="#section-9">浮動小数点数</a>
       </h2>
 <p>浮動小数点数はIEEE754 64ビット倍精度で実装されます。</p>
 <p>小数は整数部（整数型と同じルールで記述）と、それに続く小数部もしくは指数部から成ります。小数部と指数部の両方で表すことも出来ますが、その場合は小数部を指数部より前に置く必要があります。</p>
@@ -278,13 +228,11 @@ flt5 = 1e6
 flt6 = -2E-2
 
 # 複合
-flt7 = 6.626e-34
-</code></pre>
+flt7 = 6.626e-34</code></pre>
 <p>小数部は小数点の後に数字をならべて表記します。</p>
 <p>指数部は<code>E</code>(大文字小文字は問わない)の後に整数（整数型と同じルールで記述）で表記します。</p>
 <p>整数と同様、あなたは可読性のためにアンダースコアを使うことも出来ます。それぞれのアンダースコアは最低1つの数字で囲む必要があります。</p>
-<pre><code data-controller="snippet" class="language-toml">flt8 = 9_224_617.445_991_228_313
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">flt8 = 9_224_617.445_991_228_313</code></pre>
 <p><code>-0.0</code>と<code>+0.0</code>は許容され、IEEE754に従って実値に展開されます。</p>
 <p>以下の特別な浮動小数点数も記述することが出来ます。
 これらを記述する場合は小文字でなければいけません。</p>
@@ -296,61 +244,53 @@ sf3 = -inf # 負の無限大
 # 非数
 sf4 = nan  # sNaNかqNaNかは実装依存です
 sf5 = +nan # `nan`と同じ
-sf6 = -nan # 許容されますが、展開は実装依存です
-</code></pre>
-<h2 id="section-11" data-target="nav.header">
-        <a href="#section-11">ブーリアン</a>
+sf6 = -nan # 許容されますが、展開は実装依存です</code></pre>
+<h2 id="section-10" data-target="nav.header">
+        <a href="#section-10">ブーリアン</a>
       </h2>
 <p>ブーリアン値はただのトークンです（皆がいつも使っているやつです）。小文字のみとします。</p>
 <pre><code data-controller="snippet" class="language-toml">bool1 = true
-bool2 = false
-</code></pre>
-<h2 id="section-12" data-target="nav.header">
-        <a href="#section-12">オフセット付き日時</a>
+bool2 = false</code></pre>
+<h2 id="section-11" data-target="nav.header">
+        <a href="#section-11">オフセット付き日時</a>
       </h2>
 <p>明確に特定の瞬間を表現するために<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>表記のオフセット付き日時を使います。</p>
 <pre><code data-controller="snippet" class="language-toml">odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
-odt3 = 1979-05-27T00:32:00.999999-07:00
-</code></pre>
+odt3 = 1979-05-27T00:32:00.999999-07:00</code></pre>
 <p>可読性のために、<code>T</code>の代わりに日付と時刻の間に空白を置くことも出来ます（RFC 3339 section 5.6 で許可されています）。</p>
-<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">odt4 = 1979-05-27 07:32:00Z</code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="section-13" data-target="nav.header">
-        <a href="#section-13">ローカルの日時</a>
+<h2 id="section-12" data-target="nav.header">
+        <a href="#section-12">ローカルの日時</a>
       </h2>
 <p>もしあなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>のオフセットを省略するのであれば、その値はオフセットやタイムゾーンなしの日時として扱われます。そしてその値は追加の情報なしには特定の瞬間を表すデータに変換されることはありません。仮にそのようなデータに変換する必要がある場合、その変換は実装依存となります。</p>
 <pre><code data-controller="snippet" class="language-toml">ldt1 = 1979-05-27T07:32:00
-ldt2 = 1979-05-27T00:32:00.999999
-</code></pre>
+ldt2 = 1979-05-27T00:32:00.999999</code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="section-14" data-target="nav.header">
-        <a href="#section-14">ローカルの日付</a>
+<h2 id="section-13" data-target="nav.header">
+        <a href="#section-13">ローカルの日付</a>
       </h2>
 <p>もし、あなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>日時の日付部分のみを記述したならば、それはオフセットやタイムゾーンなしの、その日付そのものを表すデータとなります。</p>
-<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27
-</code></pre>
-<h2 id="section-15" data-target="nav.header">
-        <a href="#section-15">ローカルの時刻</a>
+<pre><code data-controller="snippet" class="language-toml">ld1 = 1979-05-27</code></pre>
+<h2 id="section-14" data-target="nav.header">
+        <a href="#section-14">ローカルの時刻</a>
       </h2>
 <p>もし、あなたが<a href="http://tools.ietf.org/html/rfc3339">RFC 3339</a>日時の時刻部分のみを記述したならば、それはオフセットやタイムゾーンなしの、その時刻そのものを表すデータとなります。</p>
 <pre><code data-controller="snippet" class="language-toml">lt1 = 07:32:00
-lt2 = 00:32:00.999999
-</code></pre>
+lt2 = 00:32:00.999999</code></pre>
 <p>小数秒部分の精度は実装依存ですが、最低ミリセカンド以上の精度が要求されます。もし実装がサポートしているより高い精度の値が与えられた場合、実装を超える精度については四捨五入ではなく切り捨てられる必要があります。</p>
-<h2 id="section-16" data-target="nav.header">
-        <a href="#section-16">配列</a>
+<h2 id="section-15" data-target="nav.header">
+        <a href="#section-15">配列</a>
       </h2>
 <p>配列は角括弧で囲まれた値の集まりです。空白は無視されます。各要素はカンマで区切られます。各データ型を混合させることは出来ません（文字列は全て同じ型だと考えてください。また中の要素がそれぞれ異なる配列同士も同じ型とします）。</p>
 <pre><code data-controller="snippet" class="language-toml">arr1 = [ 1, 2, 3 ]
 arr2 = [ &quot;red&quot;, &quot;yellow&quot;, &quot;green&quot; ]
 arr3 = [ [ 1, 2 ], [3, 4, 5] ]
-arr4 = [ &quot;all&quot;, 'strings', &quot;&quot;&quot;are the same&quot;&quot;&quot;, '''type''']
+arr4 = [ &quot;all&quot;, &#39;strings&#39;, &quot;&quot;&quot;are the same&quot;&quot;&quot;, &#39;&#39;&#39;type&#39;&#39;&#39;]
 arr5 = [ [ 1, 2 ], [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] ]
 
-arr6 = [ 1, 2.0 ] # 不正
-</code></pre>
+arr6 = [ 1, 2.0 ] # 不正</code></pre>
 <p>配列は複数行に書くことも出来ます。最後の要素の後ろにカンマを置くことも出来ます。改行やコメントは値や閉じ括弧の前に好きなだけ置くことが出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml">arr7 = [
   1, 2, 3
@@ -359,14 +299,12 @@ arr6 = [ 1, 2.0 ] # 不正
 arr8 = [
   1,
   2, # OK
-]
-</code></pre>
-<h2 id="section-17" data-target="nav.header">
-        <a href="#section-17">テーブル</a>
+]</code></pre>
+<h2 id="section-16" data-target="nav.header">
+        <a href="#section-16">テーブル</a>
       </h2>
 <p>テーブル（ハッシュテーブルや連想配列のことです）はキーと値の組からなる集まりです。それは角括弧で囲まれたテーブル名が書かれた行から始まります。配列は必ず（キーと組になった）値として表記されるので、テーブルの角括弧と配列は簡単に区別することが出来ます。</p>
-<pre><code data-controller="snippet" class="language-toml">[table]
-</code></pre>
+<pre><code data-controller="snippet" class="language-toml">[table]</code></pre>
 <p>ここに続いて、次のテーブルの開始か、ファイルの終わりまで、キーと値はこのテーブルに属します。
 テーブル内のキーと値の各ペアの順番は保証されません。</p>
 <pre><code data-controller="snippet" class="language-toml">[table-1]
@@ -375,27 +313,22 @@ key2 = 123
 
 [table-2]
 key1 = &quot;another string&quot;
-key2 = 456
-</code></pre>
+key2 = 456</code></pre>
 <p>テーブルの名前付けのルールはキーと同じとなります（キーの定義を参照してください）。</p>
 <pre><code data-controller="snippet" class="language-toml">[dog.&quot;tater.man&quot;]
-type.name = &quot;pug&quot;
-</code></pre>
+type.name = &quot;pug&quot;</code></pre>
 <p>これは以下のJSONと同じ構造を表します:</p>
-<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }
-</code></pre>
+<pre><code data-controller="snippet" class="language-json">{ &quot;dog&quot;: { &quot;tater.man&quot;: { &quot;type&quot;: { &quot;name&quot;: &quot;pug&quot; } } } }</code></pre>
 <p>テーブル名の周りの空白は無視されます。しかし余分な空白は使わないことお奨めします。</p>
 <pre><code data-controller="snippet" class="language-toml">[a.b.c]            # ベスト・プラクティスです
 [ d.e.f ]          # [d.e.f]と同じ
 [ g .  h  . i ]    # [g.h.i]と同じ
-[ j . &quot;ʞ&quot; . 'l' ]  # [j.&quot;ʞ&quot;.'l']と同じ
-</code></pre>
+[ j . &quot;ʞ&quot; . &#39;l&#39; ]  # [j.&quot;ʞ&quot;.&#39;l&#39;]と同じ</code></pre>
 <p>もし、上位のテーブルそのものを記述する必要がないのであれば、省略することも出来ます。</p>
 <pre><code data-controller="snippet" class="language-toml"># [x] 省略可
 # [x.y] これも可
 # [x.y.z] これも省略可
-[x.y.z.w] # ここから始めて構いません
-</code></pre>
+[x.y.z.w] # ここから始めて構いません</code></pre>
 <p>空のテーブルは単純にキーと値のペアを書かかないことで作れます。</p>
 <p>キーと同様にテーブルも同じ名前で複数回定義することは出来ません。
 もしそうした場合不正となります。</p>
@@ -405,25 +338,22 @@ type.name = &quot;pug&quot;
 b = 1
 
 [a]
-c = 2
-</code></pre>
+c = 2</code></pre>
 <pre><code data-controller="snippet" class="language-toml"># やっちゃダメですってば
 
 [a]
 b = 1
 
 [a.b]
-c = 2
-</code></pre>
-<h2 id="section-18" data-target="nav.header">
-        <a href="#section-18">インライン・テーブル</a>
+c = 2</code></pre>
+<h2 id="section-17" data-target="nav.header">
+        <a href="#section-17">インライン・テーブル</a>
       </h2>
 <p>インライン・テーブルはテーブルを表現するためのよりコンパクトな構文です。他の表現だと冗長になるようなグループになったデータを表すのに向いています。インライン・テーブルは波括弧（<code>{</code>と<code>}</code>）で囲まれている必要があります。波括弧の中では、キーと値のペアをカンマ区切りでゼロ個以上置くことが出来ます。値にはインライン・テーブル自体を含む全ての型を使うことが出来ます。</p>
 <p>インライン・テーブルは一行で表現されるべきです。波括弧の内側では改行は認められません。ただし、それぞれの値の中で改行することは、それぞれの値型で認められている範囲で出来ます。ですが、出来るとしてもインライン・テーブルを複数行に分割することはなるべく避けるべきです。もしあなたがその必要があるように感じたのならば、普通のテーブルを用いるべきです。</p>
 <pre><code data-controller="snippet" class="language-toml">name = { first = &quot;Tom&quot;, last = &quot;Preston-Werner&quot; }
 point = { x = 1, y = 2 }
-animal = { type.name = &quot;pug&quot; }
-</code></pre>
+animal = { type.name = &quot;pug&quot; }</code></pre>
 <p>上記のインライン・テーブルは下記の普通のテーブルと同一の定義です。</p>
 <pre><code data-controller="snippet" class="language-toml">[name]
 first = &quot;Tom&quot;
@@ -435,10 +365,9 @@ y = 2
 
 [animal]
 type.name = &quot;pug&quot;
-
 </code></pre>
-<h2 id="section-19" data-target="nav.header">
-        <a href="#section-19">テーブルの配列</a>
+<h2 id="section-18" data-target="nav.header">
+        <a href="#section-18">テーブルの配列</a>
       </h2>
 <p>最後に説明する型はテーブルの配列です。テーブル名を角括弧で二重に囲むことで表されます。二重角括弧で囲まれた同じテーブル名を持つテーブルは、一つの配列の要素となります。テーブルは表記順に配列に挿入されます。配列内のキーと値のペアを持たないテーブルは空のテーブルとして扱われます。</p>
 <pre><code data-controller="snippet" class="language-toml">[[products]]
@@ -450,8 +379,7 @@ sku = 738594937
 [[products]]
 name = &quot;Nail&quot;
 sku = 284758393
-color = &quot;gray&quot;
-</code></pre>
+color = &quot;gray&quot;</code></pre>
 <p>これは以下のJSONと同じ構造を表します:</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;products&quot;: [
@@ -459,8 +387,7 @@ color = &quot;gray&quot;
     { },
     { &quot;name&quot;: &quot;Nail&quot;, &quot;sku&quot;: 284758393, &quot;color&quot;: &quot;gray&quot; }
   ]
-}
-</code></pre>
+}</code></pre>
 <p>あなたはネストしたテーブルの配列を作ることも出来ます。その場合は、子テーブルにも二重角括弧表記を使ってください。それぞれのテーブルは、その上の最も近い場所に定義されている親テーブルの要素となる配列に属します。</p>
 <pre><code data-controller="snippet" class="language-toml">[[fruit]]
   name = &quot;apple&quot;
@@ -479,8 +406,7 @@ color = &quot;gray&quot;
   name = &quot;banana&quot;
 
   [[fruit.variety]]
-    name = &quot;plantain&quot;
-</code></pre>
+    name = &quot;plantain&quot;</code></pre>
 <p>上記のTOMLは下記のJSONに置き換えることができます。</p>
 <pre><code data-controller="snippet" class="language-json">{
   &quot;fruit&quot;: [
@@ -502,15 +428,13 @@ color = &quot;gray&quot;
       ]
     }
   ]
-}
-</code></pre>
+}</code></pre>
 <p>すでに値として定義された配列に対して、テーブルの配列を追加しようとする行為はパース時にエラーとなります。
 仮にそのデータ型が同じであってもです。</p>
 <pre><code data-controller="snippet" class="language-toml"># 不正です
 fruit = []
 
-[[fruit]] # エラーになります
-</code></pre>
+[[fruit]] # エラーになります</code></pre>
 <p>既にテーブルの配列として定義されたテーブルの後に、同じ名前を持つ通常のテーブルを定義しようとした場合、パース時にエラーとなります。</p>
 <pre><code data-controller="snippet" class="language-toml"># 不正なTOMLドキュメント
 [[fruit]]
@@ -521,30 +445,29 @@ fruit = []
 
   # このテーブルは上記のテーブルの配列と競合します
   [fruit.variety]
-    name = &quot;granny smith&quot;
-</code></pre>
-<h2 id="section-20" data-target="nav.header">
-        <a href="#section-20">ファイル名（拡張子）</a>
+    name = &quot;granny smith&quot;</code></pre>
+<h2 id="section-19" data-target="nav.header">
+        <a href="#section-19">ファイル名（拡張子）</a>
       </h2>
 <p>TOMLのファイルは<code>.toml</code>という拡張子を付ける必要があります。</p>
-<h2 id="section-21" data-target="nav.header">
-        <a href="#section-21">MIME Type</a>
+<h2 id="section-20" data-target="nav.header">
+        <a href="#section-20">MIME Type</a>
       </h2>
 <p>インターネット経由でTOMLファイルを転送する場合、ふさわしいMIMEタイプは<code>application/toml</code>です。</p>
-<h2 id="section-22" data-target="nav.header">
-        <a href="#section-22">他のフォーマットとの比較</a>
+<h2 id="section-21" data-target="nav.header">
+        <a href="#section-21">他のフォーマットとの比較</a>
       </h2>
 <p>いくつかの側面ではTOMLはJSONにとても似通っています。
 シンプルで、仕様がよく定義されており、どこにでもあるデータ型に変換するのが簡単です。
 JSONはコンピューター・プログラムが読み書きするデータをシリアライズするにはぴったりのフォーマットです。TOMLがJSONと異なるのは、人間が読み書きするのにやさしいフォーマットというところに重点を置いているところです。コメントが良い例です。それらはプログラムがデータをやり取りする上では何の意味も持ちません。ですが設定ファイルを人が手で編集するときにはとても助けになるのです。</p>
 <p>YAMLフォーマットはTOMLのように設定ファイルを記述するのに向いています。しかし、多くの場合、YAMLは複雑すぎる選択肢となってしまっています。TOMLは、<a href="http://www.yaml.org/spec/1.2/spec.html">YAMLの仕様</a>とは真逆のシンプルさを目標としています。</p>
 <p>INIフォーマットもまた設定ファイルを記述するのによく使われています。しかし、このフォーマットは標準化されていませんし、1つか2つのネストを超える複雑さを扱うには向いていません。</p>
-<h2 id="section-23" data-target="nav.header">
-        <a href="#section-23">貢献について</a>
+<h2 id="section-22" data-target="nav.header">
+        <a href="#section-22">貢献について</a>
       </h2>
 <p>ドキュメント化、バグレポート、プルリクエスト、その他のコントリビューションは常に歓迎しています！</p>
-<h2 id="section-24" data-target="nav.header">
-        <a href="#section-24">Wiki</a>
+<h2 id="section-23" data-target="nav.header">
+        <a href="#section-23">Wiki</a>
       </h2>
 <p>私達には<a href="https://github.com/toml-lang/toml/wiki">Official TOML Wiki</a>があります。
 そこには以下の情報が集まっています。</p>
