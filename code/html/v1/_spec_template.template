@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <nav class="hidden fixed w-full overflow-y-scroll top-0 bottom-0 bg-white z-10 py-32 pb-8 px-4 lg:w-auto lg:block lg:pl-8 lg:py-24" data-target="nav.menu">
+      <nav class="hidden fixed w-full overflow-y-scroll top-0 bottom-0 bg-white z-10 py-32 pb-8 px-4 leading-snug lg:w-68 lg:block lg:pl-8 lg:py-24" data-target="nav.menu">
         <div class="inline-block relative mb-4">
           <select
             class="inline appearance-none bg-white text-gray-800 outline-none border py-1 pl-3 pr-12"
