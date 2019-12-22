@@ -54,20 +54,20 @@ name = "Tom Preston-Werner"
 dob = 1979-05-27T07:32:00-08:00
 
 [database]
-ports = [ 8001, 8001, 8002 ]
 enabled = true
+ports = [ 8001, 8001, 8002 ]
 data = [ ["delta", "phi"], [3.14] ]
-temp = { cpu = 79.5, case = 72.0 }
+temp_targets = { cpu = 79.5, case = 72.0 }
 
 [servers]
 
 [servers.alpha]
 ip = "10.0.0.1"
-hostname = "alpha"
+role = "frontend"
 
 [servers.beta]
 ip = "10.0.0.2"
-hostname = "beta"</code></pre>
+role = "backend"</code></pre>
     </section>
   </div>
 
