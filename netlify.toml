@@ -27,15 +27,8 @@
 
 [[redirects]]
   from = "/"
-  to = "/v1/en"
+  to = "/en"
   force = true
-  headers = { X-From = 'Netlify' }
-
-[[redirects]]
-  from = "/v1"
-  to = "/v1/en"
-  force = true
-  headers = { X-From = 'Netlify' }
 
 [[headers]]
 # see https://www.netlify.com/docs/headers-and-basic-auth

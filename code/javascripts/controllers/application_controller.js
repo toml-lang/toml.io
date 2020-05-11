@@ -1,49 +1,60 @@
-// See https://stimulusjs.org for more about StimulusJS
+// See https://cameronjs.com/stimulus for more info
 
 import { Controller } from "stimulus";
 
 export default class extends Controller {
   static get targets() {
-    return ["locale"];
+    return ["versions", "languages"];
   }
 
   connect() {
-    this.addLocales();
-  }
+    for (let el of document.getElementsByTagName("code")) {
+      if (el.parentElement.nodeName === "PRE") {
+        let container = el.parentElement;
+        let div = document.createElement("div");
+        let link = document.createElement("a");
 
-  changeLocale(event) {
-    let target = event.currentTarget;
-    let path = location.pathname;
-
-    location.href = path.replace(/[a-z]{2}(\/|$)/, `${target.value}$1`) + location.hash;
-  }
-
-  addLocales() {
-    Object.entries(this.locales).forEach(([value, text]) => {
-      let option = this.optionForLocale(text, value);
-      const regex = `/${value}(\/|$)`;
-      if (location.pathname.match(regex)) {
-        option.selected = true;
+        div.classList.add("text-right");
+        link.href = "#";
+        link.classList.add("block", "text-right", "text-sm");
+        link.dataset.action = "click->application#copy";
+        link.textContent = "Copy to Clipboard";
+        div.appendChild(link);
+        container.parentElement.insertBefore(div, container.nextSibling);
       }
-
-      this.localeTarget.add(option);
-    });
+    }
   }
 
-  optionForLocale(text, value) {
-    let option = document.createElement("option");
-    option.value = value;
-    option.text = text;
-
-    return option;
+  copy(event) {
+    event.preventDefault();
+    this.copyContent(event.target.previousSibling.children[0]);
   }
 
-  get locales() {
-    return {
-      cn: "简体中文",
-      en: "English",
-      ja: "日本語",
-      ko: "한국어"
-    };
+  copyContent(target) {
+    const range = document.createRange();
+    window.getSelection().removeAllRanges();
+    range.selectNode(target);
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+  }
+
+  showVersions(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.versionsTarget.classList.toggle("hidden");
+    this.languagesTarget.classList.add("hidden");
+  }
+
+  showLanguages(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.languagesTarget.classList.toggle("hidden");
+    this.versionsTarget.classList.add("hidden");
+  }
+
+  closeAllMenus(event) {
+    this.versionsTarget.classList.add("hidden");
+    this.languagesTarget.classList.add("hidden");
   }
 }

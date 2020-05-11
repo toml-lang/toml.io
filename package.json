@@ -20,7 +20,7 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
     "autoprefixer": "^9.6.1",
-    "cameronjs-html-webpack-plugin": "^0.5.1",
+    "cameronjs-html-webpack-plugin": "0.4.2",
     "html-entities": "^1.2.1",
     "marked": "^0.7.0",
     "postcss-cli": "^6.1.3",

@@ -23,7 +23,7 @@ export default class extends Controller {
     console.log("scroll");
     let scrolledElements = this.headerTargets
       .map(target => {
-        if (target.offsetTop < window.scrollY) {
+        if (target.offsetTop <= window.scrollY) {
           return target;
         }
       })
