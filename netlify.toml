@@ -1,11 +1,11 @@
 [dev]
   command = "cameronjs dev"
-  publish = "public"
+  publish = "publish"
   port = 8080
 
 [build]
   command = "yarn build"
-  publish = "public"
+  publish = "publish"
   functions = "functions"
 
 [build.processing]

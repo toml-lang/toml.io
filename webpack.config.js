@@ -7,7 +7,7 @@ module.exports = {
   mode: process.env.NODE_ENV || "development",
   output: {
     filename: "javascripts/application.js",
-    path: path.resolve(__dirname, "public")
+    path: path.resolve(__dirname, "publish")
   },
   plugins: [
     new CameronJSHtmlWebpackPlugin({

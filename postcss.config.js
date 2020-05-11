@@ -6,7 +6,7 @@ module.exports = {
     require("autoprefixer"),
     process.env.NODE_ENV === "production" &&
       require("@fullhuman/postcss-purgecss")({
-        content: ["./public/**/*.html"],
+        content: ["./publish/**/*.html"],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         whitelist: []
       })
