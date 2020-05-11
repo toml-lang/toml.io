@@ -54,20 +54,20 @@ name = "Tom Preston-Werner"
 dob = 1979-05-27T07:32:00-08:00
 
 [database]
-server = "192.168.1.1"
-ports = [ 8001, 8001, 8002 ]
-connection_max = 5000
 enabled = true
+ports = [ 8001, 8001, 8002 ]
+data = [ ["delta", "phi"], [3.14] ]
+temp_targets = { cpu = 79.5, case = 72.0 }
 
 [servers]
 
 [servers.alpha]
 ip = "10.0.0.1"
-hostname = "alpha"
+role = "frontend"
 
-[clients]
-data = [ ["delta", "phi"], [3.14] ]
-temp = { die = 79.5, fan = 72.0 }</code></pre>
+[servers.beta]
+ip = "10.0.0.2"
+role = "backend"</code></pre>
     </section>
   </div>
 
@@ -119,7 +119,7 @@ temp = { die = 79.5, fan = 72.0 }</code></pre>
               />
             </svg>
           </div>
-          TOML has more native types
+          TOML has useful native types
         </dt>
         <dd class="text-gray-600 ml-12">
           <ul class="mt-1 ml-1 leading-relaxed">
@@ -345,8 +345,8 @@ is preserved.
           <div class="tour-text">
             <h3 class="feature-title">Numbers</h3>
             <p class="text-orange-800">
-              Integers, floats, infinity and even NaN are all supported. You can use scientific
-              notation and thousands even thousands separators.
+              Integers, floats, infinity, and even NaN are all supported. You can use scientific
+              notation and even thousands separators.
             </p>
           </div>
 
@@ -399,7 +399,7 @@ not3 = -nan </code></pre>
           <div class="tour-text">
             <h3 class="feature-title">Dates and Times</h3>
             <p class="text-orange-800">
-              TOML features support for dates, times and datetimes with and without offsets.
+              TOML features support for dates, times, and datetimes with and without offsets.
             </p>
           </div>
 
