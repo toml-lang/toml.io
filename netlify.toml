@@ -30,5 +30,10 @@
   to = "/en"
   force = true
 
+[[redirects]]
+  from = "/en/latest"
+  to = "/en/v1.0.0-rc.1"
+  force = true
+
 [[headers]]
 # see https://www.netlify.com/docs/headers-and-basic-auth
