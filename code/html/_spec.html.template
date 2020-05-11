@@ -1,3 +1,5 @@
+@@layout("application")
+
 <header class="">
   <nav
     class="flex items-center bg-white shadow fixed left-0 right-0 z-30 border-t-4 border-orange-800"
@@ -23,13 +25,16 @@
         <pre class="font-mono font-bold text-sm">v1.0</pre>
       </a>
     </div>
-    <ul class="flex items-center font-mono font-bold text-sm">
-      <li class="flex-1 text-center mx-4 uppercase">
-        <a href="/v1/@@specLocale/spec">Spec</a>
-      </li>
-      <li class="flex-1 text-center mx-4 uppercase">
-        <a href="https://github.com/toml-lang/toml">GitHub</a>
-      </li>
-    </ul>
+    @@include("{{ locale }}/nav.html")
   </nav>
 </header>
+
+<main class="spec">
+  <div class="w-full lg:max-w-4xl mx-auto bg-white shadow p-8 spec">
+    {{ spec }}
+  </div>
+</main>
+
+<footer class="py-4 text-center text-sm w-full lg:max-w-4xl mx-auto text-center">
+  <a href="https://github.com/semver/semver">GitHub</a>
+</footer>
