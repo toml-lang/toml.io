@@ -1,32 +1,28 @@
-@@layout("application")
+@@layout("application", { "title": "TOML: {{ language }} {{ version }}" })
 
-<header class="">
-  <nav
-    class="flex items-center bg-white shadow fixed left-0 right-0 z-30 border-t-4 border-orange-800"
-  >
-    <div class="flex-1 flex items-center p-2">
-      <a class="flex items-center font-mono tracking-tighter" href="/">
-        <svg class="w-10 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <polygon
-              class="fill-current text-orange-800"
-              points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0"
-            ></polygon>
-            <polygon
-              class="fill-current text-black"
-              points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652"
-            ></polygon>
-            <polygon
-              class="fill-current text-orange-800"
-              points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0"
-            ></polygon>
-          </g>
-        </svg>
-        <pre class="font-mono font-bold text-sm">v1.0</pre>
-      </a>
-    </div>
-    @@include("{{ locale }}/nav.html")
-  </nav>
+<header class="items-center bg-white shadow fixed left-0 right-0 z-30 border-t-4 border-orange-800">
+  <div class="flex flex-1 items-center p-2">
+    <a class="flex items-center font-mono tracking-tighter" href="/">
+      <svg class="w-10 mr-2" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <polygon
+            class="fill-current text-orange-800"
+            points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0"
+          ></polygon>
+          <polygon
+            class="fill-current text-black"
+            points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652"
+          ></polygon>
+          <polygon
+            class="fill-current text-orange-800"
+            points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0"
+          ></polygon>
+        </g>
+      </svg>
+      <pre class="font-mono font-bold text-sm">v1.0</pre>
+    </a>
+  </div>
+  @@include("{{ locale }}/nav.html")
 </header>
 
 <div class="spec" data-controller="nav" data-action="scroll@window->nav#scroll">
