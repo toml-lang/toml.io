@@ -26,7 +26,3 @@
     </main>
   </div>
 </div>
-
-<footer class="py-4 text-center text-sm w-full lg:max-w-4xl mx-auto text-center">
-  <a href="https://github.com/semver/semver">GitHub</a>
-</footer>
