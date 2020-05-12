@@ -4,7 +4,36 @@ import { Controller } from "stimulus";
 
 export default class extends Controller {
   static get targets() {
-    return ["versions", "languages"];
+    return ["versionsLink", "versions", "version", "languagesLink", "languages", "language"];
+  }
+
+  connect() {
+    this._pickVersion()
+    this._pickLanguage()
+  }
+
+  _pickVersion() {
+    if (this.currentVersion) {
+      this.versionTargets.every(target => {
+        if (target.dataset['version'] === this.currentVersion) {
+          this.versionsLinkTarget.textContent = this.currentVersion
+          return false
+        }
+        return true
+      })
+    }
+  }
+
+  _pickLanguage() {
+    if (this.currentLanguage) {
+      this.languageTargets.every(target => {
+        if (target.dataset['language'] === this.currentLanguage) {
+          this.languagesLinkTarget.textContent = target.textContent
+          return false
+        }
+        return true
+      })
+    }
   }
 
   copy(event) {
@@ -38,5 +67,22 @@ export default class extends Controller {
   closeAllMenus(event) {
     this.versionsTarget.classList.add("hidden");
     this.languagesTarget.classList.add("hidden");
+  }
+
+  get currentLanguage() {
+    return location.pathname.split('/')[1]
+  }
+
+  get currentVersion() {
+    const filename = location.pathname.split('/').pop()
+    if (filename[0] === 'v') {
+      let parts = filename.split('.')
+      if (parts[parts.length - 1] === 'html') {
+        parts.pop()
+      }
+      return parts.join('.')
+    } else {
+      return null
+    }
   }
 }
