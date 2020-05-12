@@ -3,7 +3,7 @@
 @@include("{{ locale }}/nav.html")
 
 <div class="spec" data-controller="nav" data-action="scroll@window->nav#scroll">
-  <div class="lg:flex pt-12">
+  <div class="lg:flex pt-14">
     <aside class="w-full bg-white lg:w-64 lg:pr-64 lg:block">
       <div class="fixed bg-white z-20 left-0 right-0 mt-3 pl-4 py-4 border-b lg:hidden" data-target="nav.menuLink">
         <div class="relative">
