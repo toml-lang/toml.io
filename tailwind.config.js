@@ -1,6 +1,12 @@
 /* See https://tailwindcss.com/docs/configuration for more options */
 
 module.exports = {
+  purge: {
+    content: ["./publish/**/*.html"],
+    options: {
+      whitelist: []
+    }
+  },
   theme: {
     extend: {
       spacing: {
