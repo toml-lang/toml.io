@@ -1,0 +1,39 @@
+[dev]
+  command = "cameronjs dev"
+  publish = "publish"
+  port = 8080
+
+[build]
+  command = "yarn build"
+  publish = "publish"
+  functions = "functions"
+
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  minify = true
+[build.processing.js]
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
+
+[context.production]
+  environment = { NODE_ENV = "production"}
+
+[context.branch-deploy]
+  environment = { NODE_ENV = "production" }
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  force = true
+
+[[redirects]]
+  from = "/en/latest"
+  to = "/en/v1.0.0-rc.1"
+  force = true
+
+[[headers]]
+# see https://www.netlify.com/docs/headers-and-basic-auth

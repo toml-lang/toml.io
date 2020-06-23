@@ -1,0 +1,63 @@
+/* See https://tailwindcss.com for more about Tailwind CSS */
+
+@tailwind base;
+@tailwind components;
+
+.mt-1\/2 {
+  margin-top: 0.125rem;
+}
+
+.marketing-title {
+  @apply text-xl tracking-tight font-semibold;
+}
+
+@screen md {
+  .marketing-title {
+    @apply text-2xl;
+  }
+}
+
+.section-title {
+  @apply text-xl tracking-tight font-semibold text-2xl;
+}
+
+.feature-title {
+  @apply section-title text-orange-900 mb-2;
+}
+
+@screen lg {
+  .feature-title {
+    @apply text-2xl;
+  }
+}
+
+.code {
+  @apply my-8 p-4;
+}
+
+@screen lg {
+  .code {
+    @apply p-8 rounded-lg;
+  }
+}
+
+.tour-text {
+  @apply px-4;
+}
+
+@screen lg {
+  .tour-text {
+    @apply px-0;
+  }
+}
+
+.button {
+  @apply inline-block bg-orange-800 text-orange-100 text-base uppercase tracking-wide font-semibold py-3 px-6 rounded;
+  transition: background-color 0.1s;
+}
+
+.button:hover {
+  @apply bg-orange-900;
+}
+
+@tailwind utilities;
