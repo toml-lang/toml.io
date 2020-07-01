@@ -19,10 +19,7 @@
       </nav>
     </aside>
 
-    <main class="relative">
-      <div class="absolute top-0 right-0 pr-4 pt-24 md:pt-12">
-        <a href="https://raw.githubusercontent.com/toml-lang/toml.io/master/specs/${locale}/${version}.md" class="text-sm bg-orange-900 text-white px-4 py-2 rounded no-underline">Text</a>
-      </div>
+    <main>
       <div class="w-full lg:max-w-4xl mx-auto bg-white p-8 spec">
         {{ spec }}
       </div>
