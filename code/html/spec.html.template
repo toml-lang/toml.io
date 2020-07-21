@@ -20,7 +20,7 @@
     </aside>
 
     <main>
-      <div class="w-full lg:max-w-4xl mx-auto bg-white shadow p-8 spec">
+      <div class="w-full lg:max-w-4xl mx-auto bg-white p-8 spec">
         {{ spec }}
       </div>
     </main>
