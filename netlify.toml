@@ -32,7 +32,7 @@
 
 [[redirects]]
   from = "/en/latest"
-  to = "/en/v1.0.0-rc.1"
+  to = "/en/v1.0.0-rc.2"
   force = true
 
 [[headers]]
