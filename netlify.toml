@@ -32,7 +32,7 @@
 
 [[redirects]]
   from = "/en/latest"
-  to = "/en/v1.0.0-rc.3"  # RELEASE AUTOMATION MARKER: version
+  to = "/en/v1.0.0"  # RELEASE AUTOMATION MARKER: version
   force = true
 
 [[headers]]
