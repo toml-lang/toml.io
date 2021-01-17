@@ -1,4 +1,4 @@
-@@layout("application", { "title" : "TOML: Tom's Obvious Minimal Language" })
+@@layout("application", { "title" : "TOML：Tom 的（语义）明显、（配置）最小化的语言" })
 
 @@include("en/nav.html")
 
@@ -26,27 +26,25 @@
           <div class="font-mono leading-tight">
             <h1 class="font-bold text-3xl lg:text-4xl">TOML</h1>
             <h2 class="text-xs text-orange-800 lg:text-base">
-              [Tom's Obvious Minimal Language]
+              ［Tom 的（语义）明显、（配置）最小化的语言］
             </h2>
           </div>
         </div>
         <h3
           class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight"
         >
-          A config file format <br class="md:hidden" />for humans.
+          为人而生的配置文件格式。
         </h3>
         <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
-          TOML aims to be a minimal configuration file format that's easy to read due to obvious
-          semantics. TOML is designed to map unambiguously to a hash table. TOML should be easy to
-          parse into data structures in a wide variety of languages.
+          TOML 旨在成为一个语义明显且易于阅读的最小化配置文件格式。TOML 被设计成可以无歧义地映射为哈希表。TOML 应该能很容易地被解析成各种语言中的数据结构。
         </p>
       </div>
     </section>
 
     <section class="lg:flex-1 lg:p-24 lg:pb-0 lg:-mb-8">
-      <pre class="code my-0 toml" data-controller="snippet" data-snippet-copy="false"><code># This is a TOML document
+      <pre class="code my-0 toml" data-controller="snippet" data-snippet-copy="false"><code># 这是一个 TOML 文档
 
-title = "TOML Example"
+title = "TOML 示例"
 
 [owner]
 name = "Tom Preston-Werner"
@@ -62,11 +60,11 @@ temp_targets = { cpu = 79.5, case = 72.0 }
 
 [servers.alpha]
 ip = "10.0.0.1"
-role = "frontend"
+role = "前端"
 
 [servers.beta]
 ip = "10.0.0.2"
-role = "backend"</code></pre>
+role = "后端"</code></pre>
     </section>
   </div>
 
@@ -85,21 +83,20 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML prioritizes humans
+          TOML 以人为先
         </dt>
 
         <dd class="text-gray-600 ml-13">
-          <p class="ml-1">TOML aims to be a minimal configuration file format that:</p>
+          <p class="ml-1">TOML 旨在成为一个最小化配置文件格式，它：</p>
           <ul class="mt-2 ml-1 leading-relaxed">
             <li class="leading-snug">
-              <span class="font-bold">is easy to read</span> due to obvious semantics
+              语义明显<span class="font-bold">易于阅读</span>
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">maps unambiguously</span> to a hash table
+              能<span class="font-bold">无歧义</span>地映射为哈希表
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">is easy to parse</span> into data structures in a wide variety
-              of languages
+              <span class="font-bold">易于解析</span>成各种语言中的数据结构
             </li>
           </ul>
         </dd>
@@ -118,7 +115,7 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML has useful native types
+          TOML 具备实用的原生类型
         </dt>
         <dd class="text-gray-600 ml-12">
           <ul class="mt-1 ml-1 leading-relaxed">
@@ -132,7 +129,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Key/Value Pairs</span>
+              <span>键/值对</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -144,7 +141,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Arrays</span>
+              <span>数组</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -156,7 +153,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tables</span>
+              <span>表</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -168,7 +165,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Inline tables</span>
+              <span>内联表</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -180,7 +177,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Arrays of tables</span>
+              <span>表数组</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -192,7 +189,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Integers & Floats</span>
+              <span>整数 & 浮点数</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -204,7 +201,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Booleans</span>
+              <span>布尔值</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -216,7 +213,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Dates & Times, with optional offsets</span>
+              <span>日期 & 时刻，带可选的时区偏移</span>
             </li>
           </ul>
         </dd>
@@ -235,14 +232,11 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML is widely supported
+          TOML 受到广泛支持
         </dt>
         <dd class="text-gray-600 ml-13">
           <p class="ml-1">
-            TOML already has implementations in most of the most popular programming languages in use
-            today: C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, Javascript, Lua,
-            Objective-C, Perl, PHP, Python, Ruby, Swift, Scala...
-            <a class="underline" href="https://github.com/toml-lang/toml/wiki">and plenty more</a>.
+            TOML 已经拥有大多数当今使用的最流行的编程语言的实现：C、C#、C++、Clojure、Dart、Elixir、Erlang、Go、Haskell、Java、Javascript、Lua、Objective-C、Perl、PHP、Python、Ruby、Swift、Scala……<a class="underline" href="https://github.com/toml-lang/toml/wiki">以及更多</a>。
           </p>
         </dd>
       </div>
@@ -254,7 +248,7 @@ role = "backend"</code></pre>
       <h2
         class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
       >
-        A Quick Tour of TOML
+        快速上手 TOML
       </h2>
     </header>
 
@@ -262,23 +256,21 @@ role = "backend"</code></pre>
       <div class="lg:flex-1 lg:ml-16 lg:mr-8">
         <section class="mt-8">
           <div class="tour-text">
-            <h3 class="feature-title">Comments</h3>
-            <p class="">TOML thinks all config files should support comments.</p>
+            <h3 class="feature-title">注释</h3>
+            <p class="">TOML 认为配置文件都应当支持注释。</p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># This is a TOML comment
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># 这是一条 TOML 注释
 
-# This is a multiline
-# TOML comment</code></pre>
+# 这是一个多行的
+# TOML 注释</code></pre>
         </section>
 
         <section class="mt-12">
           <div class="tour-text">
-            <h3 class="feature-title">Powerful Strings</h3>
+            <h3 class="feature-title">强大的字符串</h3>
             <p>
-              There are four ways to express strings: basic, multi-line basic, literal, and
-              multi-line literal. <span class="font-bold">Basic strings</span> are surrounded by
-              quotation marks:
+              有四种方式表示字符串：基本字符串、多行基本字符串、字面量和多行字面量。<span class="font-bold">基本字符串</span>由引号包裹：
             </p>
           </div>
 
@@ -287,10 +279,7 @@ str2 = "You can \"quote\" me."
 str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
 
           <p class="tour-text">
-            <span class="font-bold">Multi-line basic strings</span> are
-            surrounded by three quotation marks on each side and allow newlines. Include a line
-            ending backslash to automatically trim whitespace preceeding any non-whitespace
-            characters:
+            <span class="font-bold">多行基本字符串</span>由三个引号包裹，允许折行。用行末反斜杠自动剔除非空白字符前的任何空白字符：
           </p>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
@@ -304,16 +293,13 @@ str2 = """\
   """</code></pre>
 
           <p class="tour-text">
-            <code class="font-mono font-bold text-sm">str2</code> becomes
-            <code class="font-mono font-bold text-sm"
+            <code class="font-mono font-bold text-sm">str2</code> 变成 <code class="font-mono font-bold text-sm"
               >"The quick brown fox jumps over the lazy dog."</code
-            >
-            (a single sentence with no line breaks).
+            >（一个没有换行的单句）。
           </p>
 
           <p class="mt-8 tour-text">
-            <span class="font-bold">Literal strings</span> are surrounded by single quotes. No
-            escaping is performed so what you see is what you get:
+            <span class="font-bold">字面量字符串</span>由单引号包裹。没有转义行为故而所见即所得：
           </p>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
@@ -322,19 +308,17 @@ quoted = 'Tom "Dubs" Preston-Werner'
 regex = '<\i\c*\s*>'</code></pre>
 
           <p class="tour-text">
-            Since there is no escaping, there is no way to write a single quote inside a literal
-            string enclosed by single quotes. That's where
-            <span class="font-bold">multi-line literal strings</span> come in:
+            由于没有转义，无法在由单引号包裹的字面量字符串中写入单引号。这里就迎来了<span class="font-bold">多行字面量字符串</span>：
           </p>
           <pre
             class="code toml"
             data-controller="snippet" data-snippet-copy="false"
           ><code>re = '''\d{2} apps is t[wo]o many'''
 lines = '''
-The first newline is
-trimmed in raw strings.
-All other whitespace
-is preserved.
+原始字符串中的
+第一个换行被剔除了。
+所有其它空白
+都保留了。
 '''</code></pre>
         </section>
       </div>
@@ -342,37 +326,36 @@ is preserved.
       <div class="lg:flex-1 lg:ml-8 lg:mr-16">
         <section class="mt-12 lg:mt-8">
           <div class="tour-text">
-            <h3 class="feature-title">Numbers</h3>
+            <h3 class="feature-title">数字</h3>
             <p class="text-orange-800">
-              Integers, floats, infinity, and even NaN are all supported. You can use scientific
-              notation and even thousands separators.
+              整数、浮点数、无穷甚至非数都是支持的。你可以用科学计数法甚至千分符。
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># integers
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># 整数
 int1 = +99
 int2 = 42
 int3 = 0
 int4 = -17
 
-# hexadecimal with prefix `0x`
+# 十六进制带有前缀 `0x`
 hex1 = 0xDEADBEEF
 hex2 = 0xdeadbeef
 hex3 = 0xdead_beef
 
-# octal with prefix `0o`
+# 八进制带有前缀 `0o`
 oct1 = 0o01234567
 oct2 = 0o755
 
-# binary with prefix `0b`
+# 二进制带有前缀 `0b`
 bin1 = 0b11010110
 
-# fractional
+# 小数
 float1 = +1.0
 float2 = 3.1415
 float3 = -0.01
 
-# exponent
+# 指数
 float4 = 5e+22
 float5 = 1e06
 float6 = -2E-2
@@ -380,15 +363,15 @@ float6 = -2E-2
 # both
 float7 = 6.626e-34
 
-# separators
+# 分隔符
 float8 = 224_617.445_991_228
 
-# infinity
-infinite1 = inf # positive infinity
-infinite2 = +inf # positive infinity
-infinite3 = -inf # negative infinity
+# 无穷
+infinite1 = inf # 正无穷
+infinite2 = +inf # 正无穷
+infinite3 = -inf # 负无穷
 
-# not a number
+# 非数
 not1 = nan
 not2 = +nan
 not3 = -nan </code></pre>
@@ -396,25 +379,25 @@ not3 = -nan </code></pre>
 
         <section class="mt-12">
           <div class="tour-text">
-            <h3 class="feature-title">Dates and Times</h3>
+            <h3 class="feature-title">日期与时刻</h3>
             <p class="text-orange-800">
-              TOML features support for dates, times, and datetimes with and without offsets.
+              TOML 支持日期、时刻、日期时刻，带或者不带时区偏移。
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># offset datetime
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># 坐标日期时刻
 odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
 odt3 = 1979-05-27T00:32:00.999999-07:00
 
-# local datetime
+# 各地日期时刻
 ldt1 = 1979-05-27T07:32:00
 ldt2 = 1979-05-27T00:32:00.999999
 
-# local date
+# 各地日期
 ld1 = 1979-05-27
 
-# local time
+# 各地时刻
 lt1 = 07:32:00
 lt2 = 00:32:00.999999</code></pre>
         </section>
@@ -426,33 +409,31 @@ lt2 = 00:32:00.999999</code></pre>
     <div
       class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
     >
-      <h3 class="text-2xl font-bold lg:text-3xl">More Spec</h3>
+      <h3 class="text-2xl font-bold lg:text-3xl">更多规范</h3>
       <p class="text-gray-600">
-        <strong>TOML</strong> supports even more native types and syntax, read all about it:
+        <strong>TOML</strong> 支持更多的原生类型和语法，请阅读所有内容：
       </p>
       <div class="mt-4">
-        <a class="button" href="latest">Read the full spec</a>
+        <a class="button" href="latest">阅读完整规范</a>
       </div>
     </div>
 
     <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
-      <h3 class="text-2xl font-bold lg:text-3xl">Start coding</h3>
+      <h3 class="text-2xl font-bold lg:text-3xl">开始编程</h3>
       <p class="text-gray-600">
-        <strong>TOML</strong> is already implemented in over 40 programming languages:
+        <strong>TOML</strong> 已经以 40 多种编程语言实现：
       </p>
       <div class="mt-4">
-        <a class="button" href="https://github.com/toml-lang/toml/wiki">Find a library</a>
+        <a class="button" href="https://github.com/toml-lang/toml/wiki">查找可用库</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="bg-orange-900 text-orange-100 text-center text-sm p-4">
-  Created by
-  <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
+  <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a> 所创
   <br />
-  <span class="font-mono font-bold">TOML</span> is released under the
-  <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE"
+  <span class="font-mono font-bold">TOML</span> 以 <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE"
     >MIT License</a
-  >
+  > 发布
 </footer>
