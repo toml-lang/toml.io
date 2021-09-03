@@ -1,0 +1,453 @@
+@@layout("application", { "title" : "TOML: Tom's Obvious Minimal Language" })
+
+@@include("en/nav.html")
+
+<main class="">
+  <div class="bg-orange-100 lg:flex">
+    <section class="pt-32 pb-8 lg:pt-64 lg:flex-1 lg:w-1/2">
+      <div class="px-4 lg:px-8">
+        <div class="flex items-end">
+          <svg class="w-24 mr-2 lg:w-32" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <polygon
+                class="fill-current text-orange-800"
+                points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0"
+              ></polygon>
+              <polygon
+                class="fill-current text-black"
+                points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652"
+              ></polygon>
+              <polygon
+                class="fill-current text-orange-800"
+                points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0"
+              ></polygon>
+            </g>
+          </svg>
+          <div class="font-mono leading-tight">
+            <h1 class="font-bold text-3xl lg:text-4xl">TOML</h1>
+            <h2 class="text-xs text-orange-800 lg:text-base">
+              [Tom's Obvious Minimal Language]
+            </h2>
+          </div>
+        </div>
+        <h3
+          class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight"
+        >
+          Un format de fichier de configuration <br class="md:hidden" />pour les humains
+        </h3>
+        <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
+          TOML est un format de fichier de configuration minimal facile à lire grâce à
+          une sémantique claire. Il est conçu pour correspondre sans ambiguïté à une table de
+          hachage et doit être facile à représenter dans de nombreux langages.
+        </p>
+      </div>
+    </section>
+
+    <section class="lg:flex-1 lg:p-24 lg:pb-0 lg:-mb-8">
+      <pre class="code my-0 toml" data-controller="snippet" data-snippet-copy="false"><code># Voici un document TOML
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+enabled = true
+ports = [ 8000, 8001, 8002 ]
+data = [ ["delta", "phi"], [3.14] ]
+temp_targets = { cpu = 79.5, case = 72.0 }
+
+[servers]
+
+[servers.alpha]
+ip = "10.0.0.1"
+role = "frontend"
+
+[servers.beta]
+ip = "10.0.0.2"
+role = "backend"</code></pre>
+    </section>
+  </div>
+
+  <section class="mt-16 mb-16 lg:p-4">
+    <dl class="lg:flex lg:items-start">
+      <div class="flex-1 p-4">
+        <dt class="marketing-title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z"
+              />
+            </svg>
+          </div>
+          TOML donne la priorité à l'humain
+        </dt>
+
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">TOML est un format de fichier de configuration minimal qui :</p>
+          <ul class="mt-2 ml-1 leading-relaxed">
+            <li class="leading-snug">
+              <span class="font-bold">est facile à lire</span> grâce à une semantique claire
+            </li>
+            <li class="leading-snug mt-2">
+              <span class="font-bold">correspond sans ambiguïté</span> à une table de hachage
+            </li>
+            <li class="leading-snug mt-2">
+              <span class="font-bold">est facile à représenter</span> dans de nombreux langages
+            </li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z"
+              />
+            </svg>
+          </div>
+          TOML a des types natifs utiles
+        </dt>
+        <dd class="text-gray-600 ml-12">
+          <ul class="mt-1 ml-1 leading-relaxed">
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Paire clé/valeur</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Tableau</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Table</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Table "inline"</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Tableau de tables</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Entier & nombre à virgule flottante</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Booléen</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="inline-block w-4 h-4 mt-px mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Date & heure, avec offset optionnel</span>
+            </li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"
+              />
+            </svg>
+          </div>
+          TOML est largement supporté
+        </dt>
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">
+            TOML a déjà des implementations dans la plupart des plus populaires langages de
+            programmation actuels : C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell,
+            Java, Javascript, Lua, Objective-C, Perl, PHP, Python, Ruby, Swift, Scala...
+            <a class="underline" href="https://github.com/toml-lang/toml/wiki">et plein d'autres</a>.
+          </p>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="bg-orange-100 text-orange-800 mt-8 pb-8">
+    <header class="">
+      <h2
+        class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
+      >
+        Un tour rapide de TOML
+      </h2>
+    </header>
+
+    <div class="lg:flex">
+      <div class="lg:flex-1 lg:ml-16 lg:mr-8">
+        <section class="mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">Comments</h3>
+            <p class="">TOML pense que tous les fichiers de configuration devraient supporter les commentaires.</p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># Ceci est un commentaire TOML
+
+# Ceci est un commentaire
+# TOML multi-ligne</code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">Des chaînes puissantes</h3>
+            <p>
+              Il existe quatre façons d'exprimer des chaînes : basique, basique multi-ligne, littérale
+               et littérale multi-ligne. <span class="font-bold">Les chaînes basiques</span> sont
+               encadrées par des guillemets :
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = "Je suis une chaîne de caractères."
+str2 = "Vous pouvez me \"citer\"."
+str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
+
+          <p class="tour-text">
+            <span class="font-bold">Les chaînes basiques multi-ligne</span> sont
+            encadrées par trois guillemets et autorisent les sauts de ligne. Inclure une
+            barre oblique inverse en fin de ligne supprime tous les blancs subséquents :
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
+Les roses sont rouges
+Les violettes sont bleues"""
+
+str2 = """\
+  The quick brown \
+  fox jumps over \
+  the lazy dog.\
+  """
+
+# str2 est équivalent à :
+str3 = "The quick brown fox jumps over the lazy dog."
+</code></pre>
+
+          <p class="mt-8 tour-text">
+            <span class="font-bold">Les chaînes littérales</span> sont encadrées
+            par des guillemets simples. Aucun échappement n'est effectué, vous
+            obtenez ce que vous voyez :
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
+path2 = '\\User\admin$\system32'
+quoted = 'Tom "Dubs" Preston-Werner'
+regex = '<\i\c*\s*>'</code></pre>
+
+          <p class="tour-text">
+            Comme il n'y a pas d'échappement possible, il n'est pas possible d'écrire
+            un guillemet simple dans une chaîne littérale encardée par des guillemets
+            simples. C'est là que les <span class="font-bold">chaînes littérales
+            multi-ligne</span> entrent en jeu :
+          </p>
+          <pre
+            class="code toml"
+            data-controller="snippet" data-snippet-copy="false"
+          ><code>re = '''\d{2} apps is t[wo]o many'''
+lines = '''
+Le premier saut de ligne est ignoré
+dans les chaînes littérales.
+   Tous les autres caractères blancs
+   sont conservés.
+'''</code></pre>
+        </section>
+      </div>
+
+      <div class="lg:flex-1 lg:ml-8 lg:mr-16">
+        <section class="mt-12 lg:mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">Les nombres</h3>
+            <p class="text-orange-800">
+              Entiers, flottants, infini, et même NaN sont tous supportés. Vous pouvez
+              même utiliser la notation scientifique et le séparateur de milliers. 
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># les entiers
+int1 = +99
+int2 = 42
+int3 = 0
+int4 = -17
+
+# hexadécimal avec le préfixe `0x`
+hex1 = 0xDEADBEEF
+hex2 = 0xdeadbeef
+hex3 = 0xdead_beef
+
+# octal avec le préfixe `0o`
+oct1 = 0o01234567
+oct2 = 0o755
+
+# binaire avec le préfixe `0b`
+bin1 = 0b11010110
+
+# décimal
+float1 = +1.0
+float2 = 3.1415
+float3 = -0.01
+
+# exposant
+float4 = 5e+22
+float5 = 1e06
+float6 = -2E-2
+
+# les deux
+float7 = 6.626e-34
+
+# les séparateurs
+float8 = 224_617.445_991_228
+
+# l'infini
+infinite1 = inf # infini positif
+infinite2 = +inf # infini positif
+infinite3 = -inf # infini négatif
+
+# Not A Number (NaN)
+not1 = nan
+not2 = +nan
+not3 = -nan </code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">Dates et heures</h3>
+            <p class="text-orange-800">
+              OML prend en charge les dates, les heures et les dates-heures avec et sans offset.
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># date-heure avec décalage
+odt1 = 1979-05-27T07:32:00Z
+odt2 = 1979-05-27T00:32:00-07:00
+odt3 = 1979-05-27T00:32:00.999999-07:00
+
+# dates-heures local
+ldt1 = 1979-05-27T07:32:00
+ldt2 = 1979-05-27T00:32:00.999999
+
+# date locale
+ld1 = 1979-05-27
+
+# heure locale
+lt1 = 07:32:00
+lt2 = 00:32:00.999999</code></pre>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="lg:flex bg-white">
+    <div
+      class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
+    >
+      <h3 class="text-2xl font-bold lg:text-3xl">Plus de précisions</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong> prend en charge encore plus de types et de syntaxes natifs,
+        lisez tout à ce sujet
+      </p>
+      <div class="mt-4">
+        <a class="button" href="latest">Lire la spécification complète</a>
+      </div>
+    </div>
+
+    <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
+      <h3 class="text-2xl font-bold lg:text-3xl">Commencer à coder</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong> est déjà implémenté dans plus de 40 langages de programmation
+      </p>
+      <div class="mt-4">
+        <a class="button" href="https://github.com/toml-lang/toml/wiki">Trouver une bibliothèque</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-orange-900 text-orange-100 text-center text-sm p-4">
+  Créé par
+  <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
+  <br />
+  <span class="font-mono font-bold">TOML</span> est publié sous
+  <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE">Licence MIT</a>
+</footer>
