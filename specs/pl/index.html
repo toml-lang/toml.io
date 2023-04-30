@@ -1,7 +1,15 @@
 @@layout("application", { "title" : "TOML: Tom's Obvious Minimal Language" })
 
 @@include("en/nav.html")
-
+<!-- -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOML: Tom's Obvious Minimal Language</title>
+  <link href="https://d33wubrfki0l68.cloudfront.net/css/c44c9f14d80160911b834c9ebfa37b3f23fe1d2b/stylesheets/application.css" rel="stylesheet">
+  <script src="https://d33wubrfki0l68.cloudfront.net/js/86146118641d2eb58ed9ea2c2f05bccb3bf08176/javascripts/application.js" type="text/javascript"></script>
+</head>
+<!-- -->
 <main class="">
   <div class="bg-orange-100 lg:flex">
     <section class="pt-32 pb-8 lg:pt-64 lg:flex-1 lg:w-1/2">
@@ -33,12 +41,13 @@
         <h3
           class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight"
         >
-          A config file format <br class="md:hidden" />for humans.
+          Format plików konfiguracyjnych <br class="md:hidden" />dla człowieka.
         </h3>
         <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
-          TOML aims to be a minimal configuration file format that's easy to read due to obvious
-          semantics. TOML is designed to map unambiguously to a hash table. TOML should be easy to
-          parse into data structures in a wide variety of languages.
+          TOML dąży do tego, żeby był minimalnym formatem dla plików konfiguracji, który jest łatwy
+          do czytania z powodu oczywistej semantyki. TOML jest zaprojektowany do tego, by jednoznacznie
+          odpowiadał tablicy mieszającej. TOML powinien być łatwy do parsowania na struktury danych
+          w wielu różnych językach.
         </p>
       </div>
     </section>
@@ -85,21 +94,20 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML prioritizes humans
+          Dla TOML-a pierwszeństwem jest człowiek
         </dt>
 
         <dd class="text-gray-600 ml-13">
-          <p class="ml-1">TOML aims to be a minimal configuration file format that:</p>
+          <p class="ml-1">TOML dąży do tego, żeby był minimalnym formatem dla plików konfiguracji, który:</p>
           <ul class="mt-2 ml-1 leading-relaxed">
             <li class="leading-snug">
-              <span class="font-bold">is easy to read</span> due to obvious semantics
+              <span class="font-bold">jest łatwy do czytania</span> z powodu oczywistej semantyki
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">maps unambiguously</span> to a hash table
+              <span class="font-bold">jednoznacznie odpowiada</span> tablicy mieszającej
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">is easy to parse</span> into data structures in a wide variety
-              of languages
+              <span class="font-bold">jest łatwy do parsowania</span> na struktury danych w wielu różnych językach
             </li>
           </ul>
         </dd>
@@ -118,7 +126,7 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML has useful native types
+          TOML ma użyteczne typy natywne
         </dt>
         <dd class="text-gray-600 ml-12">
           <ul class="mt-1 ml-1 leading-relaxed">
@@ -132,7 +140,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Key/Value Pairs</span>
+              <span>Pary klucz/wartość</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -144,7 +152,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Arrays</span>
+              <span>Tablice</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -156,7 +164,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tables</span>
+              <span>Tabele</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -168,7 +176,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Inline tables</span>
+              <span>Tabele w linii</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -180,7 +188,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Arrays of tables</span>
+              <span>Tablice tabel</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -192,7 +200,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Integers & Floats</span>
+              <span>Liczby całkowite i zmiennoprzecinkowe</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -204,7 +212,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Booleans</span>
+              <span>Wartości logiczne</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -216,7 +224,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Dates & Times, with optional offsets</span>
+              <span>Daty & czasy, z opcjonalnymi odstępami</span>
             </li>
           </ul>
         </dd>
@@ -235,14 +243,14 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML is widely supported
+          TOML ma szerokie wsparcie
         </dt>
         <dd class="text-gray-600 ml-13">
           <p class="ml-1">
-            TOML already has implementations in most of the most popular programming languages in use
-            today: C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, Javascript, Lua,
+            TOML już ma implementacje w większości popularnych języków programowania w użytku do dziś:
+            C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, Javascript, Lua,
             Objective-C, Perl, PHP, Python, Ruby, Swift, Scala...
-            <a class="underline" href="https://github.com/toml-lang/toml/wiki">and plenty more</a>.
+            <a class="underline" href="https://github.com/toml-lang/toml/wiki">i wielu więcej</a>.
           </p>
         </dd>
       </div>
@@ -254,7 +262,7 @@ role = "backend"</code></pre>
       <h2
         class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
       >
-        A Quick Tour of TOML
+        Szybki przewodnik po TOML-u
       </h2>
     </header>
 
@@ -262,23 +270,23 @@ role = "backend"</code></pre>
       <div class="lg:flex-1 lg:ml-16 lg:mr-8">
         <section class="mt-8">
           <div class="tour-text">
-            <h3 class="feature-title">Comments</h3>
-            <p class="">TOML thinks all config files should support comments.</p>
+            <h3 class="feature-title">Komentarze</h3>
+            <p class="">TOML myśli, że wszystkie pliki konfiguracyjne powinny wspierać komentarze.</p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># This is a TOML comment
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># To jest komentarz w TOML-u
 
-# This is a multiline
-# TOML comment</code></pre>
+# To jest wieloliniowy
+# komentarz w TOML-u</code></pre>
         </section>
 
         <section class="mt-12">
           <div class="tour-text">
-            <h3 class="feature-title">Powerful Strings</h3>
+            <h3 class="feature-title">Mocne ciągi znakowe</h3>
             <p>
-              There are four ways to express strings: basic, multi-line basic, literal, and
-              multi-line literal. <span class="font-bold">Basic strings</span> are surrounded by
-              quotation marks:
+              Są cztery sposoby, aby wyrazić ciągi znakowe: podstawowy, wieloliniowy podstawowy,
+              dosłowny i wieloliniowy dosłowny. <span class="font-bold">Podstawowe ciągi znakowe</span>
+              są otoczone cudzysłowami:
             </p>
           </div>
 
@@ -287,10 +295,10 @@ str2 = "You can \"quote\" me."
 str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
 
           <p class="tour-text">
-            <span class="font-bold">Multi-line basic strings</span> are
-            surrounded by three quotation marks on each side and allow newlines. Include a line
-            ending backslash to automatically trim whitespace preceeding any non-whitespace
-            characters:
+            <span class="font-bold">Wieloliniowe podstawowe ciągi znakowe</span> są otoczone
+            trzema cudzysłowami z każdej strony i pozwalają na łamania linii. Uwzględnij
+            ukośnik odwrotny na końcu linii, aby automatycznie usunąć spacje na początku
+            kolejnej linii:
           </p>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
@@ -304,16 +312,16 @@ str2 = """\
   """</code></pre>
 
           <p class="tour-text">
-            <code class="font-mono font-bold text-sm">str2</code> becomes
+            <code class="font-mono font-bold text-sm">str2</code> staje się
             <code class="font-mono font-bold text-sm"
               >"The quick brown fox jumps over the lazy dog."</code
             >
-            (a single sentence with no line breaks).
+            (pojedyncze zdanie bez łamań linii).
           </p>
 
           <p class="mt-8 tour-text">
-            <span class="font-bold">Literal strings</span> are surrounded by single quotes. No
-            escaping is performed so what you see is what you get:
+            <span class="font-bold">Literały znakowe</span> są otoczone cudzysłowami pojedynczymi.
+            Nie ma tu ucieczek, więc otrzymasz to, co widzisz:
           </p>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
@@ -322,9 +330,9 @@ quoted = 'Tom "Dubs" Preston-Werner'
 regex = '<\i\c*\s*>'</code></pre>
 
           <p class="tour-text">
-            Since there is no escaping, there is no way to write a single quote inside a literal
-            string enclosed by single quotes. That's where
-            <span class="font-bold">multi-line literal strings</span> come in:
+            Ponieważ nie ma ucieczek, nie można zapisać pojedynczego cudzysłowu w literale znakowym
+            otoczonym cudzysłowami pojedynczymi. To umożliwiają
+            <span class="font-bold">wieloliniowe literały znakowe</span>:
           </p>
           <pre
             class="code toml"
@@ -342,10 +350,10 @@ is preserved.
       <div class="lg:flex-1 lg:ml-8 lg:mr-16">
         <section class="mt-12 lg:mt-8">
           <div class="tour-text">
-            <h3 class="feature-title">Numbers</h3>
+            <h3 class="feature-title">Liczby</h3>
             <p class="text-orange-800">
-              Integers, floats, infinity, and even NaN are all supported. You can use scientific
-              notation and even thousands separators.
+              Liczby całkowite, zmiennoprzecinkowe, nieskończoność, a nawet NaN są wspierane.
+              Możesz użyć notacji naukowej, a nawet separatorów tysięcy.
             </p>
           </div>
 
@@ -355,40 +363,40 @@ int2 = 42
 int3 = 0
 int4 = -17
 
-# hexadecimal with prefix `0x`
+# szesnastkowe z prefiksem `0x`
 hex1 = 0xDEADBEEF
 hex2 = 0xdeadbeef
 hex3 = 0xdead_beef
 
-# octal with prefix `0o`
+# ósemkowe z prefiksem `0o`
 oct1 = 0o01234567
 oct2 = 0o755
 
-# binary with prefix `0b`
+# dwójkowe z prefiksem `0b`
 bin1 = 0b11010110
 
-# fractional
+# ułamki
 float1 = +1.0
 float2 = 3.1415
 float3 = -0.01
 
-# exponent
+# potęgi
 float4 = 5e+22
 float5 = 1e06
 float6 = -2E-2
 
-# both
+# oba
 float7 = 6.626e-34
 
-# separators
+# separatory
 float8 = 224_617.445_991_228
 
-# infinity
-infinite1 = inf # positive infinity
-infinite2 = +inf # positive infinity
-infinite3 = -inf # negative infinity
+# nieskończoność
+infinite1 = inf # nieskończoność dodatnia
+infinite2 = +inf # nieskończoność dodatnia
+infinite3 = -inf # nieskończoność ujemna
 
-# not a number
+# nie-liczba
 not1 = nan
 not2 = +nan
 not3 = -nan </code></pre>
@@ -396,25 +404,25 @@ not3 = -nan </code></pre>
 
         <section class="mt-12">
           <div class="tour-text">
-            <h3 class="feature-title">Dates and Times</h3>
+            <h3 class="feature-title">Daty i czasy</h3>
             <p class="text-orange-800">
-              TOML features support for dates, times, and datetimes with and without offsets.
+              TOML ukazuje wsparcie dla dat, czasów, i ich kombinacji, z lub bez odstępów.
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># offset datetime
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># data i czas z odstępem
 odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
 odt3 = 1979-05-27T00:32:00.999999-07:00
 
-# local datetime
+# data i czas lokalny
 ldt1 = 1979-05-27T07:32:00
 ldt2 = 1979-05-27T00:32:00.999999
 
-# local date
+# data lokalna
 ld1 = 1979-05-27
 
-# local time
+# czas lokalny
 lt1 = 07:32:00
 lt2 = 00:32:00.999999</code></pre>
         </section>
@@ -426,33 +434,33 @@ lt2 = 00:32:00.999999</code></pre>
     <div
       class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
     >
-      <h3 class="text-2xl font-bold lg:text-3xl">More Spec</h3>
+      <h3 class="text-2xl font-bold lg:text-3xl">Dalsza specyfikacja</h3>
       <p class="text-gray-600">
-        <strong>TOML</strong> supports even more native types and syntax, read all about it:
+        <strong>TOML</strong> wspiera jeszcze więcej typów natywnych i składni, przeczytaj wszystko o tym:
       </p>
       <div class="mt-4">
-        <a class="button" href="latest">Read the full spec</a>
+        <a class="button" href="latest">Przeczytaj pełną specyfikację</a>
       </div>
     </div>
 
     <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
-      <h3 class="text-2xl font-bold lg:text-3xl">Start coding</h3>
+      <h3 class="text-2xl font-bold lg:text-3xl">Zacznij pisać kod</h3>
       <p class="text-gray-600">
-        <strong>TOML</strong> is already implemented in over 40 programming languages:
+        <strong>TOML</strong> jest już zaimplementowane w ponad 40 językach programowania:
       </p>
       <div class="mt-4">
-        <a class="button" href="https://github.com/toml-lang/toml/wiki">Find a library</a>
+        <a class="button" href="https://github.com/toml-lang/toml/wiki">Znajdź bibliotekę</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="bg-orange-900 text-orange-100 text-center text-sm p-4">
-  Created by
+  Autor: 
   <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
   <br />
-  <span class="font-mono font-bold">TOML</span> is released under the
+  <span class="font-mono font-bold">TOML</span> jest publikowany na
   <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE"
-    >MIT License</a
+    >licencji MIT</a
   >
 </footer>
