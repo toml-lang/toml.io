@@ -46,7 +46,7 @@
         <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
           TOML dąży do tego, żeby był minimalnym formatem dla plików konfiguracji, który jest łatwy
           do czytania z powodu oczywistej semantyki. TOML jest zaprojektowany do tego, by jednoznacznie
-          odpowiadał tablicy mieszającej. TOML powinien być łatwy do parsowania na struktury danych
+          odpowiadał tablicy asocjacyjnej. TOML powinien być łatwy do przetwarzania na struktury danych
           w wielu różnych językach.
         </p>
       </div>
@@ -104,10 +104,10 @@ role = "backend"</code></pre>
               <span class="font-bold">jest łatwy do czytania</span> z powodu oczywistej semantyki
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">jednoznacznie odpowiada</span> tablicy mieszającej
+              <span class="font-bold">jednoznacznie odpowiada</span> tablicy asocjacyjnej
             </li>
             <li class="leading-snug mt-2">
-              <span class="font-bold">jest łatwy do parsowania</span> na struktury danych w wielu różnych językach
+              <span class="font-bold">jest łatwy do przetwarzania</span> na struktury danych w wielu różnych językach
             </li>
           </ul>
         </dd>
@@ -126,7 +126,7 @@ role = "backend"</code></pre>
               />
             </svg>
           </div>
-          TOML ma użyteczne typy natywne
+          TOML ma użyteczne typy rodzime
         </dt>
         <dd class="text-gray-600 ml-12">
           <ul class="mt-1 ml-1 leading-relaxed">
@@ -152,7 +152,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tablice</span>
+              <span>Listy</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -164,7 +164,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tabele</span>
+              <span>Tablice asocjacyjne</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -176,7 +176,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tabele w linii</span>
+              <span>Tablice asocjacyjne w jednej linii</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -188,7 +188,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Tablice tabel</span>
+              <span>Listy tablic asocjacyjnych</span>
             </li>
             <li class="flex items-center">
               <svg
@@ -224,7 +224,7 @@ role = "backend"</code></pre>
                   d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
                 />
               </svg>
-              <span>Daty & czasy, z opcjonalnymi odstępami</span>
+              <span>Daty & czasy, z opcjonalnymi przesunięciami</span>
             </li>
           </ul>
         </dd>
@@ -331,8 +331,8 @@ regex = '<\i\c*\s*>'</code></pre>
 
           <p class="tour-text">
             Ponieważ nie ma ucieczek, nie można zapisać pojedynczego cudzysłowu w literale znakowym
-            otoczonym cudzysłowami pojedynczymi. To umożliwiają
-            <span class="font-bold">wieloliniowe literały znakowe</span>:
+            otoczonym cudzysłowami pojedynczymi. Tutaj można zauważyć funkcję
+            <span class="font-bold">wieloliniowych literałów znakowych</span>:
           </p>
           <pre
             class="code toml"
@@ -357,7 +357,7 @@ is preserved.
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># integers
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># liczby całkowite
 int1 = +99
 int2 = 42
 int3 = 0
@@ -406,11 +406,11 @@ not3 = -nan </code></pre>
           <div class="tour-text">
             <h3 class="feature-title">Daty i czasy</h3>
             <p class="text-orange-800">
-              TOML ukazuje wsparcie dla dat, czasów, i ich kombinacji, z lub bez odstępów.
+              TOML ukazuje wsparcie dla dat, czasów, i ich kombinacji, z przesunięciem lub bez.
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># data i czas z odstępem
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># data i czas z przesunięciem
 odt1 = 1979-05-27T07:32:00Z
 odt2 = 1979-05-27T00:32:00-07:00
 odt3 = 1979-05-27T00:32:00.999999-07:00
@@ -436,7 +436,7 @@ lt2 = 00:32:00.999999</code></pre>
     >
       <h3 class="text-2xl font-bold lg:text-3xl">Dalsza specyfikacja</h3>
       <p class="text-gray-600">
-        <strong>TOML</strong> wspiera jeszcze więcej typów natywnych i składni, przeczytaj wszystko o tym:
+        <strong>TOML</strong> wspiera jeszcze więcej typów rodzimych i składni, przeczytaj wszystko na ten temat:
       </p>
       <div class="mt-4">
         <a class="button" href="latest">Przeczytaj pełną specyfikację</a>
