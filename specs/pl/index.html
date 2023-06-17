@@ -281,9 +281,9 @@ role = "backend"</code></pre>
             </p>
           </div>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = "I'm a string."
-str2 = "You can \"quote\" me."
-str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>cz1 = "Jestem ciągiem znaków"
+cz2 = "Możesz mnie \"zacytować\"."
+cz3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
 
           <p class="tour-text">
             <span class="font-bold">Wieloliniowe podstawowe ciągi znakowe</span> są otoczone
@@ -292,11 +292,11 @@ str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
             kolejnej linii:
           </p>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>cz1 = """
 Wlazł kotek na płotek
 I mruga, i mruga."""
 
-str2 = """\
+cz2 = """\
   Pchnąć w tę \
   łódź jeża lub \
   ośm skrzyń fig.\
@@ -315,9 +315,9 @@ str2 = """\
             Nie ma tu ucieczek, więc widzisz to, co otrzymasz:
           </p>
 
-          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
-path2 = '\\User\admin$\system32'
-quoted = 'Tom "Dubs" Preston-Werner'
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>sciezka = 'C:\Users\nodejs\templates'
+sciezka2 = '\\User\admin$\system32'
+w_cudzyslowie = 'Tom "Dubs" Preston-Werner'
 regex = '<\i\c*\s*>'</code></pre>
 
           <p class="tour-text">
@@ -328,8 +328,8 @@ regex = '<\i\c*\s*>'</code></pre>
           <pre
             class="code toml"
             data-controller="snippet" data-snippet-copy="false"
-          ><code>re = '''I [dw]on't need \d{2} apples'''
-lines = '''
+          ><code>wr = '''\d{2} telefon[uy]? Apple('a)?'''
+linie = '''
 Pierwsze łamanie linii
 jest usunięte z surowych
 ciągów znakowych. Pozostałe
@@ -349,10 +349,10 @@ spacje są zachowane.
           </div>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># liczby całkowite
-int1 = +99
-int2 = 42
-int3 = 0
-int4 = -17
+lc1 = +99
+lc2 = 42
+lc3 = 0
+lc4 = -17
 
 # szesnastkowe z prefiksem `0x`
 hex1 = 0xDEADBEEF
@@ -367,30 +367,30 @@ oct2 = 0o755
 bin1 = 0b11010110
 
 # ułamki
-float1 = +1.0
-float2 = 3.1415
-float3 = -0.01
+lzp1 = +1.0
+lzp2 = 3.1415
+lzp3 = -0.01
 
 # potęgi
-float4 = 5e+22
-float5 = 1e06
-float6 = -2E-2
+lzp4 = 5e+22
+lzp5 = 1e06
+lzp6 = -2E-2
 
 # oba
-float7 = 6.626e-34
+lzp7 = 6.626e-34
 
 # separatory
-float8 = 224_617.445_991_228
+lzp8 = 224_617.445_991_228
 
 # nieskończoność
-infinite1 = inf # nieskończoność dodatnia
-infinite2 = +inf # nieskończoność dodatnia
-infinite3 = -inf # nieskończoność ujemna
+niesk1 = inf # nieskończoność dodatnia
+niesk2 = +inf # nieskończoność dodatnia
+niesk3 = -inf # nieskończoność ujemna
 
 # nie-liczba
-not1 = nan
-not2 = +nan
-not3 = -nan </code></pre>
+nie1 = nan
+nie2 = +nan
+nie3 = -nan </code></pre>
         </section>
 
         <section class="mt-12">
@@ -402,20 +402,20 @@ not3 = -nan </code></pre>
           </div>
 
           <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># data i czas z przesunięciem
-odt1 = 1979-05-27T07:32:00Z
-odt2 = 1979-05-27T00:32:00-07:00
-odt3 = 1979-05-27T00:32:00.999999-07:00
+dcp1 = 1979-05-27T07:32:00Z
+dcp2 = 1979-05-27T00:32:00-07:00
+dcp3 = 1979-05-27T00:32:00.999999-07:00
 
 # data i czas lokalny
-ldt1 = 1979-05-27T07:32:00
-ldt2 = 1979-05-27T00:32:00.999999
+dcl1 = 1979-05-27T07:32:00
+dcl2 = 1979-05-27T00:32:00.999999
 
 # data lokalna
-ld1 = 1979-05-27
+dl1 = 1979-05-27
 
 # czas lokalny
-lt1 = 07:32:00
-lt2 = 00:32:00.999999</code></pre>
+cl1 = 07:32:00
+cl2 = 00:32:00.999999</code></pre>
         </section>
       </div>
     </div>
