@@ -56,7 +56,7 @@ module.exports = function (hljs) {
               },
               {
                 className: 'number',
-                begin: /([\+\-\d(inf|nan|0o|0b|0x)])+[\d_eETZa-fA-F\:\-\+\.(inf|nan)]+/
+                begin: /([+-]?\b(inf|nan)\b|([\+\-\d]|0o|0b|0x)+[\d_eETZa-fA-F\:\-\+\.]+)/
               },
               hljs.NUMBER_MODE
             ]
