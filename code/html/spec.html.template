@@ -19,7 +19,7 @@
       </nav>
     </aside>
 
-    <main>
+    <main class="overflow-auto">
       <div class="w-full lg:max-w-4xl mx-auto bg-white p-8 spec">
         {{ spec }}
       </div>
