@@ -1,0 +1,457 @@
+@@layout("application", { "title" : "TOML: Tom's Obvious Minimal Language" })
+
+@@include("en/nav.html")
+
+<main class="">
+  <div class="bg-orange-100 lg:flex">
+    <section class="pt-32 pb-8 lg:pt-64 lg:flex-1 lg:w-1/2">
+      <div class="px-4 lg:px-8">
+        <div class="flex items-end">
+          <svg class="w-24 mr-2 lg:w-32" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <polygon
+                class="fill-current text-orange-800"
+                points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0"
+              ></polygon>
+              <polygon
+                class="fill-current text-black"
+                points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652"
+              ></polygon>
+              <polygon
+                class="fill-current text-orange-800"
+                points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0"
+              ></polygon>
+            </g>
+          </svg>
+          <div class="font-mono leading-tight">
+            <h1 class="font-bold text-3xl lg:text-4xl">TOML</h1>
+            <h2 class="text-xs text-orange-800 lg:text-base">
+              [Tom's Obvious Minimal Language]
+            </h2>
+          </div>
+        </div>
+        <h3
+          class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight"
+        >
+          Формат файлов конфигурации <br class="md:hidden" />для людей.
+        </h3>
+        <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
+          TOML стремится быть минималистичным форматом файлов конфигурации, который легко читаем
+          ввиду очевидной семантики. TOML разработан, чтобы однозначно переводиться в хэш-таблицу.
+          TOML должен легко парситься в структуры данных в широком ряде языков.
+        </p>
+      </div>
+    </section>
+
+    <section class="lg:flex-1 lg:p-24 lg:pb-0 lg:-mb-8">
+      <pre class="code my-0 toml" data-controller="snippet" data-snippet-copy="false"><code># Это документ на TOML
+
+title = "Пример TOML"
+
+[owner]
+name = "Том Престон-Вернер"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+enabled = true
+ports = [ 8000, 8001, 8002 ]
+data = [ ["дельта", "фи"], [3.14] ]
+temp_targets = { cpu = 79.5, case = 72.0 }
+
+[servers]
+
+[servers.alpha]
+ip = "10.0.0.1"
+role = "frontend"
+
+[servers.beta]
+ip = "10.0.0.2"
+role = "бэкенд"</code></pre>
+    </section>
+  </div>
+
+  <section class="mt-16 mb-16 lg:p-4">
+    <dl class="lg:flex lg:items-start">
+      <div class="flex-1 p-4">
+        <dt class="marketing-title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z"
+              />
+            </svg>
+          </div>
+          TOML приоритизирует людей
+        </dt>
+
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">TOML стремится быть минималистичным форматом файлов конфигурации, который:</p>
+          <ul class="mt-2 ml-1 leading-relaxed">
+            <li class="leading-snug">
+              <span class="font-bold">легко читаем</span> ввиду очевидной семантики
+            </li>
+            <li class="leading-snug mt-2">
+              <span class="font-bold">однозначно переводится</span> в хэш-таблицу
+            </li>
+            <li class="leading-snug mt-2">
+              <span class="font-bold">легко парсить</span> в структуры данных в широком ряде языков
+            </li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z"
+              />
+            </svg>
+          </div>
+          В TOML присутствуют полезные, родные типы
+        </dt>
+        <dd class="text-gray-600 ml-12">
+          <ul class="mt-1 ml-1 leading-relaxed">
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Пары Ключ/Значение</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Массивы</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Таблицы</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Встроенные таблицы</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Массивы таблиц</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Целые чила и числа с плавающей запятой</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Булевы переменные</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="inline-block w-4 h-4 mt-px mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>Даты & Времена, со смещениями по желанию</span>
+            </li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"
+              />
+            </svg>
+          </div>
+          TOML широко поддерживается
+        </dt>
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">
+            У TOML уже существуют имплементации в большинстве самых популярных языков программирования
+            для использования на сегодняшний день: C, C#, C++, Clojure, Dart, Elixir, Erlang, Go,
+            Haskell, Java, JavaScript, Lua, Objective-C, Perl, PHP, Python, Ruby, Rust, Scala, Swift, …
+            <a class="underline" href="https://github.com/toml-lang/toml/wiki">и во многих других</a>.
+          </p>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="bg-orange-100 text-orange-800 mt-8 pb-8">
+    <header class="">
+      <h2
+        class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
+      >
+        Краткий Обзор TOML
+      </h2>
+    </header>
+
+    <div class="lg:flex">
+      <div class="lg:flex-1 lg:ml-16 lg:mr-8">
+        <section class="mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">Комментарии</h3>
+            <p class="">TOML считает, что все файлы конфигурации должны поддерживать коммментарии.</p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># Это комментарий в TOML
+
+# Это - многострочный
+# комментарий в TOML</code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">Мощные Строки</h3>
+            <p>
+              Здесь присутствует четыре способа использовать строки: обычный, многострочный обычный,
+              буквальный, и многострочный буквальный. <span class="font-bold">Обычные строки</span>
+              обрамляются кавычками:
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = "Я строка."
+str2 = "Вы можете \"цитировать\" меня."
+str3 = "Имя\tВячасла\u045E\nГород\tМинск."</code></pre>
+
+          <p class="tour-text">
+            <span class="font-bold">Многострочные обычные строки</span> обрамляются
+            тройными кавычками с обоих сторох и позволяют переносы строк. Поставьте обратный
+            слэш в конец строки, чтобы автоматически удалить пустоту перед любыми не
+            пустыми символами:
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
+Розы красные
+Фиалки синие"""
+
+str2 = """\
+  Съешь ещё этих \
+  мягких французских \
+  булок, да выпей чаю. \
+  """</code></pre>
+
+          <p class="tour-text">
+            <code class="font-mono font-bold text-sm">str2</code> превращается в
+            <code class="font-mono font-bold text-sm"
+              >"Съешь ещё этих мягких французских булок, да выпей чаю."</code
+            >
+            (одно предложение без переносов строки).
+          </p>
+
+          <p class="mt-8 tour-text">
+            <span class="font-bold">Буквальные строки</span> обрамляются одиночными кавычками.
+            Экранирование не производится, так что вы получаете то, что видите:
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
+path2 = '\\User\admin$\system32'
+quoted = 'Том "Дабс" Престон-Вервер'
+regex = '<\i\c*\s*>'</code></pre>
+
+          <p class="tour-text">
+            Так как экранирование не производится, то внутри буквальной строки, обрамлённой
+            одиночными кавычками, нельзя вписать одиночную кавычку. Вот здесь и пригождаются
+            <span class="font-bold">многострочные буквальные строки</span>:
+          </p>
+          <pre
+            class="code toml"
+            data-controller="snippet" data-snippet-copy="false"
+          ><code>re = ''' \d{1} яблокjd [м]не понадобится.'''
+lines = '''
+Первый перенос обрезан
+в буквальных строках.
+Остальная пустота
+остаётся.
+'''</code></pre>
+        </section>
+      </div>
+
+      <div class="lg:flex-1 lg:ml-8 lg:mr-16">
+        <section class="mt-12 lg:mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">Числа</h3>
+            <p class="text-orange-800">
+              Целые числа, числа с плавающей запятой, бесконечность и даже NaN - все поддерживаются.
+              Вы можете использовать экспоненциальную запись и даже тысячи разделителей.
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># целые числа
+int1 = +99
+int2 = 42
+int3 = 0
+int4 = -17
+
+# шестнадцатеричные с префиксом `0x`
+hex1 = 0xDEADBEEF
+hex2 = 0xdeadbeef
+hex3 = 0xdead_beef
+
+# восьмеричные с префиксом `0o`
+oct1 = 0o01234567
+oct2 = 0o755
+
+# двоичные с префиксом `0b`
+bin1 = 0b11010110
+
+# десятичные дроби
+float1 = +1.0
+float2 = 3.1415
+float3 = -0.01
+
+# экспоненциальная запись
+float4 = 5e+22
+float5 = 1e06
+float6 = -2E-2
+
+# оба
+float7 = 6.626e-34
+
+# разделители
+float8 = 224_617.445_991_228
+
+# бесконечность
+infinite1 = inf # положительная бесконечность
+infinite2 = +inf # положительная бесконечность
+infinite3 = -inf # отрицательная бесконечность
+
+# не число (not a number)
+not1 = nan
+not2 = +nan
+not3 = -nan </code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">Даты и Времена</h3>
+            <p class="text-orange-800">
+              TOML поддерживает даты, времена, и дату и время вместе, с и без сдвигов.
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># сдвинутая дата и время
+odt1 = 1979-05-27T07:32:00Z
+odt2 = 1979-05-27T00:32:00-07:00
+odt3 = 1979-05-27T00:32:00.999999-07:00
+
+# местная дата и время
+ldt1 = 1979-05-27T07:32:00
+ldt2 = 1979-05-27T00:32:00.999999
+
+# местная дата
+ld1 = 1979-05-27
+
+# местное время
+lt1 = 07:32:00
+lt2 = 00:32:00.999999</code></pre>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="lg:flex bg-white">
+    <div
+      class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
+    >
+      <h3 class="text-2xl font-bold lg:text-3xl">Больше Спецификации</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong> поддерживает ещё больше родных типов и синтакса, прочтите об этом здесь:
+      </p>
+      <div class="mt-4">
+        <a class="button" href="latest">Читать полную спецификацию</a>
+      </div>
+    </div>
+
+    <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
+      <h3 class="text-2xl font-bold lg:text-3xl">Начать программировать</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong> уже имплементирован в более чем 40 языках программирования:
+      </p>
+      <div class="mt-4">
+        <a class="button" href="https://github.com/toml-lang/toml/wiki">Найдите библиотеку</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-orange-900 text-orange-100 text-center text-sm p-4">
+  Создан
+  <a class="underline" href="https://tom.preston-werner.com/">Томом Престон-Вернером</a>
+  <br />
+  <span class="font-mono font-bold">TOML</span> выпускается под
+  <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE"
+    >Лицензией MIT</a
+  >
+</footer>
