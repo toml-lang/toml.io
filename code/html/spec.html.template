@@ -2,12 +2,12 @@
 
 @@include("{{ locale }}/nav.html")
 
-<div class="spec" data-controller="nav" data-action="scroll@window->nav#scroll">
+<div class="spec" lang="{{ lang }}" data-controller="nav" data-action="scroll@window->nav#scroll">
   <div class="lg:flex pt-14">
     <aside class="w-full bg-white lg:w-64 lg:pr-64 lg:block">
       <div class="fixed bg-white z-20 left-0 right-0 mt-3 pl-4 py-4 border-b lg:hidden" data-target="nav.menuLink">
         <div class="relative">
-          <a href="#" class="block font-semibold lg:hidden text-orange-800" data-action="click->nav#onMenuClick">Menu</a>
+          <a href="#" class="block font-semibold lg:hidden text-orange-800" data-action="click->nav#onMenuClick">{{ menuLabel }}</a>
           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path></svg>
           </div>
