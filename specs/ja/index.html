@@ -1,0 +1,442 @@
+@@layout("application", { "title" : "TOML: トムの明瞭で最小の言語" })
+
+@@include("en/nav.html")
+
+<main class="">
+  <div class="bg-orange-100 lg:flex">
+    <section class="pt-32 pb-8 lg:pt-64 lg:flex-1 lg:w-1/2">
+      <div class="px-4 lg:px-8">
+        <div class="flex items-end">
+          <svg class="w-24 mr-2 lg:w-32" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <polygon
+                class="fill-current text-orange-800"
+                points="99.2359551 -7.08546829e-15 99.2359551 14.3820225 112.179775 14.3820225 112.179775 113.617978 99.2359551 113.617978 99.2359551 128 128 128 128 0"
+              ></polygon>
+              <polygon
+                class="fill-current text-black"
+                points="32.3595506 41.7078652 32.3595506 25.8876404 95.6404494 25.8876404 95.6404494 41.7078652 71.9101124 41.7078652 71.9101124 110.741573 56.0898876 110.741573 56.0898876 41.7078652"
+              ></polygon>
+              <polygon
+                class="fill-current text-orange-800"
+                points="28.7640449 0 28.7640449 14.3820225 15.8202247 14.3820225 15.8202247 113.617978 28.7640449 113.617978 28.7640449 128 0 128 0 0"
+              ></polygon>
+            </g>
+          </svg>
+          <div class="font-mono leading-tight">
+            <h1 class="font-bold text-3xl lg:text-4xl">TOML</h1>
+            <h2 class="text-xs text-orange-800 lg:text-base">
+              [トムの明瞭で最小の言語]
+            </h2>
+          </div>
+        </div>
+        <h3
+          class="mt-12 mb-4 font-semibold text-4xl text-left text-orange-900 leading-none tracking-tight"
+        >
+          人間用の<br class="md:hidden" />構成ファイル形式。
+        </h3>
+        <p class="hidden mt-8 text-xl text-yellow-800 lg:block">
+          TOMLは最小限の構成ファイル形式であることを目指しており、その形式は明瞭な意味論により読むのが簡単です。TOMLはハッシュテーブルに曖昧さなく対応すべく設計されています。TOMLは幅広い多様な言語におけるデータ構造へ構文解析することが簡単でしょう。
+        </p>
+      </div>
+    </section>
+
+    <section class="lg:flex-1 lg:p-24 lg:pb-0 lg:-mb-8">
+      <pre class="code my-0 toml" data-controller="snippet" data-snippet-copy="false"><code># これはTOML文書です
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+enabled = true
+ports = [ 8000, 8001, 8002 ]
+data = [ ["delta", "phi"], [3.14] ]
+temp_targets = { cpu = 79.5, case = 72.0 }
+
+[servers]
+
+[servers.alpha]
+ip = "10.0.0.1"
+role = "frontend"
+
+[servers.beta]
+ip = "10.0.0.2"
+role = "backend"</code></pre>
+    </section>
+  </div>
+
+  <section class="mt-16 mb-16 lg:p-4">
+    <dl class="lg:flex lg:items-start">
+      <div class="flex-1 p-4">
+        <dt class="marketing-title">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2zm1-5a1 1 0 0 1 0-2 5 5 0 0 1 5 5v2a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3zm-2-4a1 1 0 0 1 0-2 3 3 0 0 0 0-6 1 1 0 0 1 0-2 5 5 0 0 1 0 10z"
+              />
+            </svg>
+          </div>
+          TOMLは人間を優先します
+        </dt>
+
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">TOMLは最小の構成ファイル形式であることを目指しています。</p>
+          <ul class="mt-2 ml-1 leading-relaxed">
+            <li class="leading-snug">
+              明瞭な意味論のため<span class="font-bold">読むのが簡単</span>です。</li>
+            <li class="leading-snug mt-2">
+              ハッシュテーブルへ<span class="font-bold">曖昧さなく対応づきます</span></li>
+            <li class="leading-snug mt-2">
+              幅広い様々な言語におけるデータ構造へと<span class="font-bold">構文解析するのが簡単</span>です</li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 3h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm0 2v4h4V5h-4zM5 13h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4H5zm10-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4c0-1.1.9-2 2-2zm0 2v4h4v-4h-4z"
+              />
+            </svg>
+          </div>
+          TOMLには有用な備え付きの型があります
+        </dt>
+        <dd class="text-gray-600 ml-12">
+          <ul class="mt-1 ml-1 leading-relaxed">
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>キーバリュー対</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>配列</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>テーブル</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>行内テーブル</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>テーブルの配列</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>整数と浮動小数点数</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>真偽値</span>
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="inline-block w-4 h-4 mt-px mr-2 fill-current text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"
+                />
+              </svg>
+              <span>日付と時刻、省略可能なオフセットつき</span>
+            </li>
+          </ul>
+        </dd>
+      </div>
+
+      <div class="flex-1 p-4">
+        <dt class="mt-12 marketing-title lg:mt-0">
+          <div class="bg-orange-600 rounded-full inline-block p-2 mr-2 align-middle">
+            <svg
+              class="w-6 h-6 fill-current text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4.06 13a8 8 0 0 0 5.18 6.51A18.5 18.5 0 0 1 8.02 13H4.06zm0-2h3.96a18.5 18.5 0 0 1 1.22-6.51A8 8 0 0 0 4.06 11zm15.88 0a8 8 0 0 0-5.18-6.51A18.5 18.5 0 0 1 15.98 11h3.96zm0 2h-3.96a18.5 18.5 0 0 1-1.22 6.51A8 8 0 0 0 19.94 13zm-9.92 0c.16 3.95 1.23 7 1.98 7s1.82-3.05 1.98-7h-3.96zm0-2h3.96c-.16-3.95-1.23-7-1.98-7s-1.82 3.05-1.98 7zM12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"
+              />
+            </svg>
+          </div>
+          TOMLは幅広く対応されています
+        </dt>
+        <dd class="text-gray-600 ml-13">
+          <p class="ml-1">
+            TOMLには既にほとんどの人気があり今日使われているプログラミング言語において実装があります：C, C#, C++, Clojure, Dart, Elixir, Erlang, Go, Haskell, Java, JavaScript, Lua,
+            Objective-C, Perl, PHP, Python, Ruby, Rust, Scala, Swift, ……
+            <a class="underline" href="https://github.com/toml-lang/toml/wiki">そしてもっとたくさん</a>。
+          </p>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="bg-orange-100 text-orange-800 mt-8 pb-8">
+    <header class="">
+      <h2
+        class="py-4 text-2xl px-4 font-semibold tracking-tight bg-orange-800 text-left text-orange-100 lg:py-8 lg:text-center lg:text-4xl"
+      >
+        TOMLをざっと見てみよう
+      </h2>
+    </header>
+
+    <div class="lg:flex">
+      <div class="lg:flex-1 lg:ml-16 lg:mr-8">
+        <section class="mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">コメント</h3>
+            <p class="">TOMLの立場では、すべての構成ファイルがコメントに対応すべきだと考えています。</p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># これはTOMLのコメントです
+
+# これは複数行の
+# TOMLのコメント</code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">強力な文字列</h3>
+            <p>
+              文字列を記述するには4つの方法があります。基本文字列、複数行基本文字列、リテラル文字列、複数行リテラル文字列です。<span class="font-bold">基本文字列</span>は引用符で囲まれます。
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = "俺は文字列。"
+str2 = "俺を \"引用符\" で囲める。"
+str3 = "Name\tJos\u00E9\nLoc\tSF."</code></pre>
+
+          <p class="tour-text">
+            <span class="font-bold">複数行基本文字列</span>はそれぞれの側から3つの引用符で囲まれ、改行が許されます。すべての非空白の文字の前につく空白を自動で取り除くには、行末のバックスラッシュを含めること。
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>str1 = """
+Roses are red
+Violets are blue"""
+
+str2 = """\
+  とりなく\
+  こゑすゆめ\
+  さませ。\
+  """</code></pre>
+
+          <p class="tour-text">
+            <code class="font-mono font-bold text-sm">str2</code>は
+            <code class="font-mono font-bold text-sm"
+              >"とりなくこゑすゆめさませ。"</code
+            >になります（改行がなにもない単一の文です）。
+          </p>
+
+          <p class="mt-8 tour-text">
+            <span class="font-bold">リテラル文字列</span>は一重引用符により囲まれます。
+            エスケープは一切行われないため、見たものがそのまま得られるものです。
+          </p>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code>path = 'C:\Users\nodejs\templates'
+path2 = '\\User\admin$\system32'
+quoted = 'Tom "Dubs" Preston-Werner'
+regex = '<\i\c*\s*>'</code></pre>
+
+          <p class="tour-text">
+            エスケープがなにもないため、一重引用符で閉じたリテラル文字列内で一重引用符を書く方法はなにもありません。ここで<span class="font-bold">複数行リテラル文字列</span>の登場です。
+          </p>
+          <pre
+            class="code toml"
+            data-controller="snippet" data-snippet-copy="false"
+          ><code>re = '''I [dw]on't need \d{2} apples'''
+lines = '''
+最初の改行は
+生の文字列から取り除かれます。
+他すべての空白は
+保持されます。
+'''</code></pre>
+        </section>
+      </div>
+
+      <div class="lg:flex-1 lg:ml-8 lg:mr-16">
+        <section class="mt-12 lg:mt-8">
+          <div class="tour-text">
+            <h3 class="feature-title">数値</h3>
+            <p class="text-orange-800">
+              整数、浮動小数点数、無限、はては非数のすべてに対応。
+科学的な記法を使うことも千刻みの区切りを使うこともできます。
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># 整数
+int1 = +99
+int2 = 42
+int3 = 0
+int4 = -17
+
+# `0x`の接頭辞つき16進数
+hex1 = 0xDEADBEEF
+hex2 = 0xdeadbeef
+hex3 = 0xdead_beef
+
+# `0o`の接頭辞つき8進数
+oct1 = 0o01234567
+oct2 = 0o755
+
+# `0b`の接頭辞つき2進数
+bin1 = 0b11010110
+
+# 小数
+float1 = +1.0
+float2 = 3.1415
+float3 = -0.01
+
+# 指数
+float4 = 5e+22
+float5 = 1e06
+float6 = -2E-2
+
+# 両方
+float7 = 6.626e-34
+
+# 区切り
+float8 = 224_617.445_991_228
+
+# 無限
+infinite1 = inf # 正の無限
+infinite2 = +inf # 正の無限
+infinite3 = -inf # 負の無限
+
+# 非数
+not1 = nan
+not2 = +nan
+not3 = -nan </code></pre>
+        </section>
+
+        <section class="mt-12">
+          <div class="tour-text">
+            <h3 class="feature-title">日付と時刻</h3>
+            <p class="text-orange-800">
+              TOMLの機能には、オフセット付きまたは無しの、日付、時刻、日時への対応があります。
+            </p>
+          </div>
+
+          <pre class="code toml" data-controller="snippet" data-snippet-copy="false"><code># オフセットつき日時
+odt1 = 1979-05-27T07:32:00Z
+odt2 = 1979-05-27T00:32:00-07:00
+odt3 = 1979-05-27T00:32:00.999999-07:00
+
+# 現地の日時
+ldt1 = 1979-05-27T07:32:00
+ldt2 = 1979-05-27T00:32:00.999999
+
+# 現地の日付
+ld1 = 1979-05-27
+
+# 現地の時刻
+lt1 = 07:32:00
+lt2 = 00:32:00.999999</code></pre>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="lg:flex bg-white">
+    <div
+      class="pt-12 pb-16 px-8 text-center border-orange-100 border-b-2 lg:flex-1 lg:py-32 lg:border-r-2"
+    >
+      <h3 class="text-2xl font-bold lg:text-3xl">仕様をもっと</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong>はさらにもっと備え付きの型と構文に対応しています。そのすべてはこちらからお読みください。
+      </p>
+      <div class="mt-4">
+        <a class="button" href="latest">完全な仕様を読む</a>
+      </div>
+    </div>
+
+    <div class="pt-12 pb-16 px-8 text-center lg:flex-1 lg:py-32">
+      <h3 class="text-2xl font-bold lg:text-3xl">コードを開始</h3>
+      <p class="text-gray-600">
+        <strong>TOML</strong>は既に40を越すプログラミング言語で実装されています。
+      </p>
+      <div class="mt-4">
+        <a class="button" href="https://github.com/toml-lang/toml/wiki">ライブラリを見つける</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-orange-900 text-orange-100 text-center text-sm p-4">
+    <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>により作成
+  <br />
+  <span class="font-mono font-bold">TOML</span>は
+  <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE"
+    >MITライセンス</a
+  >のもとでリリースされています
+</footer>
